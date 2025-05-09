@@ -1,9 +1,9 @@
-# Awsome-Vibe-Coding
+# Awesome-Vibe-Coding
 A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resources
 
 
 ## Table of Contents
-- [Awsome-Vibe-Coding](#awsome-vibe-coding)
+- [Awesome-Vibe-Coding](#awesome-vibe-coding)
   - [Table of Contents](#table-of-contents)
   - [Learning Resources](#learning-resources)
   - [IDE Toolkits](#ide-toolkits)
