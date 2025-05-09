@@ -20,7 +20,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
 - [Cursor](https://www.cursor.com/): AI-powered code editor offering intelligent suggestions, and agent abilities.
 - [Replit](https://replit.com/): AI-driven platform for quickly building and deploying apps and websites with no setup required.
 - [Firebase](https://firebase.google.com/): A comprehensive mobile and web development platform by Google.
-- [Firebase Studio](https://firebase.google.com/products/studio): A visual development tool for Firebase.
+- [Firebase Studio](https://studio.firebase.google.com): A visual development tool for Firebase.
 
 ## Open-Source Projects
 
