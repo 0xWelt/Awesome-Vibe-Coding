@@ -8,6 +8,9 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
   - [Learning Resources](#learning-resources)
   - [IDE Toolkits](#ide-toolkits)
   - [Open-Source Projects](#open-source-projects)
+  - [Star History](#star-history)
+  - [Contributors](#contributors)
+  - [License](#license)
 
 ## Learning Resources
 
@@ -33,3 +36,25 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
 ## Open-Source Projects
 
 - [taxi_calculator](https://github.com/0xWelt/taxi_calculator): A simple Japanese taxi fare calculator created with cursor.
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Admal-Foundation/Awesome-Vibe-Coding&type=Date)](https://star-history.com/#Admal-Foundation/Awesome-Vibe-Coding&Date)
+
+## Contributors
+This project exists thanks to all the people who contribute.
+
+<a href="https://github.com/Admal-Foundation/Awesome-Vibe-Coding/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Admal-Foundation/Awesome-Vibe-Coding" />
+</a>
+
+## License
+
+[![Creative Commons License](http://i.creativecommons.org/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/)
+
+This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+
+[OSS Icon]: https://jaywcjlove.github.io/sb/ico/min-oss.svg "Open Source Software"
+[Freeware Icon]: https://jaywcjlove.github.io/sb/ico/min-free.svg "Freeware"
+[app-store Icon]: https://jaywcjlove.github.io/sb/ico/min-app-store.svg "App Store Software"
+[awesome-list Icon]: https://jaywcjlove.github.io/sb/ico/min-awesome.svg "Awesome List"
