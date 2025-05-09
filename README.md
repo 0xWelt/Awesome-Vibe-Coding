@@ -12,7 +12,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
 ## Learning Resources
 
 - [DeepLearning.AI](https://www.deeplearning.ai/)
-  - [Vibe Coding 101 with Replit](https://learn.deeplearning.ai/courses/vibe-coding-101-with-replit):
+  - [Vibe Coding 101 with Replit](https://learn.deeplearning.ai/courses/vibe-coding-101-with-replit)
 - [Youtube](https://www.youtube.com/)
   - [Vibe Coding Tutorial and Best Practices (Cursor / Windsurf)](https://www.youtube.com/watch?v=YWwS911iLhg)
   - [How To Get The Most Out Of Vibe Coding | Startup School](https://www.youtube.com/watch?v=BJjsfNO5JTo)
