@@ -1,27 +1,28 @@
 # Awesome-Vibe-Coding
+
 A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resources
 
 
 ## Table of Contents
-- [Awesome-Vibe-Coding](#awesome-vibe-coding)
-  - [Table of Contents](#table-of-contents)
-  - [Development Toolkits](#development-toolkits)
-    - [Local IDEs](#local-ides)
-      - [Cursor](#cursor)
-      - [Windsurf Editor](#windsurf-editor)
-      - [Trae](#trae)
-    - [Local Extensions](#local-extensions)
-      - [Continue](#continue)
-      - [Windsurf Plugins](#windsurf-plugins)
-    - [Web-based IDEs](#web-based-ides)
-      - [Replit](#replit)
-      - [Bolt.new](#boltnew)
-      - [Firebase Studio](#firebase-studio)
-  - [Open-Source Projects](#open-source-projects)
-  - [Learning Resources](#learning-resources)
-  - [Star History](#star-history)
-  - [Contributors](#contributors)
-  - [License](#license)
+
+- [Table of Contents](#table-of-contents)
+- [Development Toolkits](#development-toolkits)
+  - [Local IDEs](#local-ides)
+    - [Cursor](#cursor)
+    - [Windsurf Editor](#windsurf-editor)
+    - [Trae](#trae)
+  - [Local Extensions](#local-extensions)
+    - [Continue](#continue)
+    - [Windsurf Plugins](#windsurf-plugins)
+  - [Web-based IDEs](#web-based-ides)
+    - [Replit](#replit)
+    - [Bolt.new](#boltnew)
+    - [Firebase Studio](#firebase-studio)
+- [Open-Source Projects](#open-source-projects)
+- [Learning Resources](#learning-resources)
+- [Star History](#star-history)
+- [Contributors](#contributors)
+- [License](#license)
 
 ## Development Toolkits
 
