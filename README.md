@@ -5,37 +5,53 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [Development Toolkits](#development-toolkits)
-  - [Standalone IDEs](#standalone-ides)
-    - [Cursor](#cursor)
-    - [Windsurf Editor](#windsurf-editor)
-    - [Void](#void)
-    - [Trae](#trae)
-  - [IDE Extensions](#ide-extensions)
-    - [Github Copilot](#github-copilot)
-    - [Continue](#continue)
-    - [Windsurf Plugins](#windsurf-plugins)
-  - [Web-based IDEs](#web-based-ides)
-    - [Replit](#replit)
-    - [Bolt.new](#boltnew)
-    - [Firebase Studio](#firebase-studio)
-    - [Supabase](#supabase)
-  - [Vibe-Coding Community](#vibe-coding-community)
-    - [v0](#v0)
-    - [Lovable](#lovable)
-    - [YouWare](#youware)
-  - [Supporting Tools](#supporting-tools)
-    - [Vercel](#vercel)
-    - [Railway](#railway)
-    - [Netlify](#netlify)
-- [Open-Source Projects](#open-source-projects)
-- [Learning Resources](#learning-resources)
-- [Star History](#star-history)
-- [Contributors](#contributors)
-- [License](#license)
+- [Awesome-Vibe-Coding](#awesome-vibe-coding)
+  - [Table of Contents](#table-of-contents)
+  - [Development Toolkits](#development-toolkits)
+    - [CLI Tools](#cli-tools)
+      - [Claude Code](#claude-code)
+      - [Gemini CLI](#gemini-cli)
+    - [Standalone IDEs](#standalone-ides)
+      - [Cursor](#cursor)
+      - [Windsurf Editor](#windsurf-editor)
+      - [Void](#void)
+      - [Trae](#trae)
+    - [IDE Extensions](#ide-extensions)
+      - [Github Copilot](#github-copilot)
+      - [Continue](#continue)
+      - [Windsurf Plugins](#windsurf-plugins)
+    - [Web-based IDEs](#web-based-ides)
+      - [Replit](#replit)
+      - [Bolt.new](#boltnew)
+      - [Firebase Studio](#firebase-studio)
+      - [Supabase](#supabase)
+    - [Vibe-Coding Community](#vibe-coding-community)
+      - [v0](#v0)
+      - [Lovable](#lovable)
+      - [YouWare](#youware)
+    - [Supporting Tools](#supporting-tools)
+      - [Vercel](#vercel)
+      - [Railway](#railway)
+      - [Netlify](#netlify)
+  - [Open-Source Projects](#open-source-projects)
+  - [Learning Resources](#learning-resources)
+  - [Star History](#star-history)
+  - [Contributors](#contributors)
+  - [License](#license)
 
 ## Development Toolkits
+
+### CLI Tools
+
+> Integrate AI directly into your terminal.
+
+#### [Claude Code](https://www.anthropic.com/claude-code)
+
+Unleash Claude’s raw power directly in your terminal. Search million-line codebases instantly. Turn hours-long workflows into a single command. Your tools. Your workflow. Your codebase, evolving at thought speed.
+
+#### [Gemini CLI](https://www.anthropic.com/claude-code)
+
+Gemini CLI empowers developers to query and edit large codebases beyond the 1M token context window, generate apps from PDFs/sketches using multimodal capabilities, automate operational tasks, integrate with MCP servers for media generation, and ground queries with built-in Google Search.
 
 ### Standalone IDEs
 
