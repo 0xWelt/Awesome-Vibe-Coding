@@ -145,6 +145,7 @@ Netlify is a platform that automates your code to create high-performant, easily
 ## Open-Source Projects
 
 - [taxi_calculator](https://github.com/0xWelt/taxi_calculator): A simple Japanese taxi fare calculator created with cursor.
+- [VibeRL](https://github.com/0xWelt/VibeRL): Reinforcement Learning framework designed for AI-assisted development and automated code optimization.
 
 ## Learning Resources
 
