@@ -29,6 +29,8 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [v0](#v0)
       - [Lovable](#lovable)
       - [YouWare](#youware)
+    - [Mobile-first tools](#mobile-first-tools)
+      - [vibecode](#vibecode)
     - [Supporting Tools](#supporting-tools)
       - [Vercel](#vercel)
       - [Railway](#railway)
@@ -124,6 +126,14 @@ Lovable is an AI-powered platform that enables users of any skill level to creat
 #### [YouWare](https://www.youware.com/)
 
 YouWare is an innovative coding community specifically designed for AI creators. It offers a platform where users can create, upload, and share their code projects. Users also have the ability to remix existing projects, building on the work of others to enhance collaboration and creativity.
+
+### Mobile-first tools
+
+> Create Apps directly on your phone
+
+#### [vibecode](https://www.vibecodeapp.com)
+
+Vibecode is the mobile app that builds mobile apps. You can simply download Vibecode from the App Store, enter your idea, and within minutes you'll have your fully native iOS app running on your phone. You can then share this app with your friends in 1 click, and they can use the app without downloading anything.
 
 ### Supporting Tools
 
