@@ -10,6 +10,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
   - [Development Toolkits](#development-toolkits)
     - [CLI Tools](#cli-tools)
       - [Claude Code](#claude-code)
+      - [Crush](#crush)
       - [Gemini CLI](#gemini-cli)
     - [Standalone IDEs](#standalone-ides)
       - [Cursor](#cursor)
@@ -49,7 +50,11 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
 
 #### [Claude Code](https://www.anthropic.com/claude-code)
 
-Unleash Claude’s raw power directly in your terminal. Search million-line codebases instantly. Turn hours-long workflows into a single command. Your tools. Your workflow. Your codebase, evolving at thought speed.
+Unleash Claude's raw power directly in your terminal. Search million-line codebases instantly. Turn hours-long workflows into a single command. Your tools. Your workflow. Your codebase, evolving at thought speed.
+
+#### [Crush](https://github.com/charmbracelet/crush)
+
+The glamorous AI coding agent for your favourite terminal. Crush is your new coding bestie that brings AI-powered development directly to your terminal. It supports multiple AI providers including Anthropic, OpenAI, Groq, and OpenRouter, with features like LSP integration, MCP server support, and intelligent code assistance.
 
 #### [Gemini CLI](https://www.anthropic.com/claude-code)
 
