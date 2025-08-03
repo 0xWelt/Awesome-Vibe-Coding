@@ -33,6 +33,9 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
     - [Mobile-first tools](#mobile-first-tools)
       - [vibecode](#vibecode)
   - [MCP Servers](#mcp-servers)
+    - [MCP Server Hub](#mcp-server-hub)
+      - [Glama MCP Servers](#glama-mcp-servers)
+      - [ModelScope MCP](#modelscope-mcp)
     - [GitHub MCP Server](#github-mcp-server)
     - [ArXiv MCP Server](#arxiv-mcp-server)
     - [Zotero MCP](#zotero-mcp)
@@ -148,6 +151,18 @@ Vibecode is the mobile app that builds mobile apps. You can simply download Vibe
 
 > Model Context Protocol (MCP) servers that extend AI capabilities with external data and tools.
 
+### MCP Server Hub
+
+> Discover and explore MCP servers from various platforms and communities.
+
+#### [Glama MCP Servers](https://glama.ai/mcp/servers)
+
+Glama provides a comprehensive collection of production-ready MCP servers that extend AI capabilities through file access, database connections, API integrations, and other contextual services. The platform features over 7,700 servers across various categories including Remote, Python, TypeScript, Developer Tools, Databases, RAG Systems, and more. Each server is rated for security, license, and quality, making it easy to find reliable MCP solutions for your AI applications.
+
+#### [ModelScope MCP](https://modelscope.cn/mcp)
+
+ModelScope offers a curated selection of MCP servers designed to enhance AI model capabilities with specialized tools and integrations. The platform provides access to various MCP servers that can extend the functionality of AI assistants and applications through standardized protocols.
+
 ### [GitHub MCP Server](https://github.com/github/github-mcp-server)
 
 GitHub's official MCP server that provides comprehensive access to GitHub repositories, issues, pull requests, actions, code security, and more. Features include repository management, issue tracking, pull request operations, workflow automation, and Copilot coding agent integration. Supports both GitHub.com and GitHub Enterprise Server with configurable toolsets and read-only mode.
@@ -159,6 +174,8 @@ A specialized MCP server for searching and analyzing arXiv papers, providing AI 
 ### [Zotero MCP](https://github.com/54yyyu/zotero-mcp)
 
 A powerful MCP server that seamlessly connects your Zotero research library with Claude and other AI assistants. Features include AI-powered semantic search with vector-based similarity matching, comprehensive library search, PDF annotation extraction, metadata retrieval, and BibTeX export. Supports both local Zotero API and web API with configurable embedding models (OpenAI, Gemini, or default).
+
+
 
 ## Supporting Tools
 
