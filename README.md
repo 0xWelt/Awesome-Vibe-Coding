@@ -32,10 +32,14 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [YouWare](#youware)
     - [Mobile-first tools](#mobile-first-tools)
       - [vibecode](#vibecode)
-    - [Supporting Tools](#supporting-tools)
-      - [Vercel](#vercel)
-      - [Railway](#railway)
-      - [Netlify](#netlify)
+  - [MCP Servers](#mcp-servers)
+    - [GitHub MCP Server](#github-mcp-server)
+    - [ArXiv MCP Server](#arxiv-mcp-server)
+    - [Zotero MCP](#zotero-mcp)
+  - [Supporting Tools](#supporting-tools)
+    - [Vercel](#vercel)
+    - [Railway](#railway)
+    - [Netlify](#netlify)
   - [Open-Source Projects](#open-source-projects)
   - [Learning Resources](#learning-resources)
   - [Star History](#star-history)
@@ -140,19 +144,35 @@ YouWare is an innovative coding community specifically designed for AI creators.
 
 Vibecode is the mobile app that builds mobile apps. You can simply download Vibecode from the App Store, enter your idea, and within minutes you'll have your fully native iOS app running on your phone. You can then share this app with your friends in 1 click, and they can use the app without downloading anything.
 
-### Supporting Tools
+## MCP Servers
+
+> Model Context Protocol (MCP) servers that extend AI capabilities with external data and tools.
+
+### [GitHub MCP Server](https://github.com/github/github-mcp-server)
+
+GitHub's official MCP server that provides comprehensive access to GitHub repositories, issues, pull requests, actions, code security, and more. Features include repository management, issue tracking, pull request operations, workflow automation, and Copilot coding agent integration. Supports both GitHub.com and GitHub Enterprise Server with configurable toolsets and read-only mode.
+
+### [ArXiv MCP Server](https://github.com/blazickjp/arxiv-mcp-server)
+
+A specialized MCP server for searching and analyzing arXiv papers, providing AI assistants with direct access to academic research. Features include paper search with date and category filters, paper download and storage, content reading, and specialized research prompts for deep paper analysis. Includes local storage for faster access and comprehensive paper analysis workflows.
+
+### [Zotero MCP](https://github.com/54yyyu/zotero-mcp)
+
+A powerful MCP server that seamlessly connects your Zotero research library with Claude and other AI assistants. Features include AI-powered semantic search with vector-based similarity matching, comprehensive library search, PDF annotation extraction, metadata retrieval, and BibTeX export. Supports both local Zotero API and web API with configurable embedding models (OpenAI, Gemini, or default).
+
+## Supporting Tools
 
 > Essential tools that enhance your vibe coding workflow.
 
-#### [Vercel](https://vercel.com)
+### [Vercel](https://vercel.com)
 
 Vercel is a cloud platform for static sites and Serverless Functions that fits perfectly with vibe coding. It offers seamless deployment, automatic HTTPS, continuous deployment from Git, and preview deployments for all your changes. Perfect for deploying your AI-generated applications quickly and efficiently.
 
-#### [Railway](https://railway.app)
+### [Railway](https://railway.app)
 
 Railway is a modern platform that makes it easy to deploy your applications. It provides a simple way to deploy your applications with automatic deployments, preview environments, and easy scaling. Perfect for deploying your vibe-coded applications with minimal configuration.
 
-#### [Netlify](https://www.netlify.com)
+### [Netlify](https://www.netlify.com)
 
 Netlify is a platform that automates your code to create high-performant, easily-maintainable sites and web applications. It provides continuous deployment from Git, serverless functions, and edge functions. Ideal for deploying and hosting your vibe-coded web applications.
 
