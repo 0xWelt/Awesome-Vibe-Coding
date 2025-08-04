@@ -1,0 +1,15 @@
+.crush/
+.venv/
+.DS_Store
+*.log
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/

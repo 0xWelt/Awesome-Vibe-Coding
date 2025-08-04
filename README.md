@@ -203,6 +203,7 @@ Netlify is a platform that automates your code to create high-performant, easily
 
 - [DeepLearning.AI](https://www.deeplearning.ai/)
   - [Vibe Coding 101 with Replit](https://learn.deeplearning.ai/courses/vibe-coding-101-with-replit)
+  - [MCP: Build Rich Context AI Apps with Anthropic](https://www.deeplearning.ai/short-courses/mcp-build-rich-context-ai-apps-with-anthropic/)
 - [Youtube](https://www.youtube.com/)
   - [Vibe Coding Tutorial and Best Practices (Cursor / Windsurf)](https://www.youtube.com/watch?v=YWwS911iLhg)
   - [How To Get The Most Out Of Vibe Coding | Startup School](https://www.youtube.com/watch?v=BJjsfNO5JTo)
