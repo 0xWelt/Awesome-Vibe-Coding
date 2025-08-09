@@ -9,16 +9,25 @@ repos:
       - id: end-of-file-fixer
       - id: check-yaml
       - id: check-toml
-      - id: check-ast
       - id: check-added-large-files
       - id: check-merge-conflict
-      - id: check-executables-have-shebangs
-      - id: check-shebang-scripts-are-executable
       - id: detect-private-key
-      - id: debug-statements
-      - id: double-quote-string-fixer
   - repo: https://github.com/codespell-project/codespell
     rev: v2.4.1
     hooks:
       - id: codespell
         additional_dependencies: [".[toml]"]
+  - repo: local
+    hooks:
+      - id: prettier
+        name: prettier (write)
+        entry: npx --no-install prettier --write
+        language: system
+        types_or: [javascript, jsx, ts, tsx, json, css, scss, less, markdown, mdx, yaml, html]
+        require_serial: true
+      - id: eslint
+        name: eslint (fix)
+        entry: npx --no-install eslint --fix
+        language: system
+        types_or: [javascript, jsx, ts, tsx]
+        require_serial: true

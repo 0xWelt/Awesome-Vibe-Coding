@@ -1,0 +1,35 @@
+{
+  "name": "awesome-vibe-coding-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run parse-readme && next dev",
+    "build": "npm run parse-readme && next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "parse-readme": "node scripts/parse-readme.js"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "next": "^15.4.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.33.0",
+    "eslint-config-next": "^15.4.6",
+    "prettier": "^3.3.3",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2"
+  }
+}
