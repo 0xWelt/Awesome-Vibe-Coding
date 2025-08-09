@@ -10,8 +10,9 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
   - [Development Toolkits](#development-toolkits)
     - [CLI Tools](#cli-tools)
       - [Claude Code](#claude-code)
-      - [Crush](#crush)
       - [Gemini CLI](#gemini-cli)
+      - [Crush](#crush)
+      - [OpenCode](#opencode)
     - [Standalone IDEs](#standalone-ides)
       - [Cursor](#cursor)
       - [Windsurf Editor](#windsurf-editor)
@@ -59,13 +60,17 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
 
 Unleash Claude's raw power directly in your terminal. Search million-line codebases instantly. Turn hours-long workflows into a single command. Your tools. Your workflow. Your codebase, evolving at thought speed.
 
+#### [Gemini CLI](https://www.anthropic.com/claude-code)
+
+Gemini CLI empowers developers to query and edit large codebases beyond the 1M token context window, generate apps from PDFs/sketches using multimodal capabilities, automate operational tasks, integrate with MCP servers for media generation, and ground queries with built-in Google Search.
+
 #### [Crush](https://github.com/charmbracelet/crush)
 
 The glamorous AI coding agent for your favourite terminal. Crush is your new coding bestie that brings AI-powered development directly to your terminal. It supports multiple AI providers including Anthropic, OpenAI, Groq, and OpenRouter, with features like LSP integration, MCP server support, and intelligent code assistance.
 
-#### [Gemini CLI](https://www.anthropic.com/claude-code)
+#### [OpenCode](https://github.com/sst/opencode)
 
-Gemini CLI empowers developers to query and edit large codebases beyond the 1M token context window, generate apps from PDFs/sketches using multimodal capabilities, automate operational tasks, integrate with MCP servers for media generation, and ground queries with built-in Google Search.
+OpenCode is a powerful AI coding agent built specifically for the terminal. It provides developers with an intelligent coding assistant that can help with code generation, debugging, refactoring, and more, all from the command line. With over 18,000 stars on GitHub, OpenCode has become a popular alternative to Claude Code, offering seamless integration with your existing development workflow and terminal environment.
 
 ### Standalone IDEs
 
