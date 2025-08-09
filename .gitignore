@@ -97,3 +97,6 @@ jspm_packages/
 
 # TypeScript build info
 *.tsbuildinfo
+
+# Crush artifacts
+.crush/

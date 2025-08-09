@@ -1,33 +1,17 @@
-import next from 'eslint-config-next';
+import { FlatCompat } from '@eslint/eslintrc';
+
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname,
+});
 
 export default [
-  // Next.js recommended rules (includes TypeScript support)
-  ...next,
-  // Global ignores
+  ...compat.extends('next/core-web-vitals'),
   {
-    ignores: [
-      '.next/**',
-      'out/**',
-      'dist/**',
-      'build/**',
-      'node_modules/**',
-      'public/data/**',
-    ],
+    ignores: ['.next/**', 'out/**', 'dist/**', 'build/**', 'node_modules/**', 'public/data/**'],
   },
-  // Project-level tweaks
   {
     rules: {
       'no-console': ['warn', { allow: ['warn', 'error'] }],
-    },
-  },
-  // Node scripts (CommonJS allowed)
-  {
-    files: ['scripts/**/*.{js,ts}'],
-    languageOptions: {
-      sourceType: 'commonjs',
-    },
-    rules: {
-      '@typescript-eslint/no-var-requires': 'off',
     },
   },
 ];

@@ -1,25 +1,25 @@
 interface Tool {
-  name: string
-  url: string
-  description: string
-  category: string
-  subcategory: string
-  tags: string[]
+  name: string;
+  url: string;
+  description: string;
+  category: string;
+  subcategory: string;
+  tags: string[];
 }
 
 interface ToolCardProps {
-  tool: Tool
+  tool: Tool;
 }
 
 export default function ToolCard({ tool }: ToolCardProps) {
   const getDomainFromUrl = (url: string) => {
     try {
-      const domain = new URL(url).hostname.replace('www.', '')
-      return domain
+      const domain = new URL(url).hostname.replace('www.', '');
+      return domain;
     } catch {
-      return 'Unknown'
+      return 'Unknown';
     }
-  }
+  };
 
   return (
     <div className="card p-6 h-full flex flex-col">
@@ -34,9 +34,7 @@ export default function ToolCard({ tool }: ToolCardProps) {
           >
             {tool.name}
           </a>
-          <div className="text-sm text-gray-500 mt-1">
-            {getDomainFromUrl(tool.url)}
-          </div>
+          <div className="text-sm text-gray-500 mt-1">{getDomainFromUrl(tool.url)}</div>
         </div>
 
         {/* 描述 */}
@@ -74,5 +72,5 @@ export default function ToolCard({ tool }: ToolCardProps) {
         </a>
       </div>
     </div>
-  )
+  );
 }

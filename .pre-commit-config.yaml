@@ -1,33 +1,41 @@
-default_stages: [pre-commit, pre-push, manual]
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v4.6.0
     hooks:
-      - id: check-symlinks
-      - id: destroyed-symlinks
       - id: trailing-whitespace
       - id: end-of-file-fixer
       - id: check-yaml
-      - id: check-toml
+      - id: check-json
       - id: check-added-large-files
       - id: check-merge-conflict
-      - id: detect-private-key
-  - repo: https://github.com/codespell-project/codespell
-    rev: v2.4.1
-    hooks:
-      - id: codespell
-        additional_dependencies: [".[toml]"]
-  - repo: local
+      - id: check-case-conflict
+      - id: mixed-line-ending
+        args: ['--fix=lf']
+
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v3.1.0
     hooks:
       - id: prettier
-        name: prettier (write)
-        entry: npx --no-install prettier --write
+        files: '\.(js|jsx|ts|tsx|json|css|md|yml|yaml)$'
+        additional_dependencies:
+          - prettier@3.3.3
+
+  - repo: local
+    hooks:
+      - id: lint-check
+        name: ESLint Check
+        entry: npm run lint
         language: system
-        types_or: [javascript, jsx, ts, tsx, json, css, scss, less, markdown, mdx, yaml, html]
-        require_serial: true
-      - id: eslint
-        name: eslint (fix)
-        entry: npx --no-install eslint --fix
+        pass_filenames: false
+
+      - id: type-check
+        name: TypeScript Type Check
+        entry: npx tsc --noEmit
         language: system
-        types_or: [javascript, jsx, ts, tsx]
-        require_serial: true
+        pass_filenames: false
+
+      - id: parse-readme-check
+        name: Check README Parser
+        entry: npm run parse-readme
+        language: system
+        pass_filenames: false

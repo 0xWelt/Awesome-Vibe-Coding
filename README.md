@@ -2,7 +2,6 @@
 
 A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resources
 
-
 ## Table of Contents
 
 - [Awesome-Vibe-Coding](#awesome-vibe-coding)
@@ -180,8 +179,6 @@ A specialized MCP server for searching and analyzing arXiv papers, providing AI 
 
 A powerful MCP server that seamlessly connects your Zotero research library with Claude and other AI assistants. Features include AI-powered semantic search with vector-based similarity matching, comprehensive library search, PDF annotation extraction, metadata retrieval, and BibTeX export. Supports both local Zotero API and web API with configurable embedding models (OpenAI, Gemini, or default).
 
-
-
 ## Supporting Tools
 
 > Essential tools that enhance your vibe coding workflow.
@@ -197,7 +194,6 @@ Railway is a modern platform that makes it easy to deploy your applications. It 
 ### [Netlify](https://www.netlify.com)
 
 Netlify is a platform that automates your code to create high-performant, easily-maintainable sites and web applications. It provides continuous deployment from Git, serverless functions, and edge functions. Ideal for deploying and hosting your vibe-coded web applications.
-
 
 ## Open-Source Projects
 
@@ -223,6 +219,7 @@ Netlify is a platform that automates your code to create high-performant, easily
 [![Star History Chart](https://api.star-history.com/svg?repos=Admal-Foundation/Awesome-Vibe-Coding&type=Date)](https://star-history.com/#Admal-Foundation/Awesome-Vibe-Coding&Date)
 
 ## Contributors
+
 This project exists thanks to all the people who contribute.
 
 <a href="https://github.com/Admal-Foundation/Awesome-Vibe-Coding/graphs/contributors">
@@ -235,7 +232,7 @@ This project exists thanks to all the people who contribute.
 
 This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
 
-[OSS Icon]: https://jaywcjlove.github.io/sb/ico/min-oss.svg "Open Source Software"
-[Freeware Icon]: https://jaywcjlove.github.io/sb/ico/min-free.svg "Freeware"
-[app-store Icon]: https://jaywcjlove.github.io/sb/ico/min-app-store.svg "App Store Software"
-[awesome-list Icon]: https://jaywcjlove.github.io/sb/ico/min-awesome.svg "Awesome List"
+[OSS Icon]: https://jaywcjlove.github.io/sb/ico/min-oss.svg 'Open Source Software'
+[Freeware Icon]: https://jaywcjlove.github.io/sb/ico/min-free.svg 'Freeware'
+[app-store Icon]: https://jaywcjlove.github.io/sb/ico/min-app-store.svg 'App Store Software'
+[awesome-list Icon]: https://jaywcjlove.github.io/sb/ico/min-awesome.svg 'Awesome List'

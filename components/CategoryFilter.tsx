@@ -1,19 +1,19 @@
 interface Category {
-  name: string
+  name: string;
   subcategories: {
     [key: string]: {
-      name: string
-      tools: any[]
-    }
-  }
+      name: string;
+      tools: any[];
+    };
+  };
 }
 
 interface CategoryFilterProps {
-  categories: { [key: string]: Category }
-  selectedCategory: string
-  selectedSubcategory: string
-  onCategoryChange: (category: string) => void
-  onSubcategoryChange: (subcategory: string) => void
+  categories: { [key: string]: Category };
+  selectedCategory: string;
+  selectedSubcategory: string;
+  onCategoryChange: (category: string) => void;
+  onSubcategoryChange: (subcategory: string) => void;
 }
 
 export default function CategoryFilter({
@@ -21,11 +21,13 @@ export default function CategoryFilter({
   selectedCategory,
   selectedSubcategory,
   onCategoryChange,
-  onSubcategoryChange
+  onSubcategoryChange,
 }: CategoryFilterProps) {
-  const categoryNames = Object.keys(categories)
-  const selectedCategoryData = selectedCategory ? categories[selectedCategory] : null
-  const subcategoryNames = selectedCategoryData ? Object.keys(selectedCategoryData.subcategories) : []
+  const categoryNames = Object.keys(categories);
+  const selectedCategoryData = selectedCategory ? categories[selectedCategory] : null;
+  const subcategoryNames = selectedCategoryData
+    ? Object.keys(selectedCategoryData.subcategories)
+    : [];
 
   return (
     <div className="flex flex-wrap gap-2">
@@ -36,7 +38,7 @@ export default function CategoryFilter({
         className="btn-secondary text-sm"
       >
         <option value="">All Categories</option>
-        {categoryNames.map(category => (
+        {categoryNames.map((category) => (
           <option key={category} value={category}>
             {category}
           </option>
@@ -51,7 +53,7 @@ export default function CategoryFilter({
           className="btn-secondary text-sm"
         >
           <option value="">All {selectedCategory}</option>
-          {subcategoryNames.map(subcategory => (
+          {subcategoryNames.map((subcategory) => (
             <option key={subcategory} value={subcategory}>
               {subcategory}
             </option>
@@ -59,5 +61,5 @@ export default function CategoryFilter({
         </select>
       )}
     </div>
-  )
+  );
 }

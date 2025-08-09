@@ -15,7 +15,13 @@ function parseReadme() {
     const line = lines[i].trim();
 
     // 检测主分类 (## 开头)
-    if (line.startsWith('## ') && !line.includes('Table of Contents') && !line.includes('Star History') && !line.includes('Contributors') && !line.includes('License')) {
+    if (
+      line.startsWith('## ') &&
+      !line.includes('Table of Contents') &&
+      !line.includes('Star History') &&
+      !line.includes('Contributors') &&
+      !line.includes('License')
+    ) {
       currentCategory = line.replace('## ', '').trim();
       currentSubcategory = '';
       continue;
@@ -39,7 +45,12 @@ function parseReadme() {
         let j = i + 1;
         while (j < lines.length && j < i + 5) {
           const nextLine = lines[j].trim();
-          if (nextLine && !nextLine.startsWith('####') && !nextLine.startsWith('###') && !nextLine.startsWith('##')) {
+          if (
+            nextLine &&
+            !nextLine.startsWith('####') &&
+            !nextLine.startsWith('###') &&
+            !nextLine.startsWith('##')
+          ) {
             description = nextLine;
             break;
           }
@@ -55,7 +66,7 @@ function parseReadme() {
           description,
           category: currentCategory,
           subcategory: currentSubcategory,
-          tags: [currentCategory, currentSubcategory].filter(Boolean)
+          tags: [currentCategory, currentSubcategory].filter(Boolean),
         });
       }
     }
@@ -68,18 +79,18 @@ function parseReadme() {
 function generateCategories(tools) {
   const categories = {};
 
-  tools.forEach(tool => {
+  tools.forEach((tool) => {
     if (!categories[tool.category]) {
       categories[tool.category] = {
         name: tool.category,
-        subcategories: {}
+        subcategories: {},
       };
     }
 
     if (tool.subcategory && !categories[tool.category].subcategories[tool.subcategory]) {
       categories[tool.category].subcategories[tool.subcategory] = {
         name: tool.subcategory,
-        tools: []
+        tools: [],
       };
     }
 
@@ -124,10 +135,12 @@ function main() {
   console.log(`分类数量: ${Object.keys(categories).length}`);
 
   // 输出统计信息
-  Object.keys(categories).forEach(category => {
+  Object.keys(categories).forEach((category) => {
     const subcategoryCount = Object.keys(categories[category].subcategories).length;
-    const toolCount = Object.values(categories[category].subcategories)
-      .reduce((sum, sub) => sum + sub.tools.length, 0);
+    const toolCount = Object.values(categories[category].subcategories).reduce(
+      (sum, sub) => sum + sub.tools.length,
+      0,
+    );
     console.log(`- ${category}: ${subcategoryCount} 个子分类, ${toolCount} 个工具`);
   });
 }
