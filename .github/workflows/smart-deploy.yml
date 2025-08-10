@@ -20,38 +20,34 @@ jobs:
         id: check
         run: |
           # 定义需要监控的文件模式
-          PATTERNS=(
-            "README.md"
-            "app/**"
-            "components/**"
-            "scripts/**"
-            "package.json"
-            "package-lock.json"
-            "next.config.js"
-            "tsconfig.json"
-            "tailwind.config.js"
-            ".github/workflows/**"
-          )
+          PATTERNS="README.md|app/|components/|scripts/|package.json|package-lock.json|next.config.js|tsconfig.json|tailwind.config.js|.github/workflows/"
 
           # 获取上一次成功部署的commit SHA
           LAST_DEPLOYED_SHA=$(git log --oneline --grep="Deploy to GitHub Pages" -n 1 --format="%H" || echo "")
 
           if [ -z "$LAST_DEPLOYED_SHA" ]; then
-            echo "没有找到上一次部署记录，执行构建"
+            echo "首次部署或找不到部署记录，执行构建"
             BUILD_NEEDED=true
           else
             echo "上一次部署SHA: $LAST_DEPLOYED_SHA"
             
+            # 获取变更的文件列表
+            CHANGED_FILES=$(git diff --name-only $LAST_DEPLOYED_SHA HEAD)
+            echo "变更的文件:"
+            echo "$CHANGED_FILES"
+            
             # 检查是否有匹配的文件
-            BUILD_NEEDED=false
-            for pattern in "${PATTERNS[@]}"; do
-              if echo "$CHANGED_FILES" | grep -q "$pattern"; then
-                BUILD_NEEDED=true
-                echo "检测到变化: $(echo "$CHANGED_FILES" | grep "$pattern" | head -5)"
-                break
-              fi
-            done
+            if echo "$CHANGED_FILES" | grep -E "$PATTERNS"; then
+              BUILD_NEEDED=true
+              echo "检测到相关文件变化，需要构建"
+            else
+              BUILD_NEEDED=false
+              echo "没有检测到相关文件变化，跳过构建"
+            fi
           fi
+
+          echo "build-needed=$BUILD_NEEDED" >> $GITHUB_OUTPUT
+          echo "Build needed: $BUILD_NEEDED"
 
   build-and-deploy:
     needs: check-changes
