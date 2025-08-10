@@ -35,16 +35,24 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // 加载数据
+    // 加载数据 - 使用统一配置
     const loadData = async () => {
       try {
+        // 使用构建时确定的路径（适用于GitHub Pages和本地环境）
+        const toolsPath = '/data/tools.json';
+        const categoriesPath = '/data/categories.json';
+
+        console.log('Loading data from paths:', { toolsPath, categoriesPath });
+
         const [toolsResponse, categoriesResponse] = await Promise.all([
-          fetch('/data/tools.json'),
-          fetch('/data/categories.json'),
+          fetch(toolsPath),
+          fetch(categoriesPath),
         ]);
 
         if (!toolsResponse.ok || !categoriesResponse.ok) {
-          throw new Error('Failed to load data files');
+          throw new Error(
+            `Failed to load data files: ${toolsResponse.status} ${categoriesResponse.status}`
+          );
         }
 
         const toolsData = await toolsResponse.json();

@@ -13,6 +13,20 @@
 - `npm run parse-readme` - Parse README.md to generate tool data
 - `npm run prepare` - Install Husky git hooks
 
+## Environment Configuration
+
+**Unified environment detection in `lib/config.ts`:**
+
+```typescript
+import { config } from '@/lib/config';
+
+// Environment checks
+config.environment.isGitHubPages; // true on GitHub Pages
+config.basePath; // '/Awesome-Vibe-Coding' or ''
+config.dataPath.tools; // '/data/tools.json'
+config.getFullPath('/path'); // returns correct path
+```
+
 ## Code Style Guidelines
 
 - **Imports**: Use TypeScript, no explicit import extensions needed
@@ -35,3 +49,4 @@ Next.js 15 app with TypeScript, Tailwind CSS, and static data parsing from READM
 - `tsconfig.json` - TypeScript configuration
 - `.gitignore` - Comprehensive git ignore patterns
 - `.husky/pre-commit` - Pre-commit hooks for code quality
+- `lib/config.ts` - Unified environment detection and path configuration

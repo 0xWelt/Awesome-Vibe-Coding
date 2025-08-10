@@ -25,7 +25,9 @@ function parseReadme() {
       !line.includes('Table of Contents') &&
       !line.includes('Star History') &&
       !line.includes('Contributors') &&
-      !line.includes('License')
+      !line.includes('License') &&
+      !line.includes('Open-Source Projects') &&
+      !line.includes('Learning Resources')
     ) {
       currentCategory = line.replace('## ', '').trim();
       currentSubcategory = '';
@@ -38,46 +40,43 @@ function parseReadme() {
       continue;
     }
 
-    // 检测软件条目 (#### [软件名](链接) 格式)
-    if (
-      line.startsWith('#### [') &&
-      line.includes('](') &&
-      line.includes(')')
-    ) {
-      const match = line.match(/#### \[([^\]]+)\]\(([^)]+)\)/);
-      if (match) {
-        const name = match[1];
-        const url = match[2];
+    // 检测软件条目 (#### [软件名](链接) 或 ### [软件名](链接) 格式)
+    const toolMatch = line.match(/^(####|###) \[([^\]]+)\]\(([^)]+)\)/);
+    if (toolMatch) {
+      const name = toolMatch[2];
+      const url = toolMatch[3];
 
-        // 查找描述（下一行或下几行）
-        let description = '';
-        let j = i + 1;
-        while (j < lines.length && j < i + 5) {
-          const nextLine = lines[j].trim();
-          if (
-            nextLine &&
-            !nextLine.startsWith('####') &&
-            !nextLine.startsWith('###') &&
-            !nextLine.startsWith('##')
-          ) {
-            description = nextLine;
-            break;
-          }
-          j++;
+      // 查找描述（下一行或下几行）
+      let description = '';
+      let j = i + 1;
+      while (j < lines.length && j < i + 5) {
+        const nextLine = lines[j].trim();
+        if (
+          nextLine &&
+          !nextLine.startsWith('####') &&
+          !nextLine.startsWith('###') &&
+          !nextLine.startsWith('##')
+        ) {
+          description = nextLine;
+          break;
         }
-
-        // 清理描述文本
-        description = description.replace(/^>/, '').trim();
-
-        tools.push({
-          name,
-          url,
-          description,
-          category: currentCategory,
-          subcategory: currentSubcategory,
-          tags: [currentCategory, currentSubcategory].filter(Boolean),
-        });
+        j++;
       }
+
+      // 清理描述文本
+      description = description.replace(/^>/, '').trim();
+
+      // 对于Supporting Tools等没有子分类的，使用主分类作为子分类
+      const effectiveSubcategory = currentSubcategory || currentCategory;
+
+      tools.push({
+        name,
+        url,
+        description,
+        category: currentCategory,
+        subcategory: effectiveSubcategory,
+        tags: [currentCategory, effectiveSubcategory].filter(Boolean),
+      });
     }
   }
 
