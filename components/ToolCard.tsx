@@ -85,18 +85,20 @@ export default function ToolCard({
         </div>
 
         {/* 描述 */}
-        <div className="mb-4 cursor-pointer" onClick={toggleExpanded}>
-          <div
-            className={`text-sm leading-relaxed text-gray-600 transition-all duration-300 dark:text-gray-300 ${
-              isExpanded ? '' : 'line-clamp-2'
-            }`}
-          >
-            {tool.description}
-            {!isExpanded && tool.description.length > 120 && (
-              <span className="dark:text-primary-400 ml-1 font-medium text-primary-600">
-                ...
-              </span>
-            )}
+        <div className="mb-4">
+          <div onClick={toggleExpanded} className="cursor-pointer">
+            <div
+              className={`text-sm leading-relaxed text-gray-600 transition-all duration-300 dark:text-gray-300 ${
+                isExpanded ? 'max-h-none' : 'line-clamp-2'
+              }`}
+            >
+              {tool.description}
+              {!isExpanded && tool.description.length > 80 && (
+                <span className="dark:text-primary-400 ml-1 font-medium text-primary-600">
+                  ...
+                </span>
+              )}
+            </div>
           </div>
         </div>
 

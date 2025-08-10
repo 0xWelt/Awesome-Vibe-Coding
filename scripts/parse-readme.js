@@ -46,20 +46,40 @@ function parseReadme() {
       const name = toolMatch[2];
       const url = toolMatch[3];
 
-      // 查找描述（下一行或下几行）
+      // 查找描述（多行，直到遇到下一个标题）
       let description = '';
       let j = i + 1;
-      while (j < lines.length && j < i + 5) {
+      let foundContent = false;
+
+      while (j < lines.length) {
         const nextLine = lines[j].trim();
+
+        // 如果遇到下一个标题，停止收集
         if (
-          nextLine &&
-          !nextLine.startsWith('####') &&
-          !nextLine.startsWith('###') &&
-          !nextLine.startsWith('##')
+          nextLine.startsWith('####') ||
+          nextLine.startsWith('###') ||
+          nextLine.startsWith('##')
         ) {
-          description = nextLine;
           break;
         }
+
+        // 跳过空行，但继续收集后续内容
+        if (nextLine === '') {
+          if (foundContent) {
+            // 如果已经有内容，遇到空行可以停止
+            break;
+          }
+          j++;
+          continue;
+        }
+
+        // 收集描述内容
+        if (description) {
+          description += ' ' + nextLine;
+        } else {
+          description = nextLine;
+        }
+        foundContent = true;
         j++;
       }
 
