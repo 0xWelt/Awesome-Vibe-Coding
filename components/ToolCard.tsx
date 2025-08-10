@@ -51,20 +51,13 @@ export default function ToolCard({ tool }: ToolCardProps) {
         {/* 描述 */}
         <div className="mb-4">
           <p
-            className={`text-sm leading-relaxed text-gray-600 transition-all duration-300 dark:text-gray-300 ${
-              isExpanded ? '' : 'line-clamp-3'
+            onClick={toggleExpanded}
+            className={`cursor-pointer text-sm leading-normal text-gray-600 transition-all duration-300 dark:text-gray-300 ${
+              isExpanded ? '' : 'line-clamp-2'
             }`}
           >
             {tool.description}
           </p>
-          {tool.description.length > 120 && (
-            <button
-              onClick={toggleExpanded}
-              className="dark:text-primary-400 dark:hover:text-primary-300 mt-2 text-xs font-medium text-primary-600 transition-colors duration-200 hover:text-primary-700"
-            >
-              {isExpanded ? '收起' : '展开'}
-            </button>
-          )}
         </div>
 
         {/* 分类标签 */}
