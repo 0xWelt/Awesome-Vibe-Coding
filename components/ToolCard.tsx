@@ -22,7 +22,7 @@ export default function ToolCard({ tool }: ToolCardProps) {
   };
 
   return (
-    <div className="card p-6 h-full flex flex-col">
+    <div className="card flex h-full flex-col p-6">
       <div className="flex-1">
         {/* 标题和链接 */}
         <div className="mb-3">
@@ -30,30 +30,32 @@ export default function ToolCard({ tool }: ToolCardProps) {
             href={tool.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-lg font-semibold text-gray-900 hover:text-primary-600 transition-colors duration-200 line-clamp-2"
+            className="line-clamp-2 text-lg font-semibold text-gray-900 transition-colors duration-200 hover:text-primary-600"
           >
             {tool.name}
           </a>
-          <div className="text-sm text-gray-500 mt-1">{getDomainFromUrl(tool.url)}</div>
+          <div className="mt-1 text-sm text-gray-500">
+            {getDomainFromUrl(tool.url)}
+          </div>
         </div>
 
         {/* 描述 */}
-        <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
+        <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-gray-600">
           {tool.description}
         </p>
 
         {/* 分类标签 */}
-        <div className="flex flex-wrap gap-1 mb-4">
+        <div className="mb-4 flex flex-wrap gap-1">
           {tool.tags.slice(0, 3).map((tag, index) => (
             <span
               key={index}
-              className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-primary-100 text-primary-800"
+              className="bg-primary-100 text-primary-800 inline-flex items-center rounded-full px-2 py-1 text-xs font-medium"
             >
               {tag}
             </span>
           ))}
           {tool.tags.length > 3 && (
-            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600">
+            <span className="inline-flex items-center rounded-full bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600">
               +{tool.tags.length - 3}
             </span>
           )}

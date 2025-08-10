@@ -24,7 +24,9 @@ export default function CategoryFilter({
   onSubcategoryChange,
 }: CategoryFilterProps) {
   const categoryNames = Object.keys(categories);
-  const selectedCategoryData = selectedCategory ? categories[selectedCategory] : null;
+  const selectedCategoryData = selectedCategory
+    ? categories[selectedCategory]
+    : null;
   const subcategoryNames = selectedCategoryData
     ? Object.keys(selectedCategoryData.subcategories)
     : [];

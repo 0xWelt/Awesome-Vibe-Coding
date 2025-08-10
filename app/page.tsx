@@ -80,7 +80,9 @@ export default function Home() {
         (tool) =>
           tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
           tool.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          tool.tags.some((tag) => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+          tool.tags.some((tag) =>
+            tag.toLowerCase().includes(searchTerm.toLowerCase())
+          )
       );
     }
 
@@ -91,7 +93,9 @@ export default function Home() {
 
     // 按子分类过滤
     if (selectedSubcategory) {
-      filtered = filtered.filter((tool) => tool.subcategory === selectedSubcategory);
+      filtered = filtered.filter(
+        (tool) => tool.subcategory === selectedSubcategory
+      );
     }
 
     setFilteredTools(filtered);
@@ -114,9 +118,9 @@ export default function Home() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="flex min-h-screen items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto"></div>
+          <div className="mx-auto size-12 animate-spin rounded-full border-b-2 border-primary-600"></div>
           <p className="mt-4 text-gray-600">Loading awesome tools...</p>
         </div>
       </div>
@@ -136,7 +140,7 @@ export default function Home() {
             placeholder="Search tools, descriptions, or tags..."
           />
 
-          <div className="flex flex-wrap gap-4 items-center">
+          <div className="flex flex-wrap items-center gap-4">
             <CategoryFilter
               categories={categories}
               selectedCategory={selectedCategory}
@@ -165,16 +169,20 @@ export default function Home() {
 
         {/* 工具卡片网格 */}
         {filteredTools.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {filteredTools.map((tool, index) => (
               <ToolCard key={`${tool.name}-${index}`} tool={tool} />
             ))}
           </div>
         ) : (
-          <div className="text-center py-12">
-            <div className="text-gray-400 text-6xl mb-4">🔍</div>
-            <h3 className="text-xl font-semibold text-gray-700 mb-2">No tools found</h3>
-            <p className="text-gray-500">Try adjusting your search terms or filters</p>
+          <div className="py-12 text-center">
+            <div className="mb-4 text-6xl text-gray-400">🔍</div>
+            <h3 className="mb-2 text-xl font-semibold text-gray-700">
+              No tools found
+            </h3>
+            <p className="text-gray-500">
+              Try adjusting your search terms or filters
+            </p>
           </div>
         )}
       </main>

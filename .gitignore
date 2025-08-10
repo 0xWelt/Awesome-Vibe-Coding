@@ -1,24 +1,39 @@
-# Generated data
-data/
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Dependencies
+# dependencies
 node_modules/
+.pnp
+.pnp.js
+
+# testing
+coverage/
+
+# next.js
+.next/
+out/
+build/
+
+# production
+dist/
+
+# misc
+.DS_Store
+*.pem
+
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Next.js
-.next/
-out/
-build/
-dist/
+# local env files
+.env*.local
 
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
 
 # IDE
 .vscode/
@@ -27,7 +42,6 @@ dist/
 *.swo
 
 # OS
-.DS_Store
 Thumbs.db
 
 # Logs
@@ -41,13 +55,16 @@ pids
 *.pid.lock
 
 # Coverage directory used by tools like istanbul
-coverage/
+*.lcov
 
 # nyc test coverage
 .nyc_output
 
-# Dependency directories
-jspm_packages/
+# Grunt intermediate storage
+.grunt
+
+# Bower dependency directory
+bower_components
 
 # Optional npm cache directory
 .npm
@@ -70,12 +87,9 @@ jspm_packages/
 # Yarn Integrity file
 .yarn-integrity
 
-# parcel-bundler cache (https://parceljs.org/)
+# parcel-bundler cache
 .cache
 .parcel-cache
-
-# next.js build output
-.next
 
 # nuxt.js build output
 .nuxt
@@ -100,3 +114,26 @@ jspm_packages/
 
 # Crush artifacts
 .crush/
+
+# Prettier cache
+.prettiercache
+
+# Husky
+.husky/_
+
+# Turbo
+.turbo
+
+# Storybook
+storybook-static
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Bundle analyzer
+analyze/
+
+# Generated data
+data/

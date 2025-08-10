@@ -34,7 +34,11 @@ function parseReadme() {
     }
 
     // 检测软件条目 (#### [软件名](链接) 格式)
-    if (line.startsWith('#### [') && line.includes('](') && line.includes(')')) {
+    if (
+      line.startsWith('#### [') &&
+      line.includes('](') &&
+      line.includes(')')
+    ) {
       const match = line.match(/#### \[([^\]]+)\]\(([^)]+)\)/);
       if (match) {
         const name = match[1];
@@ -87,7 +91,10 @@ function generateCategories(tools) {
       };
     }
 
-    if (tool.subcategory && !categories[tool.category].subcategories[tool.subcategory]) {
+    if (
+      tool.subcategory &&
+      !categories[tool.category].subcategories[tool.subcategory]
+    ) {
       categories[tool.category].subcategories[tool.subcategory] = {
         name: tool.subcategory,
         tools: [],
@@ -95,7 +102,9 @@ function generateCategories(tools) {
     }
 
     if (tool.subcategory) {
-      categories[tool.category].subcategories[tool.subcategory].tools.push(tool);
+      categories[tool.category].subcategories[tool.subcategory].tools.push(
+        tool
+      );
     }
   });
 
@@ -136,12 +145,16 @@ function main() {
 
   // 输出统计信息
   Object.keys(categories).forEach((category) => {
-    const subcategoryCount = Object.keys(categories[category].subcategories).length;
+    const subcategoryCount = Object.keys(
+      categories[category].subcategories
+    ).length;
     const toolCount = Object.values(categories[category].subcategories).reduce(
       (sum, sub) => sum + sub.tools.length,
-      0,
+      0
     );
-    console.log(`- ${category}: ${subcategoryCount} 个子分类, ${toolCount} 个工具`);
+    console.log(
+      `- ${category}: ${subcategoryCount} 个子分类, ${toolCount} 个工具`
+    );
   });
 }
 

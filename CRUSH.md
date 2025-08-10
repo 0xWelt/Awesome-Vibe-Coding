@@ -4,11 +4,14 @@
 
 - `npm run dev` - Start development server with README parsing
 - `npm run build` - Build production bundle with README parsing
+- `npm run start` - Start production server
 - `npm run lint` - Run ESLint
 - `npm run lint:fix` - Auto-fix ESLint issues
 - `npm run format` - Format code with Prettier
 - `npm run format:check` - Check Prettier formatting
+- `npm run type-check` - Type checking with TypeScript
 - `npm run parse-readme` - Parse README.md to generate tool data
+- `npm run prepare` - Install Husky git hooks
 
 ## Code Style Guidelines
 
@@ -19,7 +22,16 @@
 - **Error handling**: Try-catch blocks with fallback values
 - **Styling**: Tailwind CSS with custom components in `globals.css`
 - **File structure**: `/app` for Next.js pages, `/components` for React components
+- **Pre-commit**: Husky + lint-staged for automated code quality checks
 
 ## Project Structure
 
 Next.js 15 app with TypeScript, Tailwind CSS, and static data parsing from README.md
+
+## Configuration Files
+
+- `.eslintrc.json` - ESLint configuration with Next.js and Prettier
+- `.prettierrc.json` - Prettier formatting configuration
+- `tsconfig.json` - TypeScript configuration
+- `.gitignore` - Comprehensive git ignore patterns
+- `.husky/pre-commit` - Pre-commit hooks for code quality
