@@ -105,6 +105,9 @@ export default function Home() {
       filtered = filtered.filter(
         (tool) => tool.subcategory === selectedSubcategory
       );
+    } else if (selectedCategory) {
+      // 如果选择了分类但没有选择子分类，包含该分类下所有工具（包括General子分类）
+      filtered = filtered.filter((tool) => tool.category === selectedCategory);
     }
 
     setFilteredTools(filtered);

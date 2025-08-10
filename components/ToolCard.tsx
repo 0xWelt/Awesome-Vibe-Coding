@@ -23,6 +23,10 @@ export default function ToolCard({
   const [isExpanded, setIsExpanded] = useState(false);
 
   const getSubcategoryColor = (subcategory: string) => {
+    if (subcategory === '__NO_SUBCATEGORY__') {
+      return '';
+    }
+
     const colorMap: { [key: string]: string } = {
       'CLI Tools':
         'border-green-200 bg-green-50 text-green-700 dark:border-green-400/30 dark:bg-green-400/20 dark:text-green-100',
@@ -100,17 +104,24 @@ export default function ToolCard({
           >
             {tool.category}
           </button>
-          <button
-            onClick={() => {
-              onCategoryClick?.(tool.category);
-              onSubcategoryClick?.(tool.subcategory);
-            }}
-            className={`inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-semibold transition-all duration-200 hover:scale-105 hover:shadow-sm ${getSubcategoryColor(tool.subcategory)}`}
-          >
-            {tool.subcategory}
-          </button>
+          {tool.subcategory !== '__NO_SUBCATEGORY__' && (
+            <button
+              onClick={() => {
+                onCategoryClick?.(tool.category);
+                onSubcategoryClick?.(tool.subcategory);
+              }}
+              className={`inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-semibold transition-all duration-200 hover:scale-105 hover:shadow-sm ${getSubcategoryColor(tool.subcategory)}`}
+            >
+              {tool.subcategory}
+            </button>
+          )}
           {tool.tags
-            .filter((tag) => tag !== tool.category && tag !== tool.subcategory)
+            .filter(
+              (tag) =>
+                tag !== tool.category &&
+                tag !== tool.subcategory &&
+                tool.subcategory !== '__NO_SUBCATEGORY__'
+            )
             .slice(0, isExpanded ? undefined : 4)
             .map((tag, index) => (
               <span
@@ -121,13 +132,19 @@ export default function ToolCard({
               </span>
             ))}
           {tool.tags.filter(
-            (tag) => tag !== tool.category && tag !== tool.subcategory
+            (tag) =>
+              tag !== tool.category &&
+              tag !== tool.subcategory &&
+              tool.subcategory !== '__NO_SUBCATEGORY__'
           ).length > 4 &&
             !isExpanded && (
               <span className="inline-flex items-center rounded-full border border-gray-200 bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-600 transition-all duration-200 hover:scale-105 dark:border-gray-400/30 dark:bg-gray-600/20 dark:text-gray-200">
                 +
                 {tool.tags.filter(
-                  (tag) => tag !== tool.category && tag !== tool.subcategory
+                  (tag) =>
+                    tag !== tool.category &&
+                    tag !== tool.subcategory &&
+                    tool.subcategory !== '__NO_SUBCATEGORY__'
                 ).length - 4}
               </span>
             )}

@@ -66,8 +66,17 @@ function parseReadme() {
       // 清理描述文本
       description = description.replace(/^>/, '').trim();
 
-      // 对于Supporting Tools等没有子分类的，使用主分类作为子分类
-      const effectiveSubcategory = currentSubcategory || currentCategory;
+      // 根据标题级别决定子分类
+      // 如果是三级标题(###)的工具，直接属于一级分类
+      // 如果是四级标题(####)的工具，属于当前子分类
+      const level = toolMatch[1];
+      const effectiveSubcategory =
+        level === '###'
+          ? '__NO_SUBCATEGORY__'
+          : currentSubcategory || '__NO_SUBCATEGORY__';
+
+      // 确保tags只包含一级分类
+      const tags = [currentCategory];
 
       tools.push({
         name,
@@ -75,7 +84,7 @@ function parseReadme() {
         description,
         category: currentCategory,
         subcategory: effectiveSubcategory,
-        tags: [currentCategory, effectiveSubcategory].filter(Boolean),
+        tags: tags,
       });
     }
   }
@@ -95,21 +104,19 @@ function generateCategories(tools) {
       };
     }
 
-    if (
-      tool.subcategory &&
-      !categories[tool.category].subcategories[tool.subcategory]
-    ) {
-      categories[tool.category].subcategories[tool.subcategory] = {
-        name: tool.subcategory,
+    // 如果没有子分类，使用主分类作为子分类
+    const effectiveSubcategory = tool.subcategory || tool.category;
+
+    if (!categories[tool.category].subcategories[effectiveSubcategory]) {
+      categories[tool.category].subcategories[effectiveSubcategory] = {
+        name: effectiveSubcategory,
         tools: [],
       };
     }
 
-    if (tool.subcategory) {
-      categories[tool.category].subcategories[tool.subcategory].tools.push(
-        tool
-      );
-    }
+    categories[tool.category].subcategories[effectiveSubcategory].tools.push(
+      tool
+    );
   });
 
   return categories;

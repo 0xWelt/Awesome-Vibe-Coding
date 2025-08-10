@@ -27,8 +27,12 @@ export default function CategoryFilter({
   const selectedCategoryData = selectedCategory
     ? categories[selectedCategory]
     : null;
+
+  // 过滤掉特殊子分类
   const subcategoryNames = selectedCategoryData
-    ? Object.keys(selectedCategoryData.subcategories)
+    ? Object.keys(selectedCategoryData.subcategories).filter(
+        (subcategory) => subcategory !== '__NO_SUBCATEGORY__'
+      )
     : [];
 
   return (
@@ -47,7 +51,7 @@ export default function CategoryFilter({
         ))}
       </select>
 
-      {/* 子分类筛选 */}
+      {/* 子分类筛选 - 隐藏General子分类 */}
       {selectedCategory && subcategoryNames.length > 0 && (
         <select
           value={selectedSubcategory}
