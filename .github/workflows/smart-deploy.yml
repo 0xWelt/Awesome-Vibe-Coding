@@ -1,0 +1,101 @@
+name: Smart Build and Deploy Website
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  check-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      should-build: ${{ steps.check.outputs.build-needed }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # 获取当前和上一个commit
+
+      - name: Check if build is needed
+        id: check
+        run: |
+          # 定义需要监控的文件模式
+          PATTERNS=(
+            "README.md"
+            "app/**"
+            "components/**"
+            "scripts/**"
+            "package.json"
+            "package-lock.json"
+            "next.config.js"
+            "tsconfig.json"
+            "tailwind.config.js"
+            ".github/workflows/**"
+          )
+
+          # 获取变化的文件
+          CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD)
+          
+          # 检查是否有匹配的文件
+          BUILD_NEEDED=false
+          for pattern in "${PATTERNS[@]}"; do
+            if echo "$CHANGED_FILES" | grep -q "$pattern"; then
+              BUILD_NEEDED=true
+              echo "检测到变化: $(echo "$CHANGED_FILES" | grep "$pattern" | head -5)"
+              break
+            fi
+          done
+
+          # 输出结果
+          echo "build-needed=$BUILD_NEEDED" >> $GITHUB_OUTPUT
+          echo "Build needed: $BUILD_NEEDED"
+
+  build-and-deploy:
+    needs: check-changes
+    if: needs.check-changes.outputs.should-build == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Parse README and generate data
+        run: npm run parse-readme
+
+      - name: Build website
+        run: npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  skip-build:
+    needs: check-changes
+    if: needs.check-changes.outputs.should-build == 'false'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Skip build notification
+        run: |
+          echo "🎯 No relevant changes detected, skipping build"
+          echo "Changed files: $(git diff --name-only HEAD~1 HEAD | tr '\n' ' ')"
