@@ -4,13 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'README.md'
-      - 'app/**'
-      - 'components/**'
-      - 'scripts/**'
-      - 'package.json'
-      - 'next.config.js'
-      - 'tsconfig.json'
+      - '**'  # 任何文件变化都触发
   workflow_dispatch:
 
 jobs:
