@@ -92,13 +92,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-  skip-build:
-    needs: check-changes
-    if: needs.check-changes.outputs.should-build == 'false'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Skip build notification
-        run: |
-          echo "🎯 No relevant changes detected, skipping build"
-          echo "Changed files: $(git diff --name-only $LAST_DEPLOYED_SHA HEAD | tr '\n' ' ')"
