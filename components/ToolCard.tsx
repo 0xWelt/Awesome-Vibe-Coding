@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 interface Tool {
   name: string;
   url: string;
@@ -12,6 +14,8 @@ interface ToolCardProps {
 }
 
 export default function ToolCard({ tool }: ToolCardProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   const getDomainFromUrl = (url: string) => {
     try {
       const domain = new URL(url).hostname.replace('www.', '');
@@ -19,6 +23,11 @@ export default function ToolCard({ tool }: ToolCardProps) {
     } catch {
       return 'Unknown';
     }
+  };
+
+  const toggleExpanded = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsExpanded(!isExpanded);
   };
 
   return (
@@ -40,9 +49,23 @@ export default function ToolCard({ tool }: ToolCardProps) {
         </div>
 
         {/* 描述 */}
-        <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-gray-600 transition-colors duration-200 dark:text-gray-300">
-          {tool.description}
-        </p>
+        <div className="mb-4">
+          <p
+            className={`text-sm leading-relaxed text-gray-600 transition-all duration-300 dark:text-gray-300 ${
+              isExpanded ? '' : 'line-clamp-3'
+            }`}
+          >
+            {tool.description}
+          </p>
+          {tool.description.length > 120 && (
+            <button
+              onClick={toggleExpanded}
+              className="dark:text-primary-400 dark:hover:text-primary-300 mt-2 text-xs font-medium text-primary-600 transition-colors duration-200 hover:text-primary-700"
+            >
+              {isExpanded ? '收起' : '展开'}
+            </button>
+          )}
+        </div>
 
         {/* 分类标签 */}
         <div className="flex flex-wrap gap-1.5">
@@ -54,7 +77,7 @@ export default function ToolCard({ tool }: ToolCardProps) {
           </span>
           {tool.tags
             .filter((tag) => tag !== tool.category && tag !== tool.subcategory)
-            .slice(0, 4)
+            .slice(0, isExpanded ? undefined : 4)
             .map((tag, index) => (
               <span
                 key={index}
@@ -65,14 +88,15 @@ export default function ToolCard({ tool }: ToolCardProps) {
             ))}
           {tool.tags.filter(
             (tag) => tag !== tool.category && tag !== tool.subcategory
-          ).length > 4 && (
-            <span className="inline-flex items-center rounded-full border border-gray-200 bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-600 transition-all duration-200 hover:scale-105 dark:border-gray-400/30 dark:bg-gray-600/20 dark:text-gray-200">
-              +
-              {tool.tags.filter(
-                (tag) => tag !== tool.category && tag !== tool.subcategory
-              ).length - 4}
-            </span>
-          )}
+          ).length > 4 &&
+            !isExpanded && (
+              <span className="inline-flex items-center rounded-full border border-gray-200 bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-600 transition-all duration-200 hover:scale-105 dark:border-gray-400/30 dark:bg-gray-600/20 dark:text-gray-200">
+                +
+                {tool.tags.filter(
+                  (tag) => tag !== tool.category && tag !== tool.subcategory
+                ).length - 4}
+              </span>
+            )}
         </div>
       </div>
     </div>
