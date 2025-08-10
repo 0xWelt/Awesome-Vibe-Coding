@@ -5,6 +5,7 @@ import ToolCard from '@/components/ToolCard';
 import SearchBar from '@/components/SearchBar';
 import CategoryFilter from '@/components/CategoryFilter';
 import Header from '@/components/Header';
+import { config } from '@/lib/config';
 
 interface Tool {
   name: string;
@@ -38,15 +39,9 @@ export default function Home() {
     // 加载数据 - 使用统一配置
     const loadData = async () => {
       try {
-        // 使用相对路径确保在GitHub Pages和本地都能正确加载
-        const basePath = window.location.pathname.startsWith(
-          '/Awesome-Vibe-Coding'
-        )
-          ? '/Awesome-Vibe-Coding'
-          : '';
-
-        const toolsPath = `${basePath}/data/tools.json`;
-        const categoriesPath = `${basePath}/data/categories.json`;
+        // 使用统一的路径配置
+        const toolsPath = config.runtime.getDataPath('tools.json');
+        const categoriesPath = config.runtime.getDataPath('categories.json');
 
         console.log('Loading data from paths:', { toolsPath, categoriesPath });
 
