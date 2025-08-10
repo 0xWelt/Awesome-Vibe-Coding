@@ -25,12 +25,12 @@ export default function ToolCard({ tool }: ToolCardProps) {
     <div className="card flex h-full flex-col p-6">
       <div className="flex-1">
         {/* 标题和链接 */}
-        <div className="mb-3">
+        <div className="mb-4">
           <a
             href={tool.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="dark:hover:text-primary-400 line-clamp-2 text-lg font-semibold text-gray-900 transition-colors duration-200 hover:text-primary-600 dark:text-white"
+            className="dark:hover:text-primary-400 line-clamp-2 text-xl font-bold text-gray-900 transition-colors duration-200 hover:text-primary-600 dark:text-white"
           >
             {tool.name}
           </a>
@@ -45,7 +45,7 @@ export default function ToolCard({ tool }: ToolCardProps) {
         </p>
 
         {/* 分类标签 */}
-        <div className="mb-4 flex flex-wrap gap-1.5">
+        <div className="flex flex-wrap gap-1.5">
           <span className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700 transition-all duration-200 hover:scale-105 hover:shadow-sm dark:border-blue-400/30 dark:bg-blue-400/20 dark:text-blue-100">
             {tool.category}
           </span>
@@ -74,18 +74,6 @@ export default function ToolCard({ tool }: ToolCardProps) {
             </span>
           )}
         </div>
-      </div>
-
-      {/* 操作按钮 */}
-      <div className="mt-auto">
-        <a
-          href={tool.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-primary w-full text-center text-sm"
-        >
-          Visit Website
-        </a>
       </div>
     </div>
   );

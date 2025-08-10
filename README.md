@@ -69,7 +69,7 @@ Unleash Claude's raw power directly in your terminal. Search million-line
 codebases instantly. Turn hours-long workflows into a single command. Your
 tools. Your workflow. Your codebase, evolving at thought speed.
 
-#### [Gemini CLI](https://www.anthropic.com/claude-code)
+#### [Gemini CLI](https://github.com/google-gemini/gemini-cli)
 
 Gemini CLI empowers developers to query and edit large codebases beyond the 1M
 token context window, generate apps from PDFs/sketches using multimodal
