@@ -6,10 +6,9 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-🌐 **Live Website**: [https://admalfoundation.github.io/Awesome-Vibe-Coding/](https://admalfoundation.github.io/Awesome-Vibe-Coding/)
+A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resources
 
-A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning
-Resources
+🌐 **Live Website**: [https://admalfoundation.github.io/Awesome-Vibe-Coding/](https://admalfoundation.github.io/Awesome-Vibe-Coding/)
 
 ## Table of Contents
 
