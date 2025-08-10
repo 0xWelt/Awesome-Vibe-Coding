@@ -127,17 +127,19 @@ export default function Home() {
 
   if (loading) {
     return (
-      <div className="flex min-h-screen items-center justify-center">
+      <div className="flex min-h-screen items-center justify-center bg-gray-50 transition-colors duration-200 dark:bg-gray-900">
         <div className="text-center">
-          <div className="mx-auto size-12 animate-spin rounded-full border-b-2 border-primary-600"></div>
-          <p className="mt-4 text-gray-600">Loading awesome tools...</p>
+          <div className="dark:border-primary-400 mx-auto size-12 animate-spin rounded-full border-b-2 border-primary-600"></div>
+          <p className="mt-4 text-gray-600 transition-colors duration-200 dark:text-gray-300">
+            Loading awesome tools...
+          </p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 transition-colors duration-200 dark:bg-gray-900">
       <Header />
 
       <main className="container mx-auto px-4 py-8">
@@ -168,7 +170,7 @@ export default function Home() {
 
         {/* 结果统计 */}
         <div className="mb-6">
-          <p className="text-gray-600">
+          <p className="text-gray-600 transition-colors duration-200 dark:text-gray-300">
             Showing {filteredTools.length} of {tools.length} tools
             {searchTerm && ` for "${searchTerm}"`}
             {selectedCategory && ` in ${selectedCategory}`}
@@ -185,11 +187,13 @@ export default function Home() {
           </div>
         ) : (
           <div className="py-12 text-center">
-            <div className="mb-4 text-6xl text-gray-400">🔍</div>
-            <h3 className="mb-2 text-xl font-semibold text-gray-700">
+            <div className="mb-4 text-6xl text-gray-400 transition-colors duration-200 dark:text-gray-500">
+              🔍
+            </div>
+            <h3 className="mb-2 text-xl font-semibold text-gray-700 transition-colors duration-200 dark:text-gray-200">
               No tools found
             </h3>
-            <p className="text-gray-500">
+            <p className="text-gray-500 transition-colors duration-200 dark:text-gray-400">
               Try adjusting your search terms or filters
             </p>
           </div>

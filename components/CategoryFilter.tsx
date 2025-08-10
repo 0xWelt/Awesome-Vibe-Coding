@@ -37,7 +37,7 @@ export default function CategoryFilter({
       <select
         value={selectedCategory}
         onChange={(e) => onCategoryChange(e.target.value)}
-        className="btn-secondary text-sm"
+        className="btn-secondary text-sm transition-colors duration-200 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300"
       >
         <option value="">All Categories</option>
         {categoryNames.map((category) => (
@@ -52,7 +52,7 @@ export default function CategoryFilter({
         <select
           value={selectedSubcategory}
           onChange={(e) => onSubcategoryChange(e.target.value)}
-          className="btn-secondary text-sm"
+          className="btn-secondary text-sm transition-colors duration-200 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300"
         >
           <option value="">All {selectedCategory}</option>
           {subcategoryNames.map((subcategory) => (
