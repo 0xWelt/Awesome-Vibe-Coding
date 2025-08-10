@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2  # 获取当前和上一个commit
+          fetch-depth: 2 # 获取当前和上一个commit
 
       - name: Check if build is needed
         id: check
@@ -35,7 +35,7 @@ jobs:
 
           # 获取变化的文件
           CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD)
-          
+
           # 检查是否有匹配的文件
           BUILD_NEEDED=false
           for pattern in "${PATTERNS[@]}"; do
