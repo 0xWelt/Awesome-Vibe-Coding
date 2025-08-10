@@ -17,8 +17,8 @@ interface ToolCardProps {
 
 export default function ToolCard({
   tool,
-  onCategoryClick,
-  onSubcategoryClick,
+  onCategoryChange,
+  onSubcategoryChange,
 }: ToolCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
