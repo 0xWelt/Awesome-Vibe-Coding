@@ -5,6 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  basePath: '/Awesome-Vibe-Coding',
+  assetPrefix: '/Awesome-Vibe-Coding',
 };
 
 export default nextConfig;
