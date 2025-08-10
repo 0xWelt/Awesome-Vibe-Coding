@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2 # 获取当前和上一个commit
+          fetch-depth: 0 # 获取完整历史记录以查找上一次部署
 
       - name: Check if build is needed
         id: check
@@ -33,8 +33,17 @@ jobs:
             ".github/workflows/**"
           )
 
-          # 获取变化的文件
-          CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD)
+          # 获取上一次成功部署的commit SHA
+          LAST_DEPLOYED_SHA=$(git log --oneline --grep="Deploy to GitHub Pages" -n 1 --format="%H" || echo "")
+
+          if [ -z "$LAST_DEPLOYED_SHA" ]; then
+            echo "没有找到上一次部署记录，执行构建"
+            BUILD_NEEDED=true
+          else
+            echo "上一次部署SHA: $LAST_DEPLOYED_SHA"
+            
+            # 获取变化的文件（从上一次部署到现在）
+            CHANGED_FILES=$(git diff --name-only $LAST_DEPLOYED_SHA HEAD)
 
           # 检查是否有匹配的文件
           BUILD_NEEDED=false
@@ -98,4 +107,4 @@ jobs:
       - name: Skip build notification
         run: |
           echo "🎯 No relevant changes detected, skipping build"
-          echo "Changed files: $(git diff --name-only HEAD~1 HEAD | tr '\n' ' ')"
+          echo "Changed files: $(git diff --name-only $LAST_DEPLOYED_SHA HEAD | tr '\n' ' ')"
