@@ -11,8 +11,8 @@ interface Tool {
 
 interface ToolCardProps {
   tool: Tool;
-  onCategoryClick?: (category: string) => void;
-  onSubcategoryClick?: (subcategory: string) => void;
+  onCategoryChange?: (category: string) => void;
+  onSubcategoryChange?: (subcategory: string) => void;
 }
 
 export default function ToolCard({
@@ -99,7 +99,7 @@ export default function ToolCard({
         {/* 分类标签 */}
         <div className="flex flex-wrap gap-1.5">
           <button
-            onClick={() => onCategoryClick?.(tool.category)}
+            onClick={() => onCategoryChange?.(tool.category)}
             className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700 transition-all duration-200 hover:scale-105 hover:shadow-sm dark:border-blue-400/30 dark:bg-blue-400/20 dark:text-blue-100"
           >
             {tool.category}
@@ -107,8 +107,8 @@ export default function ToolCard({
           {tool.subcategory !== '__NO_SUBCATEGORY__' && (
             <button
               onClick={() => {
-                onCategoryClick?.(tool.category);
-                onSubcategoryClick?.(tool.subcategory);
+                onCategoryChange?.(tool.category);
+                onSubcategoryChange?.(tool.subcategory);
               }}
               className={`inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-semibold transition-all duration-200 hover:scale-105 hover:shadow-sm ${getSubcategoryColor(tool.subcategory)}`}
             >
