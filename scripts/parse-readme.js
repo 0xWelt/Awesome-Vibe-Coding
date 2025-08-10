@@ -123,13 +123,8 @@ function main() {
   const tools = parseReadme();
   const categories = generateCategories(tools);
 
-  // 创建数据目录
-  const dataDir = path.join(__dirname, '..', 'data');
+  // 创建数据目录 - 只保留public/data，移除重复的data目录
   const publicDataDir = path.join(__dirname, '..', 'public', 'data');
-
-  if (!fs.existsSync(dataDir)) {
-    fs.mkdirSync(dataDir, { recursive: true });
-  }
 
   if (!fs.existsSync(publicDataDir)) {
     fs.mkdirSync(publicDataDir, { recursive: true });
@@ -137,13 +132,17 @@ function main() {
 
   // 写入工具数据
   const toolsJson = JSON.stringify(tools, null, 2);
-  fs.writeFileSync(path.join(dataDir, 'tools.json'), toolsJson);
   fs.writeFileSync(path.join(publicDataDir, 'tools.json'), toolsJson);
 
   // 写入分类数据
   const categoriesJson = JSON.stringify(categories, null, 2);
-  fs.writeFileSync(path.join(dataDir, 'categories.json'), categoriesJson);
   fs.writeFileSync(path.join(publicDataDir, 'categories.json'), categoriesJson);
+
+  // 移除旧的data目录
+  const oldDataDir = path.join(__dirname, '..', 'data');
+  if (fs.existsSync(oldDataDir)) {
+    fs.rmSync(oldDataDir, { recursive: true, force: true });
+  }
 
   console.log(`解析完成！共找到 ${tools.length} 个工具`);
   console.log(`分类数量: ${Object.keys(categories).length}`);
