@@ -42,22 +42,16 @@ jobs:
           else
             echo "上一次部署SHA: $LAST_DEPLOYED_SHA"
             
-            # 获取变化的文件（从上一次部署到现在）
-            CHANGED_FILES=$(git diff --name-only $LAST_DEPLOYED_SHA HEAD)
-
-          # 检查是否有匹配的文件
-          BUILD_NEEDED=false
-          for pattern in "${PATTERNS[@]}"; do
-            if echo "$CHANGED_FILES" | grep -q "$pattern"; then
-              BUILD_NEEDED=true
-              echo "检测到变化: $(echo "$CHANGED_FILES" | grep "$pattern" | head -5)"
-              break
-            fi
-          done
-
-          # 输出结果
-          echo "build-needed=$BUILD_NEEDED" >> $GITHUB_OUTPUT
-          echo "Build needed: $BUILD_NEEDED"
+            # 检查是否有匹配的文件
+            BUILD_NEEDED=false
+            for pattern in "${PATTERNS[@]}"; do
+              if echo "$CHANGED_FILES" | grep -q "$pattern"; then
+                BUILD_NEEDED=true
+                echo "检测到变化: $(echo "$CHANGED_FILES" | grep "$pattern" | head -5)"
+                break
+              fi
+            done
+          fi
 
   build-and-deploy:
     needs: check-changes
