@@ -1,5 +1,13 @@
 # Awesome-Vibe-Coding
 
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fadmalfoundation.github.io%2FAwesome-Vibe-Coding%2F&label=Live%20Site)](https://admalfoundation.github.io/Awesome-Vibe-Coding/)
+[![GitHub stars](https://img.shields.io/github/stars/Admal-Foundation/Awesome-Vibe-Coding?style=social)](https://github.com/Admal-Foundation/Awesome-Vibe-Coding)
+[![GitHub forks](https://img.shields.io/github/forks/Admal-Foundation/Awesome-Vibe-Coding?style=social)](https://github.com/Admal-Foundation/Awesome-Vibe-Coding/fork)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+
+🌐 **Live Website**: [https://admalfoundation.github.io/Awesome-Vibe-Coding/](https://admalfoundation.github.io/Awesome-Vibe-Coding/)
+
 A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning
 Resources
 
