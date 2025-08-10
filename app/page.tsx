@@ -38,9 +38,15 @@ export default function Home() {
     // 加载数据 - 使用统一配置
     const loadData = async () => {
       try {
-        // 使用构建时确定的路径（适用于GitHub Pages和本地环境）
-        const toolsPath = '/data/tools.json';
-        const categoriesPath = '/data/categories.json';
+        // 使用相对路径确保在GitHub Pages和本地都能正确加载
+        const basePath = window.location.pathname.startsWith(
+          '/Awesome-Vibe-Coding'
+        )
+          ? '/Awesome-Vibe-Coding'
+          : '';
+
+        const toolsPath = `${basePath}/data/tools.json`;
+        const categoriesPath = `${basePath}/data/categories.json`;
 
         console.log('Loading data from paths:', { toolsPath, categoriesPath });
 
