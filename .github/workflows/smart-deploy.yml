@@ -33,11 +33,24 @@ jobs:
           WORKFLOW_PATTERN="^\.github/workflows/"
 
           # 获取上一次成功部署的commit SHA
+          # 尝试多种方式查找上一次部署
           LAST_DEPLOYED_SHA=$(git log --oneline --grep="Deploy to GitHub Pages" -n 1 --format="%H" || echo "")
 
+          # 如果找不到，尝试查找GitHub Actions的部署记录
           if [ -z "$LAST_DEPLOYED_SHA" ]; then
+            # 查找最近的包含部署相关关键词的提交
+            LAST_DEPLOYED_SHA=$(git log --oneline --grep="deploy" -i -n 1 --format="%H" || echo "")
+          fi
+
+          # 如果还是找不到，使用第一次提交作为基准
+          if [ -z "$LAST_DEPLOYED_SHA" ]; then
+            LAST_DEPLOYED_SHA=$(git rev-list --max-parents=0 HEAD)
+            echo "📅 使用首次提交作为基准: $LAST_DEPLOYED_SHA"
+          fi
+
+          if [ "$LAST_DEPLOYED_SHA" = "$(git rev-list --max-parents=0 HEAD)" ]; then
             echo "🚀 首次构建检测"
-            echo "build-reason=首次构建 - 找不到之前的部署记录" >> $GITHUB_OUTPUT
+            echo "build-reason=首次构建 - 使用仓库首次提交作为基准" >> $GITHUB_OUTPUT
             echo "changed-files=所有文件 (首次构建)" >> $GITHUB_OUTPUT
             BUILD_NEEDED=true
           else
