@@ -8,7 +8,7 @@ interface GitHubCornerProps {
 
 export default function GitHubCorner({
   url,
-  size = 80,
+  size = 50,
   color = '#151513',
 }: GitHubCornerProps) {
   // Check if URL is a GitHub repository
