@@ -16,17 +16,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # 获取完整历史记录
+          fetch-depth: 0 # Get full history
 
       - name: Check if build is needed
         id: check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # 定义需要监控的文件模式
+          # Define file patterns to monitor
           PATTERNS="README.md|app/|components/|scripts/|package.json|package-lock.json|next.config.js|tsconfig.json|tailwind.config.js|.github/workflows/"
 
-          # 定义详细的文件分类
+          # Define detailed file categories
           README_PATTERN="README.md"
           APP_PATTERN="^app/"
           COMPONENTS_PATTERN="^components/"
@@ -34,38 +34,38 @@ jobs:
           CONFIG_PATTERN="(package\.json|package-lock\.json|next\.config\.js|tsconfig\.json|tailwind\.config\.js)"
           WORKFLOW_PATTERN="^\.github/workflows/"
 
-          # 使用GitHub API查找上一次成功build-and-deploy的commit
-          echo "🔍 查询上一次成功build-and-deploy的commit..."
+          # Use GitHub API to find last successful build-and-deploy commit
+          echo "🔍 Querying last successful build-and-deploy commit..."
 
-          # 获取上一次成功运行的build-and-deploy工作流
+          # Get last successful build-and-deploy workflow run
           RESPONSE=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
             "https://api.github.com/repos/${{ github.repository }}/actions/workflows/smart-deploy.yml/runs?status=success&per_page=1&branch=main")
 
           LAST_BUILD_SHA=$(echo "$RESPONSE" | jq -r '.workflow_runs[0].head_sha // empty')
 
           if [ -z "$LAST_BUILD_SHA" ] || [ "$LAST_BUILD_SHA" = "null" ]; then
-            echo "🚀 首次构建 - 找不到之前的成功构建记录"
-            echo "build-reason=首次构建 - 找不到之前的成功构建记录" >> $GITHUB_OUTPUT
-            echo "changed-files=所有文件 (首次构建)" >> $GITHUB_OUTPUT
+            echo "🚀 First build - no previous successful build found"
+            echo "build-reason=First build - no previous successful build found" >> $GITHUB_OUTPUT
+            echo "changed-files=All files (first build)" >> $GITHUB_OUTPUT
             BUILD_NEEDED=true
           else
-            echo "📊 上一次成功构建: $LAST_BUILD_SHA"
+            echo "📊 Last successful build: $LAST_BUILD_SHA"
             
-            # 获取变更的文件列表
+            # Get list of changed files
             CHANGED_FILES=$(git diff --name-only $LAST_BUILD_SHA HEAD)
             
             if [ -z "$CHANGED_FILES" ]; then
-              echo "✅ 没有文件变更"
-              echo "build-reason=无文件变更" >> $GITHUB_OUTPUT
-              echo "changed-files=无" >> $GITHUB_OUTPUT
+              echo "✅ No file changes"
+              echo "build-reason=No file changes" >> $GITHUB_OUTPUT
+              echo "changed-files=None" >> $GITHUB_OUTPUT
               BUILD_NEEDED=false
             else
-              echo "📁 检测到的变更文件:"
+              echo "📁 Detected changed files:"
               echo "$CHANGED_FILES" | while read -r file; do
                 echo "  - $file"
               done
               
-              # 分析匹配的文件
+              # Analyze matching files
               MATCHING_FILES=""
               README_CHANGED=false
               APP_CHANGED=false
@@ -96,24 +96,24 @@ jobs:
                 fi
               done <<< "$CHANGED_FILES"
               
-              # 构建详细原因
-              REASON="检测到变更:"
+              # Build detailed reason
+              REASON="Changes detected:"
               [ "$README_CHANGED" = true ] && REASON="$REASON README.md"
-              [ "$APP_CHANGED" = true ] && REASON="$REASON 应用文件"
-              [ "$COMPONENTS_CHANGED" = true ] && REASON="$REASON 组件文件"
-              [ "$SCRIPTS_CHANGED" = true ] && REASON="$REASON 脚本文件"
-              [ "$CONFIG_CHANGED" = true ] && REASON="$REASON 配置文件"
-              [ "$WORKFLOW_CHANGED" = true ] && REASON="$REASON 工作流文件"
+              [ "$APP_CHANGED" = true ] && REASON="$REASON app files"
+              [ "$COMPONENTS_CHANGED" = true ] && REASON="$REASON component files"
+              [ "$SCRIPTS_CHANGED" = true ] && REASON="$REASON script files"
+              [ "$CONFIG_CHANGED" = true ] && REASON="$REASON config files"
+              [ "$WORKFLOW_CHANGED" = true ] && REASON="$REASON workflow files"
               
-              # 检查是否有匹配的文件
+              # Check if matching files exist
               if [ -n "$MATCHING_FILES" ]; then
-                echo "🔍 匹配到需要重新构建的文件类型: $MATCHING_FILES"
+                echo "🔍 Matched file types requiring rebuild: $MATCHING_FILES"
                 echo "build-reason=$REASON" >> $GITHUB_OUTPUT
                 echo "changed-files=$(echo "$CHANGED_FILES" | head -20 | sed ':a;N;$!ba;s/\n/, /g')" >> $GITHUB_OUTPUT
                 BUILD_NEEDED=true
               else
-                echo "ℹ️  变更的文件不影响构建"
-                echo "build-reason=变更的文件不影响构建" >> $GITHUB_OUTPUT
+                echo "ℹ️  Changed files do not affect build"
+                echo "build-reason=Changed files do not affect build" >> $GITHUB_OUTPUT
                 echo "changed-files=$(echo "$CHANGED_FILES" | head -10 | sed ':a;N;$!ba;s/\n/, /g')" >> $GITHUB_OUTPUT
                 BUILD_NEEDED=false
               fi
@@ -121,7 +121,7 @@ jobs:
           fi
 
           echo "build-needed=$BUILD_NEEDED" >> $GITHUB_OUTPUT
-          echo "最终决策: Build needed = $BUILD_NEEDED"
+          echo "Final decision: Build needed = $BUILD_NEEDED"
 
   build-and-deploy:
     needs: check-changes
@@ -153,12 +153,12 @@ jobs:
 
       - name: Build Summary
         run: |
-          echo "## 📋 构建详情" >> $GITHUB_STEP_SUMMARY
-          echo "- **构建原因**: ${{ needs.check-changes.outputs.build-reason }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **变更文件**: ${{ needs.check-changes.outputs.changed-files }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **构建时间**: $(date)" >> $GITHUB_STEP_SUMMARY
-          echo "- **Node版本**: $(node --version)" >> $GITHUB_STEP_SUMMARY
-          echo "- **NPM版本**: $(npm --version)" >> $GITHUB_STEP_SUMMARY
+          echo "## 📋 Build Details" >> $GITHUB_STEP_SUMMARY
+          echo "- **Build Reason**: ${{ needs.check-changes.outputs.build-reason }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Changed Files**: ${{ needs.check-changes.outputs.changed-files }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Build Time**: $(date)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Node Version**: $(node --version)" >> $GITHUB_STEP_SUMMARY
+          echo "- **NPM Version**: $(npm --version)" >> $GITHUB_STEP_SUMMARY
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -179,8 +179,8 @@ jobs:
     steps:
       - name: Skip build notification
         run: |
-          echo "## ⏭️ 跳过构建" >> $GITHUB_STEP_SUMMARY
-          echo "- **跳过原因**: ${{ needs.check-changes.outputs.build-reason }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **变更文件**: ${{ needs.check-changes.outputs.changed-files }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **检查时间**: $(date)" >> $GITHUB_STEP_SUMMARY
-          echo "✅ 检测到变更的文件不影响网站构建，跳过此次部署"
+          echo "## ⏭️ Skip Build" >> $GITHUB_STEP_SUMMARY
+          echo "- **Skip Reason**: ${{ needs.check-changes.outputs.build-reason }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Changed Files**: ${{ needs.check-changes.outputs.changed-files }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Check Time**: $(date)" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Detected changed files do not affect website build, skipping deployment"
