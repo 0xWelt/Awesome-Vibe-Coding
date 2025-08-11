@@ -16,10 +16,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # 获取完整历史记录以查找上一次部署
+          fetch-depth: 0 # 获取完整历史记录
 
       - name: Check if build is needed
         id: check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # 定义需要监控的文件模式
           PATTERNS="README.md|app/|components/|scripts/|package.json|package-lock.json|next.config.js|tsconfig.json|tailwind.config.js|.github/workflows/"
@@ -32,33 +34,25 @@ jobs:
           CONFIG_PATTERN="(package\.json|package-lock\.json|next\.config\.js|tsconfig\.json|tailwind\.config\.js)"
           WORKFLOW_PATTERN="^\.github/workflows/"
 
-          # 获取上一次成功部署的commit SHA
-          # 尝试多种方式查找上一次部署
-          LAST_DEPLOYED_SHA=$(git log --oneline --grep="Deploy to GitHub Pages" -n 1 --format="%H" || echo "")
+          # 使用GitHub API查找上一次成功build-and-deploy的commit
+          echo "🔍 查询上一次成功build-and-deploy的commit..."
 
-          # 如果找不到，尝试查找GitHub Actions的部署记录
-          if [ -z "$LAST_DEPLOYED_SHA" ]; then
-            # 查找最近的包含部署相关关键词的提交
-            LAST_DEPLOYED_SHA=$(git log --oneline --grep="deploy" -i -n 1 --format="%H" || echo "")
-          fi
+          # 获取上一次成功运行的build-and-deploy工作流
+          RESPONSE=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/smart-deploy.yml/runs?status=success&per_page=1&branch=main")
 
-          # 如果还是找不到，使用第一次提交作为基准
-          if [ -z "$LAST_DEPLOYED_SHA" ]; then
-            LAST_DEPLOYED_SHA=$(git rev-list --max-parents=0 HEAD)
-            echo "📅 使用首次提交作为基准: $LAST_DEPLOYED_SHA"
-          fi
+          LAST_BUILD_SHA=$(echo "$RESPONSE" | jq -r '.workflow_runs[0].head_sha // empty')
 
-          if [ "$LAST_DEPLOYED_SHA" = "$(git rev-list --max-parents=0 HEAD)" ]; then
-            echo "🚀 首次构建检测"
-            echo "build-reason=首次构建 - 使用仓库首次提交作为基准" >> $GITHUB_OUTPUT
+          if [ -z "$LAST_BUILD_SHA" ] || [ "$LAST_BUILD_SHA" = "null" ]; then
+            echo "🚀 首次构建 - 找不到之前的成功构建记录"
+            echo "build-reason=首次构建 - 找不到之前的成功构建记录" >> $GITHUB_OUTPUT
             echo "changed-files=所有文件 (首次构建)" >> $GITHUB_OUTPUT
             BUILD_NEEDED=true
           else
-            echo "📊 分析自上次部署以来的变更 ($LAST_DEPLOYED_SHA → HEAD)"
-            echo "上一次部署SHA: $LAST_DEPLOYED_SHA"
+            echo "📊 上一次成功构建: $LAST_BUILD_SHA"
             
             # 获取变更的文件列表
-            CHANGED_FILES=$(git diff --name-only $LAST_DEPLOYED_SHA HEAD)
+            CHANGED_FILES=$(git diff --name-only $LAST_BUILD_SHA HEAD)
             
             if [ -z "$CHANGED_FILES" ]; then
               echo "✅ 没有文件变更"
