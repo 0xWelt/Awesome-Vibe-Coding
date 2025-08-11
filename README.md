@@ -95,20 +95,23 @@ over 18,000 stars on GitHub, OpenCode has become a popular alternative to Claude
 Code, offering seamless integration with your existing development workflow and
 terminal environment.
 
+#### [Cursor CLI](https://docs.cursor.com/en/cli/overview)
+
+Cursor CLI lets you interact with AI agents directly from your terminal to write, review, and modify code. Whether you prefer an interactive terminal interface or non-interactive automation for scripts and CI pipelines, the CLI provides powerful coding assistance right where you work. Features include interactive conversational sessions, non-interactive mode for automation, and session management to resume previous conversations with maintained context.
+
 ### Standalone IDEs
 
 > IDEs build for AI native experiences.
 
 #### [Cursor](https://www.cursor.com/)
 
-Cursor is an AI code editor used by millions of engineers. It is powered by a
-series of custom models that generate more code than almost any LLMs in the
-world.
+#### [Cursor](https://www.cursor.com/)
+
+Cursor is the AI code editor used by millions of engineers worldwide, built to make you extraordinarily productive. Powered by a mix of purpose-built and frontier models, Cursor features intelligent tab completion that predicts your next edit, natural language code editing for updating entire classes or functions with simple prompts, and deep codebase understanding that lets you get answers from your codebase or refer to files and docs instantly. With seamless VS Code compatibility (import all extensions, themes, and keybindings in one click), privacy options including SOC 2 certification, and trusted by engineers at Samsung, Stripe, OpenAI, and other world-class companies, Cursor represents the best way to code with AI.
 
 #### [Windsurf Editor](https://windsurf.com/)
 
-AI-powered code editor that anticipates developers' needs, automates complex
-tasks, and enhances productivity.
+Windsurf Editor is a purpose-built AI code editor designed to keep developers in flow state. It features Cascade, an agentic AI that remembers your codebase structure and workflow patterns, automatically fixes lint errors, supports MCP servers for enhanced capabilities, and offers Turbo mode for autonomous terminal command execution. With drag-and-drop image support for instant design implementation, sequential thinking for complex tasks, and seamless GitHub integration, Windsurf provides a truly magical coding experience trusted by over 1 million developers and 4,000+ enterprises worldwide.
 
 #### [Void](https://github.com/voideditor/void)
 
@@ -144,7 +147,7 @@ extensions and hub of models, rules, prompts, docs, and other building blocks。
 
 #### [Windsurf Plugins](https://windsurf.com/plugins)
 
-Windsurf autocompletes your code with AI in all major IDEs. We
+Windsurf Plugins autocompletes your code with AI in all major IDEs. We
 [launched](https://www.windsurf.com/blog/codeium-copilot-alternative-in-vim)
 this implementation of the Windsurf plugin for Vim and Neovim to bring this
 modern coding superpower to more developers. Check out our
@@ -196,15 +199,11 @@ subscriptions, Storage, and Vector embeddings.
 
 #### [Devin](https://www.cognition-labs.com/introducing-devin)
 
-Devin is the world's first fully autonomous AI software engineer developed by Cognition Labs. It can plan, execute, and complete complex engineering tasks independently, from building and deploying applications to debugging code and training AI models. Devin operates in a sandboxed cloud environment with access to standard developer tools including a shell, code editor, and browser, allowing it to work just like a human engineer but with superhuman speed and accuracy.
+Devin is the world's first fully autonomous AI software engineer developed by Cognition Labs that can plan, execute, and complete complex engineering tasks independently, from building and deploying applications to debugging code and training AI models. Devin operates in a sandboxed cloud environment with access to standard developer tools including a shell, code editor, and browser, allowing it to work just like a human engineer but with superhuman speed and accuracy. Key capabilities include autonomous planning that breaks down complex tasks into manageable steps, code generation that writes, tests, and debugs code across multiple languages, deployment that builds and deploys applications to production, learning that adapts and learns from new technologies and frameworks, and collaboration that works alongside human developers as a teammate.
 
-Key capabilities:
+#### [Cursor Background Agents](https://docs.cursor.com/en/background-agent)
 
-- **Autonomous Planning**: Breaks down complex tasks into manageable steps
-- **Code Generation**: Writes, tests, and debugs code across multiple languages
-- **Deployment**: Builds and deploys applications to production
-- **Learning**: Adapts and learns from new technologies and frameworks
-- **Collaboration**: Works alongside human developers as a teammate
+Cursor Background Agents are asynchronous remote agents that run in isolated Ubuntu-based cloud environments and can edit and run code autonomously while you continue working on other tasks, providing a true background coding experience. These agents feature asynchronous operation that spawns agents working independently while you focus on other tasks, remote environment execution in isolated VMs with internet access and package installation capabilities, GitHub integration that automatically clones repos, works on separate branches, and pushes changes, environment customization via `.cursor/environment.json` with custom Docker setups, terminal management with persistent tmux sessions for running background processes, and privacy mode availability to ensure code isn't used for training. Background agents support Max Mode-compatible models and can be accessed via the sidebar or `Ctrl+E` shortcut, requiring GitHub read-write access and storing encrypted secrets for development environments.
 
 ### Vibe-Coding Community
 
