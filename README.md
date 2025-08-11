@@ -22,7 +22,6 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
     - [Cursor CLI](#cursor-cli)
   - [Standalone IDEs](#standalone-ides)
     - [Cursor](#cursor)
-    - [Cursor](#cursor-1)
     - [Windsurf Editor](#windsurf-editor)
     - [Void](#void)
     - [Trae](#trae)
@@ -104,8 +103,6 @@ Cursor CLI lets you interact with AI agents directly from your terminal to write
 ### Standalone IDEs
 
 > IDEs build for AI native experiences.
-
-#### [Cursor](https://www.cursor.com/)
 
 #### [Cursor](https://www.cursor.com/)
 
