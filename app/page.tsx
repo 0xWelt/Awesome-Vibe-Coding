@@ -178,16 +178,13 @@ export default function Home() {
           />
 
           {(searchTerm || selectedCategory || selectedSubcategory) && (
-            <div className="mt-4 flex items-center justify-between">
+            <div className="mt-4">
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 Showing {filteredTools.length} of {tools.length} items
                 {searchTerm && ` for "${searchTerm}"`}
                 {selectedCategory && ` in ${selectedCategory}`}
                 {selectedSubcategory && ` > ${selectedSubcategory}`}
               </p>
-              <button onClick={clearFilters} className="btn-secondary text-sm">
-                Clear All Filters
-              </button>
             </div>
           )}
         </div>

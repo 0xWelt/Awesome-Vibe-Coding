@@ -60,36 +60,45 @@ export default function TopNavPanel({
         </div>
 
         {/* Subcategories */}
-        {selectedCategory && categories[selectedCategory]?.length > 0 && (
-          <div className="mt-3 flex items-center space-x-2 overflow-x-auto border-t pt-3 dark:border-gray-700">
-            <span className="flex-shrink-0 text-sm font-medium text-gray-500 dark:text-gray-400">
-              {selectedCategory}:
-            </span>
-            <button
-              onClick={() => onSubcategorySelect('')}
-              className={`whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-medium transition-all ${
-                !selectedSubcategory
-                  ? 'bg-primary-100 dark:bg-primary-900/30 dark:text-primary-300 text-primary-700'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
-              }`}
-            >
-              All
-            </button>
-            {categories[selectedCategory].map((subcategory) => (
-              <button
-                key={subcategory}
-                onClick={() => onSubcategorySelect(subcategory)}
-                className={`whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-medium transition-all ${
-                  selectedSubcategory === subcategory
-                    ? 'bg-primary-100 dark:bg-primary-900/30 dark:text-primary-300 text-primary-700'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
-                }`}
-              >
-                {subcategory}
-              </button>
-            ))}
-          </div>
-        )}
+        {selectedCategory &&
+          (() => {
+            const validSubcategories =
+              categories[selectedCategory]?.filter(
+                (sub) => sub !== '__NO_SUBCATEGORY__'
+              ) || [];
+            if (validSubcategories.length === 0) return null;
+
+            return (
+              <div className="mt-3 flex items-center space-x-2 overflow-x-auto border-t pt-3 dark:border-gray-700">
+                <span className="flex-shrink-0 text-sm font-medium text-gray-500 dark:text-gray-400">
+                  {selectedCategory}:
+                </span>
+                <button
+                  onClick={() => onSubcategorySelect('')}
+                  className={`whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-medium transition-all ${
+                    !selectedSubcategory
+                      ? 'bg-primary-100 dark:bg-primary-900/30 dark:text-primary-300 text-primary-700'
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
+                  }`}
+                >
+                  All
+                </button>
+                {validSubcategories.map((subcategory) => (
+                  <button
+                    key={subcategory}
+                    onClick={() => onSubcategorySelect(subcategory)}
+                    className={`whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-medium transition-all ${
+                      selectedSubcategory === subcategory
+                        ? 'bg-primary-100 dark:bg-primary-900/30 dark:text-primary-300 text-primary-700'
+                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
+                    }`}
+                  >
+                    {subcategory}
+                  </button>
+                ))}
+              </div>
+            );
+          })()}
       </div>
     </div>
   );
