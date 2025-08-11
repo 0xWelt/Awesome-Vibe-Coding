@@ -26,7 +26,6 @@ function parseReadme() {
       !line.includes('Star History') &&
       !line.includes('Contributors') &&
       !line.includes('License') &&
-      !line.includes('Open-Source Projects') &&
       !line.includes('Learning Resources')
     ) {
       currentCategory = line.replace('## ', '').trim();

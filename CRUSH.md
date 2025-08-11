@@ -2,51 +2,26 @@
 
 ## Build/Lint/Test Commands
 
-- `npm run dev` - Start development server with README parsing
-- `npm run build` - Build production bundle with README parsing
+- `npm run dev` - Start dev server with README parsing
+- `npm run build` - Build production bundle
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
 - `npm run lint:fix` - Auto-fix ESLint issues
-- `npm run format` - Format code with Prettier
+- `npm run format` - Format with Prettier
 - `npm run format:check` - Check Prettier formatting
-- `npm run type-check` - Type checking with TypeScript
+- `npm run type-check` - TypeScript type checking
 - `npm run parse-readme` - Parse README.md to generate tool data
 - `npm run prepare` - Install Husky git hooks
-
-## Environment Configuration
-
-**Unified environment detection in `lib/config.ts`:**
-
-```typescript
-import { config } from '@/lib/config';
-
-// Environment checks
-config.environment.isGitHubPages; // true on GitHub Pages
-config.basePath; // '/Awesome-Vibe-Coding' or ''
-config.dataPath.tools; // '/data/tools.json'
-config.getFullPath('/path'); // returns correct path
-```
+- `node test.js` - Run single test file
 
 ## Code Style Guidelines
 
-- **Imports**: Use TypeScript, no explicit import extensions needed
+- **Imports**: TypeScript, no extensions, use `@/` alias
 - **Formatting**: 2 spaces, single quotes, semicolons, trailing commas
-- **Types**: Use TypeScript interfaces for props (e.g., `Tool`, `ToolCardProps`)
-- **Naming**: PascalCase for components, camelCase for functions/variables
-- **Error handling**: Try-catch blocks with fallback values
-- **Styling**: Tailwind CSS with custom components in `globals.css`
-- **File structure**: `/app` for Next.js pages, `/components` for React components
-- **Pre-commit**: Husky + lint-staged for automated code quality checks
-
-## Project Structure
-
-Next.js 15 app with TypeScript, Tailwind CSS, and static data parsing from README.md
-
-## Configuration Files
-
-- `.eslintrc.json` - ESLint configuration with Next.js and Prettier
-- `.prettierrc.json` - Prettier formatting configuration
-- `tsconfig.json` - TypeScript configuration
-- `.gitignore` - Comprehensive git ignore patterns
-- `.husky/pre-commit` - Pre-commit hooks for code quality
-- `lib/config.ts` - Unified environment detection and path configuration
+- **Types**: Interfaces for props (`Tool`, `ToolCardProps`), strict TypeScript
+- **Naming**: PascalCase components, camelCase functions/variables
+- **Error handling**: Try-catch with fallbacks, never throw in UI
+- **Styling**: Tailwind CSS, custom components in `globals.css`
+- **Structure**: `/app` Next.js pages, `/components` React components
+- **Config**: Use `lib/config.ts` for environment detection
+- **Pre-commit**: Husky + lint-staged runs automatically

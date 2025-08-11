@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import ToolCard from '@/components/ToolCard';
 import SearchBar from '@/components/SearchBar';
 import CategoryFilter from '@/components/CategoryFilter';
+import TopNavPanel from '@/components/TopNavPanel';
 import Header from '@/components/Header';
 import { config } from '@/lib/config';
 
@@ -128,6 +129,16 @@ export default function Home() {
     setSelectedSubcategory('');
   };
 
+  const handleTopNavCategorySelect = (category: string) => {
+    setSelectedCategory(category);
+    setSelectedSubcategory('');
+  };
+
+  const handleClearTopNavSelection = () => {
+    setSelectedCategory('');
+    setSelectedSubcategory('');
+  };
+
   if (loading) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-gray-50 transition-colors duration-200 dark:bg-gray-900">
@@ -145,8 +156,15 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50 transition-colors duration-200 dark:bg-gray-900">
       <Header />
 
+      <TopNavPanel
+        categories={Object.keys(categories)}
+        selectedCategory={selectedCategory}
+        onCategorySelect={handleTopNavCategorySelect}
+        onClearSelection={handleClearTopNavSelection}
+      />
+
       <main className="container mx-auto px-4 py-8">
-        {/* 搜索和筛选区域 */}
+        {/* 搜索和子分类筛选区域 */}
         <div className="mb-8 space-y-4">
           <SearchBar
             value={searchTerm}
@@ -154,27 +172,32 @@ export default function Home() {
             placeholder="Search tools, descriptions, or tags..."
           />
 
-          <div className="flex flex-wrap items-center gap-4">
-            <CategoryFilter
-              categories={categories}
-              selectedCategory={selectedCategory}
-              selectedSubcategory={selectedSubcategory}
-              onCategoryChange={handleCategoryChange}
-              onSubcategoryChange={handleSubcategoryChange}
-            />
+          {selectedCategory && (
+            <div className="flex flex-wrap items-center gap-4">
+              <CategoryFilter
+                categories={categories}
+                selectedCategory={selectedCategory}
+                selectedSubcategory={selectedSubcategory}
+                onCategoryChange={handleCategoryChange}
+                onSubcategoryChange={handleSubcategoryChange}
+              />
 
-            {(searchTerm || selectedCategory || selectedSubcategory) && (
-              <button onClick={clearFilters} className="btn-secondary text-sm">
-                Clear Filters
-              </button>
-            )}
-          </div>
+              {selectedSubcategory && (
+                <button
+                  onClick={clearFilters}
+                  className="btn-secondary text-sm"
+                >
+                  Clear Filters
+                </button>
+              )}
+            </div>
+          )}
         </div>
 
         {/* 结果统计 */}
         <div className="mb-6">
           <p className="text-gray-600 transition-colors duration-200 dark:text-gray-300">
-            Showing {filteredTools.length} of {tools.length} tools
+            Showing {filteredTools.length} of {tools.length} items
             {searchTerm && ` for "${searchTerm}"`}
             {selectedCategory && ` in ${selectedCategory}`}
             {selectedSubcategory && ` > ${selectedSubcategory}`}
@@ -199,7 +222,7 @@ export default function Home() {
               🔍
             </div>
             <h3 className="mb-2 text-xl font-semibold text-gray-700 transition-colors duration-200 dark:text-gray-200">
-              No tools found
+              No items found
             </h3>
             <p className="text-gray-500 transition-colors duration-200 dark:text-gray-400">
               Try adjusting your search terms or filters
