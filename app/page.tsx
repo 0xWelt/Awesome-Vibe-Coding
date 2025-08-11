@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import ToolCard from '@/components/ToolCard';
 import SearchBar from '@/components/SearchBar';
-import CategoryFilter from '@/components/CategoryFilter';
 import TopNavPanel from '@/components/TopNavPanel';
 import Header from '@/components/Header';
 import { config } from '@/lib/config';
@@ -29,7 +28,7 @@ interface Category {
 
 export default function Home() {
   const [tools, setTools] = useState<Tool[]>([]);
-  const [categories, setCategories] = useState<{ [key: string]: Category }>({});
+  const [categories, setCategories] = useState<{ [key: string]: string[] }>({});
   const [filteredTools, setFilteredTools] = useState<Tool[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -63,8 +62,17 @@ export default function Home() {
         console.log('Loaded tools:', toolsData.length);
         console.log('Loaded categories:', Object.keys(categoriesData).length);
 
+        // 转换categories数据结构为子分类数组
+        const categorySubcategories: { [key: string]: string[] } = {};
+        Object.keys(categoriesData).forEach((categoryName) => {
+          const category = categoriesData[categoryName];
+          categorySubcategories[categoryName] = Object.keys(
+            category.subcategories || {}
+          );
+        });
+
         setTools(toolsData);
-        setCategories(categoriesData);
+        setCategories(categorySubcategories);
         setFilteredTools(toolsData);
       } catch (error) {
         console.error('Error loading data:', error);
@@ -107,21 +115,12 @@ export default function Home() {
         (tool) => tool.subcategory === selectedSubcategory
       );
     } else if (selectedCategory) {
-      // 如果选择了分类但没有选择子分类，包含该分类下所有工具（包括General子分类）
+      // 如果选择了分类但没有选择子分类，包含该分类下所有工具
       filtered = filtered.filter((tool) => tool.category === selectedCategory);
     }
 
     setFilteredTools(filtered);
   }, [tools, searchTerm, selectedCategory, selectedSubcategory]);
-
-  const handleCategoryChange = (category: string) => {
-    setSelectedCategory(category);
-    setSelectedSubcategory('');
-  };
-
-  const handleSubcategoryChange = (subcategory: string) => {
-    setSelectedSubcategory(subcategory);
-  };
 
   const clearFilters = () => {
     setSearchTerm('');
@@ -132,6 +131,10 @@ export default function Home() {
   const handleTopNavCategorySelect = (category: string) => {
     setSelectedCategory(category);
     setSelectedSubcategory('');
+  };
+
+  const handleTopNavSubcategorySelect = (subcategory: string) => {
+    setSelectedSubcategory(subcategory);
   };
 
   const handleClearTopNavSelection = () => {
@@ -157,51 +160,36 @@ export default function Home() {
       <Header />
 
       <TopNavPanel
-        categories={Object.keys(categories)}
+        categories={categories}
         selectedCategory={selectedCategory}
+        selectedSubcategory={selectedSubcategory}
         onCategorySelect={handleTopNavCategorySelect}
+        onSubcategorySelect={handleTopNavSubcategorySelect}
         onClearSelection={handleClearTopNavSelection}
       />
 
       <main className="container mx-auto px-4 py-8">
-        {/* 搜索和子分类筛选区域 */}
-        <div className="mb-8 space-y-4">
+        {/* 搜索区域 */}
+        <div className="mb-8">
           <SearchBar
             value={searchTerm}
             onChange={setSearchTerm}
             placeholder="Search tools, descriptions, or tags..."
           />
 
-          {selectedCategory && (
-            <div className="flex flex-wrap items-center gap-4">
-              <CategoryFilter
-                categories={categories}
-                selectedCategory={selectedCategory}
-                selectedSubcategory={selectedSubcategory}
-                onCategoryChange={handleCategoryChange}
-                onSubcategoryChange={handleSubcategoryChange}
-              />
-
-              {selectedSubcategory && (
-                <button
-                  onClick={clearFilters}
-                  className="btn-secondary text-sm"
-                >
-                  Clear Filters
-                </button>
-              )}
+          {(searchTerm || selectedCategory || selectedSubcategory) && (
+            <div className="mt-4 flex items-center justify-between">
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Showing {filteredTools.length} of {tools.length} items
+                {searchTerm && ` for "${searchTerm}"`}
+                {selectedCategory && ` in ${selectedCategory}`}
+                {selectedSubcategory && ` > ${selectedSubcategory}`}
+              </p>
+              <button onClick={clearFilters} className="btn-secondary text-sm">
+                Clear All Filters
+              </button>
             </div>
           )}
-        </div>
-
-        {/* 结果统计 */}
-        <div className="mb-6">
-          <p className="text-gray-600 transition-colors duration-200 dark:text-gray-300">
-            Showing {filteredTools.length} of {tools.length} items
-            {searchTerm && ` for "${searchTerm}"`}
-            {selectedCategory && ` in ${selectedCategory}`}
-            {selectedSubcategory && ` > ${selectedSubcategory}`}
-          </p>
         </div>
 
         {/* 工具卡片网格 */}
@@ -211,8 +199,8 @@ export default function Home() {
               <ToolCard
                 key={`${tool.name}-${index}`}
                 tool={tool}
-                onCategoryChange={handleCategoryChange}
-                onSubcategoryChange={handleSubcategoryChange}
+                onCategoryChange={handleTopNavCategorySelect}
+                onSubcategoryChange={handleTopNavSubcategorySelect}
               />
             ))}
           </div>
