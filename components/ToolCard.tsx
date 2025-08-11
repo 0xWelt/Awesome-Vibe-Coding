@@ -129,8 +129,8 @@ export default function ToolCard({
             .filter(
               (tag) =>
                 tag !== tool.category &&
-                tag !== tool.subcategory &&
-                tool.subcategory !== '__NO_SUBCATEGORY__'
+                (tool.subcategory === '__NO_SUBCATEGORY__' ||
+                  tag !== tool.subcategory)
             )
             .slice(0, isExpanded ? undefined : 4)
             .map((tag, index) => (
@@ -144,8 +144,8 @@ export default function ToolCard({
           {tool.tags.filter(
             (tag) =>
               tag !== tool.category &&
-              tag !== tool.subcategory &&
-              tool.subcategory !== '__NO_SUBCATEGORY__'
+              (tool.subcategory === '__NO_SUBCATEGORY__' ||
+                tag !== tool.subcategory)
           ).length > 4 &&
             !isExpanded && (
               <span className="inline-flex items-center rounded-full border border-gray-200 bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-600 transition-all duration-200 hover:scale-105 dark:border-gray-400/30 dark:bg-gray-600/20 dark:text-gray-200">
@@ -153,8 +153,8 @@ export default function ToolCard({
                 {tool.tags.filter(
                   (tag) =>
                     tag !== tool.category &&
-                    tag !== tool.subcategory &&
-                    tool.subcategory !== '__NO_SUBCATEGORY__'
+                    (tool.subcategory === '__NO_SUBCATEGORY__' ||
+                      tag !== tool.subcategory)
                 ).length - 4}
               </span>
             )}
