@@ -154,7 +154,7 @@ jobs:
           echo "- **NPM版本**: $(npm --version)" >> $GITHUB_STEP_SUMMARY
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
