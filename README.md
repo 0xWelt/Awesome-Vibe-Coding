@@ -34,6 +34,8 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [Bolt.new](#boltnew)
       - [Firebase Studio](#firebase-studio)
       - [Supabase](#supabase)
+    - [Cloud-based Agents](#cloud-based-agents)
+      - [Devin](#devin)
     - [Vibe-Coding Community](#vibe-coding-community)
       - [v0](#v0)
       - [Lovable](#lovable)
@@ -187,6 +189,22 @@ something new with templates supporting variety of languages and frameworks.
 Supabase is an open source Firebase alternative. Start your project with a
 Postgres database, Authentication, instant APIs, Edge Functions, Realtime
 subscriptions, Storage, and Vector embeddings.
+
+### Cloud-based Agents
+
+> AI software engineers that work autonomously in the cloud.
+
+#### [Devin](https://www.cognition-labs.com/introducing-devin)
+
+Devin is the world's first fully autonomous AI software engineer developed by Cognition Labs. It can plan, execute, and complete complex engineering tasks independently, from building and deploying applications to debugging code and training AI models. Devin operates in a sandboxed cloud environment with access to standard developer tools including a shell, code editor, and browser, allowing it to work just like a human engineer but with superhuman speed and accuracy.
+
+Key capabilities:
+
+- **Autonomous Planning**: Breaks down complex tasks into manageable steps
+- **Code Generation**: Writes, tests, and debugs code across multiple languages
+- **Deployment**: Builds and deploys applications to production
+- **Learning**: Adapts and learns from new technologies and frameworks
+- **Collaboration**: Works alongside human developers as a teammate
 
 ### Vibe-Coding Community
 
