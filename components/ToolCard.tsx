@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import GitHubCorner from './GitHubCorner';
 
 interface Tool {
   name: string;
@@ -67,7 +68,10 @@ export default function ToolCard({
   };
 
   return (
-    <div className="card flex h-full flex-col p-6">
+    <div className="card relative flex h-full flex-col p-6">
+      {/* GitHub Corner */}
+      <GitHubCorner url={tool.url} />
+
       <div className="flex-1">
         {/* 标题和链接 */}
         <div className="mb-4">
