@@ -327,7 +327,7 @@ deploying and hosting your vibe-coded web applications.
 
 ### [Awesome-Vibe-Coding](https://github.com/Admal-Foundation/Awesome-Vibe-Coding)
 
-A comprehensive directory of vibe coding tools and resources, built entirely through vibe coding practices. The project demonstrates meta-level implementation where content curation, frontend development, categorization logic, and deployment automation were all created using AI-assisted development. Features include automated README parsing, dynamic tool categorization, responsive Next.js interface, and continuous deployment - essentially using vibe coding to showcase vibe coding itself.
+This very project - a comprehensive directory of vibe coding tools and resources built entirely through vibe coding practices using Next.js 14 with TypeScript, Tailwind CSS, automated README parsing, GitHub Actions CI/CD and GitHub Pages deployment, covering Development Toolkits, Web-based IDEs, Cloud Agents, Community Tools, MCP Servers, Deployment Platforms, Vibe Coding Projects and Learning Resources.
 
 ### [taxi_calculator](https://github.com/0xWelt/taxi_calculator)
 
