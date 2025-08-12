@@ -295,6 +295,14 @@ Supabase is an open source Firebase alternative. Start your project with a
 Postgres database, Authentication, instant APIs, Edge Functions, Realtime
 subscriptions, Storage, and Vector embeddings.
 
+#### [HeroUI Chat](https://heroui.chat/)
+
+HeroUI Chat is an AI-powered web development platform that creates beautiful, responsive web applications using natural language. Built specifically for modern React and Next.js development, it generates production-ready code with HeroUI components, Tailwind CSS styling, and best practices. Features include instant app generation from text prompts, built-in HeroUI component library integration, automatic responsive design, real-time preview and editing, and seamless deployment options.
+
+#### [Lazy AI](https://getlazy.ai/)
+
+Lazy AI is a prompt-to-app platform that enables users to create full-stack web applications and prototypes for various purposes, including SaaS apps, APIs, and internal tools. It leverages advanced AI models to facilitate the development process, making it accessible for product managers, developers, and marketers. Features include instant full-stack app generation from natural language prompts, support for complex SaaS applications and APIs, built-in database and authentication systems, deployment-ready code generation, and collaborative tools for teams.
+
 ### Cloud-based Agents
 
 > AI software engineers that work autonomously in the cloud.
@@ -349,6 +357,10 @@ YouWare is an innovative coding community specifically designed for AI creators.
 It offers a platform where users can create, upload, and share their code
 projects. Users also have the ability to remix existing projects, building on
 the work of others to enhance collaboration and creativity.
+
+#### [Trickle](https://trickle.so/)
+
+Trickle is an AI-powered platform that transforms your ideas into production-ready web applications through natural language. Simply describe what you want to build, and Trickle generates complete full-stack applications with modern frameworks, responsive design, and deployment-ready code. Features include instant app generation from text prompts, support for complex multi-page applications, built-in database integration, automatic responsive design, and one-click deployment to the cloud.
 
 ### Mobile-first tools
 
