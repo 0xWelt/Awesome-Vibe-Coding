@@ -2,9 +2,7 @@
 
 ## Build/Lint/Test Commands
 
-- `npm run dev` - Start dev server with README parsing
-- `npm run build` - Build production bundle
-- `npm run start` - Start production server
+- `npm run build` - Build production bundle (use this instead of dev)
 - `npm run lint` - Run ESLint
 - `npm run lint:fix` - Auto-fix ESLint issues
 - `npm run format` - Format with Prettier
@@ -13,6 +11,8 @@
 - `npm run parse-readme` - Parse README.md to generate tool data
 - `npm run prepare` - Install Husky git hooks
 - `node test.js` - Run single test file
+
+**Note**: Do not run `npm run dev` (hangs), use `npm run build` and inspect generated files instead
 
 ## Code Style Guidelines
 
@@ -25,3 +25,8 @@
 - **Structure**: `/app` Next.js pages, `/components` React components
 - **Config**: Use `lib/config.ts` for environment detection
 - **Pre-commit**: Husky + lint-staged runs automatically
+
+## Communication Guidelines
+
+- **Conversation language**: Use Chinese for user communication
+- **Code language**: Use English for code, comments, and commit messages

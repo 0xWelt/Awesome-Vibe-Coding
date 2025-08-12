@@ -54,7 +54,10 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
   - [Vercel](#vercel)
   - [Railway](#railway)
   - [Netlify](#netlify)
-- [Open-Source Projects](#open-source-projects)
+- [Vibe Coding Projects](#vibe-coding-projects)
+  - [Awesome-Vibe-Coding](#awesome-vibe-coding-1)
+  - [taxi_calculator](#taxi_calculator)
+  - [VibeRL](#viberl)
 - [Learning Resources](#learning-resources)
 - [Star History](#star-history)
 - [Contributors](#contributors)
@@ -320,11 +323,17 @@ deploying and hosting your vibe-coded web applications.
 
 ## Vibe Coding Projects
 
-#### [taxi_calculator](https://github.com/0xWelt/taxi_calculator)
+> Projects created through vibe coding.
+
+### [Awesome-Vibe-Coding](https://github.com/Admal-Foundation/Awesome-Vibe-Coding)
+
+A comprehensive directory of vibe coding tools and resources, built entirely through vibe coding practices. The project demonstrates meta-level implementation where content curation, frontend development, categorization logic, and deployment automation were all created using AI-assisted development. Features include automated README parsing, dynamic tool categorization, responsive Next.js interface, and continuous deployment - essentially using vibe coding to showcase vibe coding itself.
+
+### [taxi_calculator](https://github.com/0xWelt/taxi_calculator)
 
 A Japanese taxi fare calculator web application created entirely with Cursor AI using vibe coding principles. Features interactive OpenStreetMap integration, real-time route planning with OSRM, intelligent location search supporting Chinese/Japanese/English, and accurate fare calculations based on Tokyo taxi rates (410 yen base + 80 yen per 237m + night surcharge). Built with Python Flask backend and responsive frontend, deployed on Vercel with one-click setup.
 
-#### [VibeRL](https://github.com/0xWelt/VibeRL)
+### [VibeRL](https://github.com/0xWelt/VibeRL)
 
 A modern reinforcement learning framework built through vibe coding with Kimi K2 and Claude Code. Features REINFORCE, PPO, and DQN algorithms with Gymnasium integration, async vector environments for parallel training, comprehensive testing with 50+ unit tests, and modern Python tooling including UV package management, Ruff linting, and Weights & Biases integration. Includes Snake Game environment and supports TensorBoard visualization for educational RL research.
 
