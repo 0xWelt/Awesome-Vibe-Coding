@@ -25,6 +25,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
     - [Windsurf Editor](#windsurf-editor)
     - [Void](#void)
     - [Trae](#trae)
+    - [Dyad](#dyad)
   - [IDE Extensions](#ide-extensions)
     - [Github Copilot](#github-copilot)
     - [Continue](#continue)
@@ -37,6 +38,9 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
   - [Cloud-based Agents](#cloud-based-agents)
     - [Devin](#devin)
     - [Cursor Background Agents](#cursor-background-agents)
+  - [Task Management](#task-management)
+    - [Boomerang Tasks](#boomerang-tasks)
+    - [Taskmaster AI](#taskmaster-ai)
   - [Vibe-Coding Community](#vibe-coding-community)
     - [v0](#v0)
     - [Lovable](#lovable)
@@ -128,6 +132,10 @@ AI IDE product, with intelligent productivity at its core, seamlessly integrates
 into your development process, working in perfect harmony with you to complete
 every task with higher quality and greater efficiency.
 
+#### [Dyad](https://www.dyad.sh/)
+
+Dyad is a free, local, open-source AI app builder that serves as an alternative to cloud-based tools like Lovable and Bolt.new. It provides a visual interface for building full-stack applications with AI assistance while keeping all source code and data on your local machine. Features include drag-and-drop interface building, support for any AI model with your own API keys, Supabase integration for backend functionality, and complete freedom from vendor lock-in. Runs on macOS and Windows with no sign-up required.
+
 ### IDE Extensions
 
 > Integrate AI into your existing IDEs.
@@ -206,6 +214,18 @@ Devin is the world's first fully autonomous AI software engineer developed by Co
 #### [Cursor Background Agents](https://docs.cursor.com/en/background-agent)
 
 Cursor Background Agents are asynchronous remote agents that run in isolated Ubuntu-based cloud environments and can edit and run code autonomously while you continue working on other tasks, providing a true background coding experience. These agents feature asynchronous operation that spawns agents working independently while you focus on other tasks, remote environment execution in isolated VMs with internet access and package installation capabilities, GitHub integration that automatically clones repos, works on separate branches, and pushes changes, environment customization via `.cursor/environment.json` with custom Docker setups, terminal management with persistent tmux sessions for running background processes, and privacy mode availability to ensure code isn't used for training. Background agents support Max Mode-compatible models and can be accessed via the sidebar or `Ctrl+E` shortcut, requiring GitHub read-write access and storing encrypted secrets for development environments.
+
+### Task Management
+
+> AI-powered project management tools for breaking down complex development tasks.
+
+#### [Boomerang Tasks](https://docs.roocode.com/features/boomerang-tasks)
+
+Boomerang Tasks is Roo Code's built-in orchestration system that breaks complex projects into manageable subtasks using specialized AI modes. It features an Orchestrator mode that automatically delegates work to appropriate specialized modes (Code, Architect, Debug), maintains isolated contexts for each subtask, and provides seamless workflow coordination. Each subtask runs independently with its own conversation history, preventing context overload while enabling complex multi-step development workflows.
+
+#### [Taskmaster AI](https://www.task-master.dev/)
+
+Taskmaster AI is a free, open-source project management system that acts as a PM for your AI agent. It breaks down complex projects into manageable tasks that AI can complete in single shots, eliminating context overload and preventing good code from being broken. Features include intelligent task decomposition, progress tracking, and seamless integration with existing AI coding workflows while keeping your API keys and remaining completely free to use.
 
 ### Vibe-Coding Community
 
