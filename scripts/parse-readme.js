@@ -94,13 +94,8 @@ function parseReadme() {
           ? '__NO_SUBCATEGORY__'
           : currentSubcategory || '__NO_SUBCATEGORY__';
 
-      // 确保tags只包含一级分类，并自动检测开源项目
+      // 确保tags只包含一级分类
       const tags = [currentCategory];
-
-      // 自动为GitHub项目添加"Open Source"标签
-      if (url.includes('github.com')) {
-        tags.push('Open Source');
-      }
 
       tools.push({
         name,
