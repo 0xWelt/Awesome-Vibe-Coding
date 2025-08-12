@@ -16,16 +16,6 @@ interface Tool {
   tags: string[];
 }
 
-interface Category {
-  name: string;
-  subcategories: {
-    [key: string]: {
-      name: string;
-      tools: Tool[];
-    };
-  };
-}
-
 export default function Home() {
   const [tools, setTools] = useState<Tool[]>([]);
   const [categories, setCategories] = useState<{ [key: string]: string[] }>({});
@@ -122,12 +112,6 @@ export default function Home() {
     setFilteredTools(filtered);
   }, [tools, searchTerm, selectedCategory, selectedSubcategory]);
 
-  const clearFilters = () => {
-    setSearchTerm('');
-    setSelectedCategory('');
-    setSelectedSubcategory('');
-  };
-
   const handleTopNavCategorySelect = (category: string) => {
     setSelectedCategory(category);
     setSelectedSubcategory('');
@@ -146,7 +130,7 @@ export default function Home() {
     return (
       <div className="flex min-h-screen items-center justify-center bg-gray-50 transition-colors duration-200 dark:bg-gray-900">
         <div className="text-center">
-          <div className="dark:border-primary-400 mx-auto size-12 animate-spin rounded-full border-b-2 border-primary-600"></div>
+          <div className="dark:border-primary-400 border-primary-600 mx-auto size-12 animate-spin rounded-full border-b-2"></div>
           <p className="mt-4 text-gray-600 transition-colors duration-200 dark:text-gray-300">
             Loading awesome tools...
           </p>

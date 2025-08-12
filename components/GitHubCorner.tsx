@@ -17,7 +17,7 @@ export default function GitHubCorner({
   if (!isGitHubRepo) return null;
 
   // Extract owner and repo from GitHub URL
-  const match = url.match(/github\.com\/([^\/]+)\/([^\/]+)/);
+  const match = url.match(/github\.com\/([^/]+)\/([^/]+)/);
   if (!match) return null;
 
   const [, owner, repo] = match;
