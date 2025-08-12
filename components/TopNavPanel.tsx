@@ -70,14 +70,11 @@ export default function TopNavPanel({
 
             return (
               <div className="mt-3 flex items-center space-x-2 overflow-x-auto border-t pt-3 dark:border-gray-700">
-                <span className="flex-shrink-0 text-sm font-medium text-gray-500 dark:text-gray-400">
-                  {selectedCategory}:
-                </span>
                 <button
                   onClick={() => onSubcategorySelect('')}
                   className={`rounded-full px-3 py-1.5 text-xs font-medium whitespace-nowrap transition-all ${
                     !selectedSubcategory
-                      ? 'bg-primary-100 dark:bg-primary-900/30 dark:text-primary-300 text-primary-700'
+                      ? 'bg-primary-600 text-white shadow-sm'
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
                   }`}
                 >
@@ -89,7 +86,7 @@ export default function TopNavPanel({
                     onClick={() => onSubcategorySelect(subcategory)}
                     className={`rounded-full px-3 py-1.5 text-xs font-medium whitespace-nowrap transition-all ${
                       selectedSubcategory === subcategory
-                        ? 'bg-primary-100 dark:bg-primary-900/30 dark:text-primary-300 text-primary-700'
+                        ? 'bg-primary-600 text-white shadow-sm'
                         : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
                     }`}
                   >
