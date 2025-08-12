@@ -107,6 +107,30 @@ terminal environment.
 
 Cursor CLI lets you interact with AI agents directly from your terminal to write, review, and modify code. Whether you prefer an interactive terminal interface or non-interactive automation for scripts and CI pipelines, the CLI provides powerful coding assistance right where you work. Features include interactive conversational sessions, non-interactive mode for automation, and session management to resume previous conversations with maintained context.
 
+#### [Goose](https://block.github.io/goose/)
+
+Goose is your local AI agent that automates engineering tasks seamlessly. Built with transparency and collaboration in mind, Goose runs locally to execute tasks efficiently while keeping control in your hands. It's extensible with any LLM and MCP servers, handles complex tasks autonomously from debugging to deployment, and is loved by engineers worldwide for its ability to turn hours-long workflows into simple commands.
+
+#### [MyCoder.ai](https://github.com/drivecore/mycoder)
+
+MyCoder is a powerful command-line AI agent system for coding tasks that leverages Anthropic's Claude, OpenAI models, and Ollama for intelligent assistance. It features an extensible tool system with modular architecture, parallel execution with sub-agents, self-modification capabilities, GitHub integration for issues and PRs, MCP server support, and interactive corrections during execution. With comprehensive browser automation and system browser detection, MyCoder provides a complete AI coding assistant experience directly from your terminal.
+
+#### [RA.Aid](https://github.com/ai-christianson/RA.Aid)
+
+RA.Aid (pronounced "raid") is a standalone coding agent built on LangGraph's agent-based task execution framework that helps you develop software autonomously. It provides an intelligent assistant for research, planning, and implementation of multi-step development tasks through a three-stage architecture: Research (analyzing codebases and gathering context), Planning (breaking down tasks into actionable steps), and Implementation (executing each planned step sequentially). RA.Aid can optionally integrate with aider for specialized code editing capabilities and features web research via Tavily API, human-in-the-loop interaction, chat mode, and a modern web interface with real-time streaming.
+
+#### [CodeSelect](https://github.com/maynetee/codeselect)
+
+CodeSelect is a lightweight CLI tool that helps developers share code with AI assistants like Claude or ChatGPT. It provides a simple interactive interface to select files from a project and exports them in an AI-friendly format with intelligent context about project structure and relationships between files. Features include visual file selection with checkboxes, intelligent code analysis that detects imports and file relationships, multi-language support, zero dependencies, clipboard integration, and AI-optimized output formats including LLM, Markdown, and plain text.
+
+#### [OpenAI Codex](https://github.com/openai/codex)
+
+OpenAI Codex CLI is a lightweight coding agent that runs locally in your terminal. It provides intelligent coding assistance with features like autonomous code generation, debugging, refactoring, and testing. Codex offers three levels of autonomy from read-only to full write access, runs in a secure sandbox environment, supports both interactive and non-interactive modes, integrates with ChatGPT plans for usage-based billing, and can work with open-source models via Ollama. With 34.5k+ stars, it's one of the most popular AI coding agents available.
+
+#### [Qwen Code](https://github.com/QwenLM/qwen-code)
+
+Qwen Code is a powerful command-line AI workflow tool adapted from Google Gemini CLI and optimized for Qwen3-Coder models. It provides intelligent coding assistance with features like code understanding and editing beyond traditional context windows, workflow automation for operational tasks, enhanced parser specifically optimized for Qwen-Coder models, and multiple free usage options including Qwen OAuth with 2,000 requests/day, Alibaba Cloud Bailian, ModelScope, and OpenRouter. With 9.2k+ stars, it offers comprehensive development acceleration capabilities including codebase exploration, refactoring, testing, and documentation generation.
+
 ### Standalone IDEs
 
 > IDEs build for AI native experiences.
@@ -136,6 +160,10 @@ every task with higher quality and greater efficiency.
 
 Dyad is a free, local, open-source AI app builder that serves as an alternative to cloud-based tools like Lovable and Bolt.new. It provides a visual interface for building full-stack applications with AI assistance while keeping all source code and data on your local machine. Features include drag-and-drop interface building, support for any AI model with your own API keys, Supabase integration for backend functionality, and complete freedom from vendor lock-in. Runs on macOS and Windows with no sign-up required.
 
+#### [Kiro](https://kiro.dev)
+
+Kiro is an AI IDE designed for taking projects from prototype to production through spec-driven development. It transforms prompts into clear requirements, system design, and discrete tasks while enabling collaboration on specifications and architecture. Features include agent hooks for automated task execution on events like file saves, multimodal chat support, native MCP integration for connecting to docs, databases, and APIs, autopilot mode for autonomous large task execution, VS Code compatibility with Open VSX plugins and themes, and enterprise-grade security. Currently in beta with waitlist access, Kiro helps structure AI coding with mature engineering practices.
+
 ### IDE Extensions
 
 > Integrate AI into your existing IDEs.
@@ -157,12 +185,36 @@ extensions and hub of models, rules, prompts, docs, and other building blocks。
 
 #### [Windsurf Plugins](https://windsurf.com/plugins)
 
+#### [Amazon Q Developer](https://aws.amazon.com/q/developer)
+
+Amazon Q Developer is the most capable generative AI-powered assistant for software development. It provides real-time code suggestions, vulnerability scanning, and agentic capabilities that can autonomously perform tasks like implementing features, documenting code, testing, and refactoring. Available for JetBrains, VS Code, Visual Studio, Eclipse, and command line with 50 free agentic chat interactions per month.
+
+#### [Superdesign.dev](https://www.superdesign.dev/)
+
+The first open-source design agent that lives inside your IDE. Generate multiple UI mocks, components, and wireframes in parallel. Seamlessly integrates with Cursor, Windsurf, VS Code, and Claude Code. Features include product mock generation, UI component design, wireframing, and easy forking for design iterations.
+
 Windsurf Plugins autocompletes your code with AI in all major IDEs. We
 [launched](https://www.windsurf.com/blog/codeium-copilot-alternative-in-vim)
 this implementation of the Windsurf plugin for Vim and Neovim to bring this
 modern coding superpower to more developers. Check out our
 [playground](https://www.windsurf.com/playground) if you want to quickly try out
 Windsurf online.
+
+#### [Roo Code](https://github.com/RooVetGit/Roo-Code)
+
+Roo Code gives you a whole dev team of AI agents in your code editor. It's an AI-powered autonomous coding agent that lives in VS Code, capable of communicating in natural language, reading and writing files directly in your workspace, running terminal commands, automating browser actions, and integrating with any OpenAI-compatible or custom API/model. Features include multiple specialized modes (Code, Architect, Ask, Debug), custom modes for specialized tasks, smart tools for file operations and terminal commands, MCP (Model Context Protocol) integration for unlimited custom tools, and extensive customization options. With 18.4k+ stars, it's one of the most popular AI coding extensions available.
+
+#### [Avante.nvim](https://github.com/yetone/avante.nvim)
+
+Avante.nvim is a Neovim plugin designed to emulate the behavior of the Cursor AI IDE, providing AI-driven code suggestions and the ability to apply recommendations directly to source files. Features include AI-powered code assistance with natural language interaction, one-click application of AI suggestions, support for multiple AI providers (Claude, OpenAI, Gemini, etc.), Fast Apply functionality for instant code edits with 96-98% accuracy, RAG (Retrieval-Augmented Generation) service for enhanced context, web search integration, custom tools support, and comprehensive key bindings. With 15.5k+ stars, it's the most popular AI coding plugin for Neovim.
+
+#### [Prompt Tower](https://github.com/backnotprop/prompt-tower)
+
+Prompt Tower is a VS Code extension for context management with long-context LLMs, agents, and vibe coding. It instantly builds context for entire repositories, selected files, folders, and GitHub issues to generate structured AI-XML context with real-time token counting. Features include visual file selection with checkboxes, smart context packaging with project structure, context control with `.towerignore` files, GitHub issues integration, token intelligence for model limits, and one-click context copying. Perfect for developers using Gemini's 1M context, Cursor's agent, Claude Code, or any AI assistant.
+
+#### [Augment Code](https://www.augmentcode.com/)
+
+Augment Code is the most powerful AI software development platform backed by an industry-leading context engine. It provides autonomous software agents that can plan, build, and open PRs end-to-end, both locally and in the cloud. Features include cutting-edge context retrieval that understands codebases of any size, support for VS Code, JetBrains IDEs, Vim and Neovim, native integrations with essential development tools, terminal command execution with approval controls, MCP support for 100+ external tools, CLI and TUI interfaces, smart apply functionality for one-click code changes, enterprise-grade security and privacy, and leading performance on SWE-Bench Verified. Trusted by engineers at major companies worldwide.
 
 ### Web-based IDEs
 
@@ -197,6 +249,46 @@ collaborative workspace accessible from anywhere, containing everything you need
 to develop an application. You can import your existing projects or start
 something new with templates supporting variety of languages and frameworks.
 
+#### [Capacity](https://capacity.so/)
+
+Capacity is an AI-powered platform that turns any idea into a working web app using agentic coding. Features true agentic coding with global codebase understanding, multi-file refactoring, 90% fewer errors, and adaptive pricing. Build 20x faster than traditional methods with full-stack Next.js, Tailwind CSS, and TypeScript applications ready for deployment.
+
+#### [Command.new](https://chai.new)
+
+Command.new (formerly chai.new) is a platform for vibe coding any AI agent. Turn prompts into production-ready agents with support for email agents, support agents, research agents, and more. Features a community hub with 36K+ developers sharing pre-built agents for various use cases including cold email writing, resume generation, social media management, and productivity automation.
+
+#### [Create.xyz](https://www.create.xyz)
+
+Create is a free-to-use AI app builder that turns your words into sites, tools, apps and products built with code. Add GPT-4o and 40+ integrations instantly. Build AI tools and automations without writing any code using latest AI models like Claude 3.5 Sonnet, GPT-4o, and Stable Diffusion.
+
+#### [Tempo.new](https://www.tempo.new)
+
+Tempo is where designers and developers collaborate on React apps 10x faster with AI. Features a drag-and-drop visual editor for editing React code, works with any existing React codebase, includes hundreds of components and templates, and offers GitHub integration. Backed by Y Combinator with plans from free to $4,000/month for agent-driven development.
+
+#### [Softgen](https://softgen.ai)
+
+Softgen is an AI web app builder that turns your ideas into stunning web applications with no coding required. Features AI-powered code generation, full-stack development with modern tech stack, built-in integrations for emails, payments, authentication, database, and cloud storage. Users report 800% productivity increase and can go from concept to revenue-generating product in days.
+
+#### [HeyBoss](https://www.heyboss.xyz)
+
+HeyBoss AI is the easiest no-code AI builder for sites and apps where everyone can vibe code. Create apps and websites by simply chatting with AI. Features include built-in database, AI app store, payment acceptance, visual editor, and SEO optimization. Free plan available with community support.
+
+#### [Creatr](https://getcreatr.com)
+
+Creatr is a deep build platform that goes beyond vibe coding to create real apps for real users. Features one-prompt development that asks the right questions and builds exactly what you meant in one go. Used by 1000+ teams and 40k+ happy builders to go from idea to fully-functional web apps in 12-14 hours with zero bugs and no errors.
+
+#### [Rork](https://rork.app)
+
+Rork builds complete, cross-platform mobile apps using AI and React Native. Create native mobile apps in minutes with full cross-platform compatibility, leveraging React Native for iOS and Android deployment.
+
+#### [Napkins.dev](https://www.napkins.dev)
+
+Napkins.dev turns your wireframes into working apps by uploading an image of your website design. Uses AI to build React + Tailwind applications from screenshots or design images, powered by Together AI and Llama 4.
+
+#### [Rocket.new](https://www.rocket.new)
+
+Rocket.new helps build web and mobile apps 10x faster without code. Create applications quickly using AI-powered development tools for both web and mobile platforms.
+
 #### [Supabase](https://supabase.com)
 
 Supabase is an open source Firebase alternative. Start your project with a
@@ -215,15 +307,19 @@ Devin is the world's first fully autonomous AI software engineer developed by Co
 
 Cursor Background Agents are asynchronous remote agents that run in isolated Ubuntu-based cloud environments and can edit and run code autonomously while you continue working on other tasks, providing a true background coding experience. These agents feature asynchronous operation that spawns agents working independently while you focus on other tasks, remote environment execution in isolated VMs with internet access and package installation capabilities, GitHub integration that automatically clones repos, works on separate branches, and pushes changes, environment customization via `.cursor/environment.json` with custom Docker setups, terminal management with persistent tmux sessions for running background processes, and privacy mode availability to ensure code isn't used for training. Background agents support Max Mode-compatible models and can be accessed via the sidebar or `Ctrl+E` shortcut, requiring GitHub read-write access and storing encrypted secrets for development environments.
 
+#### [Replit Ghostwriter](https://replit.com/learn/intro-to-ghostwriter)
+
+Ghostwriter is Replit's AI-powered coding assistant that serves as your partner in code. Features complete code completion, explain code functionality in plain English, transform and refactor code between languages and styles, and generate complete programs from simple prompts. Includes a 5-day beginner-friendly course to master AI-assisted programming.
+
 ### Task Management
 
 > AI-powered project management tools for breaking down complex development tasks.
 
-#### [Boomerang Tasks](https://docs.roocode.com/features/boomerang-tasks)
+#### [Boomerang Tasks](https://github.com/RooCodeInc/Roo-Code)
 
 Boomerang Tasks is Roo Code's built-in orchestration system that breaks complex projects into manageable subtasks using specialized AI modes. It features an Orchestrator mode that automatically delegates work to appropriate specialized modes (Code, Architect, Debug), maintains isolated contexts for each subtask, and provides seamless workflow coordination. Each subtask runs independently with its own conversation history, preventing context overload while enabling complex multi-step development workflows.
 
-#### [Taskmaster AI](https://www.task-master.dev/)
+#### [Taskmaster AI](https://github.com/eyaltoledano/claude-task-master)
 
 Taskmaster AI is a free, open-source project management system that acts as a PM for your AI agent. It breaks down complex projects into manageable tasks that AI can complete in single shots, eliminating context overload and preventing good code from being broken. Features include intelligent task decomposition, progress tracking, and seamless integration with existing AI coding workflows while keeping your API keys and remaining completely free to use.
 
