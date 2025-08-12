@@ -18,11 +18,11 @@ export default function TopNavPanel({
   const categoryKeys = Object.keys(categories);
 
   return (
-    <div className="sticky top-0 z-10 border-b bg-white/95 backdrop-blur-sm transition-colors duration-200 dark:border-gray-700 dark:bg-gray-900/95">
+    <div className="sticky top-0 z-10 bg-white/95 backdrop-blur-sm transition-colors duration-200 dark:bg-gray-900/95">
       <div className="container mx-auto px-4 py-3">
         {/* Primary Categories */}
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2 overflow-x-auto pb-2">
+          <div className="flex items-center space-x-2 overflow-x-auto">
             <button
               onClick={onClearSelection}
               className={`rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap transition-all ${
@@ -69,7 +69,7 @@ export default function TopNavPanel({
             if (validSubcategories.length === 0) return null;
 
             return (
-              <div className="mt-3 flex items-center space-x-2 overflow-x-auto border-t pt-3 dark:border-gray-700">
+              <div className="mt-2 flex items-center space-x-2 overflow-x-auto pt-2">
                 <button
                   onClick={() => onSubcategorySelect('')}
                   className={`rounded-full px-3 py-1.5 text-xs font-medium whitespace-nowrap transition-all ${
