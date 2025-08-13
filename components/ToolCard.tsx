@@ -43,7 +43,7 @@ export default function ToolCard({
         'border-yellow-200 bg-yellow-50 text-yellow-700 dark:border-yellow-400/30 dark:bg-yellow-400/20 dark:text-yellow-100',
       'Supporting Tools':
         'border-indigo-200 bg-indigo-50 text-indigo-700 dark:border-indigo-400/30 dark:bg-indigo-400/20 dark:text-indigo-100',
-      'Vibe-Coding Community':
+      'Vibe Coding Community':
         'border-pink-200 bg-pink-50 text-pink-700 dark:border-pink-400/30 dark:bg-pink-400/20 dark:text-pink-100',
     };
 

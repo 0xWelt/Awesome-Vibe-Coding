@@ -54,7 +54,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
   - [Task Management](#task-management)
     - [Boomerang Tasks](#boomerang-tasks)
     - [Taskmaster AI](#taskmaster-ai)
-  - [Vibe-Coding Community](#vibe-coding-community)
+  - [Vibe Coding Community](#vibe-coding-community)
     - [v0](#v0)
     - [Lovable](#lovable)
     - [YouWare](#youware)
@@ -345,7 +345,7 @@ Boomerang Tasks is Roo Code's built-in orchestration system that breaks complex 
 
 Taskmaster AI is a free, open-source project management system that acts as a PM for your AI agent. It breaks down complex projects into manageable tasks that AI can complete in single shots, eliminating context overload and preventing good code from being broken. Features include intelligent task decomposition, progress tracking, and seamless integration with existing AI coding workflows while keeping your API keys and remaining completely free to use.
 
-### Vibe-Coding Community
+### Vibe Coding Community
 
 > Create APPs with AI and share with the community.
 
@@ -488,7 +488,7 @@ A modern reinforcement learning framework built through vibe coding with Kimi K2
   - [Vibe Coding Tutorial and Best Practices (Cursor / Windsurf)](https://www.youtube.com/watch?v=YWwS911iLhg)
   - [How To Get The Most Out Of Vibe Coding | Startup School](https://www.youtube.com/watch?v=BJjsfNO5JTo)
   - [A Structured Workflow for "Vibe Coding" Full-Stack Apps -- Complete Walkthrough](https://www.youtube.com/watch?v=WYzEROo7reY)
-  - [AI’s Vibe-Coding Era — How The Shift To Apps Changed The Race](https://www.youtube.com/watch?v=mmws6Oqtq9o)
+  - [AI’s Vibe Coding Era — How The Shift To Apps Changed The Race](https://www.youtube.com/watch?v=mmws6Oqtq9o)
   - [Vibe Coding With PayPal](https://www.youtube.com/watch?v=KpKEhviBRkU)
   - [Vibe Coding with Wispr Flow and Cursor](https://www.youtube.com/watch?v=xh5PhzZZcnQ)
   - [AI Vibe Coding Tutorial + Workflow (Cursor, Best Practices, PRD, Rules, MCP)](https://www.youtube.com/watch?v=qIO9Mg1Man4)
