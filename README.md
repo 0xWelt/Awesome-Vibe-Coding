@@ -46,6 +46,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
     - [Napkins.dev](#napkinsdev)
     - [Rocket.new](#rocketnew)
     - [HeroUI Chat](#heroui-chat)
+    - [Open Lovable](#open-lovable)
     - [Lazy AI](#lazy-ai)
   - [Cloud-based Agents](#cloud-based-agents)
     - [Devin](#devin)
@@ -314,6 +315,10 @@ subscriptions, Storage, and Vector embeddings.
 #### [HeroUI Chat](https://heroui.chat/)
 
 HeroUI Chat is an AI-powered web development platform that creates beautiful, responsive web applications using natural language. Built specifically for modern React and Next.js development, it generates production-ready code with HeroUI components, Tailwind CSS styling, and best practices. Features include instant app generation from text prompts, built-in HeroUI component library integration, automatic responsive design, real-time preview and editing, and seamless deployment options.
+
+#### [Open Lovable](https://github.com/mendableai/open-lovable)
+
+Open Lovable is an open-source AI-powered React app builder that lets you chat with AI to build modern web applications instantly. Created by the Firecrawl team, it provides a complete local development environment for AI-assisted app creation. Features include real-time AI chat interface for app building, React/Next.js code generation, integration with multiple AI providers (Anthropic, OpenAI, Gemini, Groq), sandboxed code execution with E2B, web scraping capabilities with Firecrawl, and full TypeScript support. Perfect for developers who want the power of Lovable.dev in an open-source, self-hosted solution.
 
 #### [Lazy AI](https://getlazy.ai/)
 
