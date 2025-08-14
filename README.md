@@ -488,17 +488,19 @@ A modern reinforcement learning framework built through vibe coding with Kimi K2
 
 ## Learning Resources
 
-- [DeepLearning.AI](https://www.deeplearning.ai/)
-  - [Vibe Coding 101 with Replit](https://learn.deeplearning.ai/courses/vibe-coding-101-with-replit)
-  - [MCP: Build Rich Context AI Apps with Anthropic](https://www.deeplearning.ai/short-courses/mcp-build-rich-context-ai-apps-with-anthropic/)
-- [Youtube](https://www.youtube.com/)
-  - [Vibe Coding Tutorial and Best Practices (Cursor / Windsurf)](https://www.youtube.com/watch?v=YWwS911iLhg)
-  - [How To Get The Most Out Of Vibe Coding | Startup School](https://www.youtube.com/watch?v=BJjsfNO5JTo)
-  - [A Structured Workflow for "Vibe Coding" Full-Stack Apps -- Complete Walkthrough](https://www.youtube.com/watch?v=WYzEROo7reY)
-  - [AI’s Vibe Coding Era — How The Shift To Apps Changed The Race](https://www.youtube.com/watch?v=mmws6Oqtq9o)
-  - [Vibe Coding With PayPal](https://www.youtube.com/watch?v=KpKEhviBRkU)
-  - [Vibe Coding with Wispr Flow and Cursor](https://www.youtube.com/watch?v=xh5PhzZZcnQ)
-  - [AI Vibe Coding Tutorial + Workflow (Cursor, Best Practices, PRD, Rules, MCP)](https://www.youtube.com/watch?v=qIO9Mg1Man4)
+> Essential courses and educational resources to master vibe coding and AI-assisted development.
+
+### DeepLearning.AI
+
+> The premier AI education platform founded by Andrew Ng, offering comprehensive courses that bridge the gap between AI theory and practical application.
+
+#### [Vibe Coding 101 with Replit](https://learn.deeplearning.ai/courses/vibe-coding-101-with-replit)
+
+Master the art of vibe coding with this hands-on course created in partnership with Replit. Learn how to leverage AI coding agents to build and deploy web applications without traditional programming barriers. This 1-hour intensive covers agentic code development principles, practical SEO analyzer creation, and voting app implementation using Replit's cloud environment.
+
+#### [MCP: Build Rich Context AI Apps with Anthropic](https://www.deeplearning.ai/short-courses/mcp-build-rich-context-ai-apps-with-anthropic)
+
+Dive deep into the Model Context Protocol (MCP) with this comprehensive 1-hour 38-minute course developed with Anthropic. Learn to build standardized AI applications that seamlessly connect to external tools and data sources. Master MCP server creation, client implementation, and deployment strategies for building rich-context AI applications with minimal integration overhead.
 
 ## Star History
 
