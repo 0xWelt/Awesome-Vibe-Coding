@@ -25,8 +25,7 @@ function parseReadme() {
       !line.includes('Table of Contents') &&
       !line.includes('Star History') &&
       !line.includes('Contributors') &&
-      !line.includes('License') &&
-      !line.includes('Learning Resources')
+      !line.includes('License')
     ) {
       currentCategory = line.replace('## ', '').trim();
       currentSubcategory = '';
@@ -143,7 +142,7 @@ function generateCategories(tools) {
 
 // 主函数
 function main() {
-  console.log('开始解析README.md...');
+  console.log('Parsing README.md...');
 
   const tools = parseReadme();
   const categories = generateCategories(tools);
@@ -169,20 +168,20 @@ function main() {
     fs.rmSync(oldDataDir, { recursive: true, force: true });
   }
 
-  console.log(`解析完成！共找到 ${tools.length} 个工具`);
-  console.log(`分类数量: ${Object.keys(categories).length}`);
+  console.log(`Parsing complete! Found ${tools.length} items`);
+  console.log(`Categories: ${Object.keys(categories).length}`);
 
   // 输出统计信息
   Object.keys(categories).forEach((category) => {
     const subcategoryCount = Object.keys(
       categories[category].subcategories
     ).length;
-    const toolCount = Object.values(categories[category].subcategories).reduce(
+    const itemCount = Object.values(categories[category].subcategories).reduce(
       (sum, sub) => sum + sub.tools.length,
       0
     );
     console.log(
-      `- ${category}: ${subcategoryCount} 个子分类, ${toolCount} 个工具`
+      `- ${category}: ${subcategoryCount} subcategories, ${itemCount} items`
     );
   });
 }
