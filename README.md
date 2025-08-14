@@ -199,6 +199,8 @@ extensions and hub of models, rules, prompts, docs, and other building blocks。
 
 #### [Windsurf Plugins](https://windsurf.com/plugins)
 
+Windsurf Plugins bring AI-powered coding assistance to JetBrains, VS Code, and 40+ other editors. Features intelligent autocomplete, Cascade agent for multi-file editing, and support for 70+ programming languages. Trusted by 5.5M+ developers worldwide.
+
 #### [Amazon Q Developer](https://aws.amazon.com/q/developer)
 
 Amazon Q Developer is the most capable generative AI-powered assistant for software development. It provides real-time code suggestions, vulnerability scanning, and agentic capabilities that can autonomously perform tasks like implementing features, documenting code, testing, and refactoring. Available for JetBrains, VS Code, Visual Studio, Eclipse, and command line with 50 free agentic chat interactions per month.
