@@ -13,6 +13,9 @@ function parseReadme() {
 
   const lines = readmeContent.split('\n');
   const tools = [];
+  const categoryDescriptions = {};
+  const subcategoryDescriptions = {};
+
   let currentCategory = '';
   let currentSubcategory = '';
 
@@ -29,12 +32,33 @@ function parseReadme() {
     ) {
       currentCategory = line.replace('## ', '').trim();
       currentSubcategory = '';
+
+      // 查找主分类的注释信息
+      let j = i + 1;
+      while (j < lines.length && lines[j].trim() === '') {
+        j++;
+      }
+      if (j < lines.length && lines[j].trim().startsWith('>')) {
+        categoryDescriptions[currentCategory] = lines[j]
+          .trim()
+          .replace(/^>\s*/, '');
+      }
       continue;
     }
 
     // 检测子分类 (### 开头)
     if (line.startsWith('### ') && !line.startsWith('### [')) {
       currentSubcategory = line.replace('### ', '').trim();
+
+      // 查找子分类的注释信息
+      let j = i + 1;
+      while (j < lines.length && lines[j].trim() === '') {
+        j++;
+      }
+      if (j < lines.length && lines[j].trim().startsWith('>')) {
+        subcategoryDescriptions[`${currentCategory}|${currentSubcategory}`] =
+          lines[j].trim().replace(/^>\s*/, '');
+      }
       continue;
     }
 
@@ -107,27 +131,37 @@ function parseReadme() {
     }
   }
 
-  return tools;
+  return { tools, categoryDescriptions, subcategoryDescriptions };
 }
 
 // 生成分类数据
-function generateCategories(tools) {
+function generateCategories(
+  tools,
+  categoryDescriptions,
+  subcategoryDescriptions
+) {
   const categories = {};
 
   tools.forEach((tool) => {
     if (!categories[tool.category]) {
       categories[tool.category] = {
         name: tool.category,
+        description: categoryDescriptions[tool.category] || '',
         subcategories: {},
       };
     }
 
     // 如果没有子分类，使用主分类作为子分类
     const effectiveSubcategory = tool.subcategory || tool.category;
+    const subcategoryKey = `${tool.category}|${effectiveSubcategory}`;
 
     if (!categories[tool.category].subcategories[effectiveSubcategory]) {
       categories[tool.category].subcategories[effectiveSubcategory] = {
-        name: effectiveSubcategory,
+        name:
+          effectiveSubcategory === '__NO_SUBCATEGORY__'
+            ? tool.category
+            : effectiveSubcategory,
+        description: subcategoryDescriptions[subcategoryKey] || '',
         tools: [],
       };
     }
@@ -144,8 +178,13 @@ function generateCategories(tools) {
 function main() {
   console.log('Parsing README.md...');
 
-  const tools = parseReadme();
-  const categories = generateCategories(tools);
+  const { tools, categoryDescriptions, subcategoryDescriptions } =
+    parseReadme();
+  const categories = generateCategories(
+    tools,
+    categoryDescriptions,
+    subcategoryDescriptions
+  );
 
   // 创建数据目录 - 只保留public/data，移除重复的data目录
   const publicDataDir = path.join(__dirname, '..', 'public', 'data');

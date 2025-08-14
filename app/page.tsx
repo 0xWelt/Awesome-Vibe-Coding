@@ -16,9 +16,24 @@ interface Tool {
   tags: string[];
 }
 
+interface CategoryData {
+  name: string;
+  description: string;
+  subcategories: Record<
+    string,
+    {
+      name: string;
+      description: string;
+      tools: any[];
+    }
+  >;
+}
+
 export default function Home() {
   const [tools, setTools] = useState<Tool[]>([]);
-  const [categories, setCategories] = useState<{ [key: string]: string[] }>({});
+  const [categories, setCategories] = useState<Record<string, CategoryData>>(
+    {}
+  );
   const [filteredTools, setFilteredTools] = useState<Tool[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -52,17 +67,8 @@ export default function Home() {
         console.log('Loaded tools:', toolsData.length);
         console.log('Loaded categories:', Object.keys(categoriesData).length);
 
-        // 转换categories数据结构为子分类数组
-        const categorySubcategories: { [key: string]: string[] } = {};
-        Object.keys(categoriesData).forEach((categoryName) => {
-          const category = categoriesData[categoryName];
-          categorySubcategories[categoryName] = Object.keys(
-            category.subcategories || {}
-          );
-        });
-
         setTools(toolsData);
-        setCategories(categorySubcategories);
+        setCategories(categoriesData);
         setFilteredTools(toolsData);
       } catch (error) {
         console.error('Error loading data:', error);
