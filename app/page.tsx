@@ -6,6 +6,7 @@ import SearchBar from '@/components/SearchBar';
 import TopNavPanel from '@/components/TopNavPanel';
 import Header from '@/components/Header';
 import { config } from '@/lib/config';
+import { initializeColorManager } from '@/lib/colorManager';
 
 interface Tool {
   name: string;
@@ -66,6 +67,9 @@ export default function Home() {
 
         console.log('Loaded tools:', toolsData.length);
         console.log('Loaded categories:', Object.keys(categoriesData).length);
+
+        // 初始化颜色管理器
+        initializeColorManager(toolsData);
 
         setTools(toolsData);
         setCategories(categoriesData);

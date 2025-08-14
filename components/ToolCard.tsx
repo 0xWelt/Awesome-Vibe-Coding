@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import GitHubCorner from './GitHubCorner';
+import { colorManager } from '@/lib/colorManager';
 
 interface Tool {
   name: string;
@@ -23,34 +24,13 @@ export default function ToolCard({
 }: ToolCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const getSubcategoryColor = (subcategory: string) => {
+  const getSubcategoryColor = (category: string, subcategory: string) => {
     if (subcategory === '__NO_SUBCATEGORY__') {
       return '';
     }
 
-    const colorMap: { [key: string]: string } = {
-      'CLI Tools':
-        'border-green-200 bg-green-50 text-green-700 dark:border-green-400/30 dark:bg-green-400/20 dark:text-green-100',
-      'Standalone IDEs':
-        'border-teal-200 bg-teal-50 text-teal-700 dark:border-teal-400/30 dark:bg-teal-400/20 dark:text-teal-100',
-      'Web-based IDEs':
-        'border-purple-200 bg-purple-50 text-purple-700 dark:border-purple-400/30 dark:bg-purple-400/20 dark:text-purple-100',
-      'IDE Extensions':
-        'border-orange-200 bg-orange-50 text-orange-700 dark:border-orange-400/30 dark:bg-orange-400/20 dark:text-orange-100',
-      'MCP Server Hub':
-        'border-red-200 bg-red-50 text-red-700 dark:border-red-400/30 dark:bg-red-400/20 dark:text-red-100',
-      'Mobile-first tools':
-        'border-yellow-200 bg-yellow-50 text-yellow-700 dark:border-yellow-400/30 dark:bg-yellow-400/20 dark:text-yellow-100',
-      'Supporting Tools':
-        'border-indigo-200 bg-indigo-50 text-indigo-700 dark:border-indigo-400/30 dark:bg-indigo-400/20 dark:text-indigo-100',
-      'Vibe Coding Community':
-        'border-pink-200 bg-pink-50 text-pink-700 dark:border-pink-400/30 dark:bg-pink-400/20 dark:text-pink-100',
-    };
-
-    return (
-      colorMap[subcategory] ||
-      'border-purple-200 bg-purple-50 text-purple-700 dark:border-purple-400/30 dark:bg-purple-400/20 dark:text-purple-100'
-    );
+    // 使用全局颜色管理器获取颜色
+    return colorManager.getSubcategoryColor(category, subcategory);
   };
 
   const getDomainFromUrl = (url: string) => {
@@ -120,7 +100,7 @@ export default function ToolCard({
                 onCategoryChange?.(tool.category);
                 onSubcategoryChange?.(tool.subcategory);
               }}
-              className={`inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-semibold transition-all duration-200 hover:scale-105 hover:shadow-sm ${getSubcategoryColor(tool.subcategory)}`}
+              className={`inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-semibold transition-all duration-200 hover:scale-105 hover:shadow-sm ${getSubcategoryColor(tool.category, tool.subcategory)}`}
             >
               {tool.subcategory}
             </button>
