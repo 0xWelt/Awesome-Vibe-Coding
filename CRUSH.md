@@ -10,7 +10,7 @@
 - `npm run type-check` - TypeScript type checking
 - `npm run parse-readme` - Parse README.md to generate tool data
 - `npm run prepare` - Install Husky git hooks
-- `node test.js` - Run single test file
+- `node scripts/parse-readme.js` - Run single script directly
 
 **Note**: Do not run `npm run dev` (hangs), use `npm run build` and inspect generated files instead
 
