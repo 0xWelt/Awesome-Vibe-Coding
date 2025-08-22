@@ -30,11 +30,24 @@ interface CategoryData {
   >;
 }
 
+interface ProjectInfo {
+  title: string;
+  description: string;
+  itemCount: number;
+  categoryCount: number;
+}
+
 export default function Home() {
   const [tools, setTools] = useState<Tool[]>([]);
   const [categories, setCategories] = useState<Record<string, CategoryData>>(
     {}
   );
+  const [projectInfo, setProjectInfo] = useState<ProjectInfo>({
+    title: '',
+    description: '',
+    itemCount: 0,
+    categoryCount: 0,
+  });
   const [filteredTools, setFilteredTools] = useState<Tool[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -48,13 +61,20 @@ export default function Home() {
         // 使用统一的路径配置
         const toolsPath = config.runtime.getDataPath('tools.json');
         const categoriesPath = config.runtime.getDataPath('categories.json');
+        const projectPath = config.runtime.getDataPath('project.json');
 
-        console.log('Loading data from paths:', { toolsPath, categoriesPath });
+        console.log('Loading data from paths:', {
+          toolsPath,
+          categoriesPath,
+          projectPath,
+        });
 
-        const [toolsResponse, categoriesResponse] = await Promise.all([
-          fetch(toolsPath),
-          fetch(categoriesPath),
-        ]);
+        const [toolsResponse, categoriesResponse, projectResponse] =
+          await Promise.all([
+            fetch(toolsPath),
+            fetch(categoriesPath),
+            fetch(projectPath),
+          ]);
 
         if (!toolsResponse.ok || !categoriesResponse.ok) {
           throw new Error(
@@ -64,21 +84,31 @@ export default function Home() {
 
         const toolsData = await toolsResponse.json();
         const categoriesData = await categoriesResponse.json();
+        const projectData = await projectResponse.json();
 
         console.log('Loaded tools:', toolsData.length);
         console.log('Loaded categories:', Object.keys(categoriesData).length);
+        console.log('Project info:', projectData);
 
         // 初始化颜色管理器
         initializeColorManager(toolsData);
 
         setTools(toolsData);
         setCategories(categoriesData);
+        setProjectInfo(projectData);
         setFilteredTools(toolsData);
       } catch (error) {
         console.error('Error loading data:', error);
         // 显示错误信息给用户
         setTools([]);
         setCategories({});
+        setProjectInfo({
+          title: 'Parse Error',
+          description:
+            'Failed to load project data. Please check README.md format.',
+          itemCount: 0,
+          categoryCount: 0,
+        });
         setFilteredTools([]);
       } finally {
         setLoading(false);
@@ -142,7 +172,7 @@ export default function Home() {
         <div className="text-center">
           <div className="dark:border-primary-400 border-primary-600 mx-auto size-12 animate-spin rounded-full border-b-2"></div>
           <p className="mt-4 text-gray-600 transition-colors duration-200 dark:text-gray-300">
-            Loading awesome tools...
+            Loading project data...
           </p>
         </div>
       </div>
@@ -151,7 +181,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-50 transition-colors duration-200 dark:bg-gray-900">
-      <Header />
+      <Header title={projectInfo.title} description={projectInfo.description} />
 
       <TopNavPanel
         categories={categories}

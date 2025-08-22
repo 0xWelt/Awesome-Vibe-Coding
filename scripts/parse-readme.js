@@ -19,6 +19,42 @@ function parseReadme() {
   let currentCategory = '';
   let currentSubcategory = '';
 
+  // 提取标题和描述
+  const titleMatch = readmeContent.match(/^#\s+(.+)$/m);
+  if (!titleMatch) {
+    console.error('❌ ERROR: README.md must start with # Title');
+    console.error('   Example: # My Awesome List');
+    process.exit(1);
+  }
+  const title = titleMatch[1].trim();
+
+  let description = '';
+  const readmeLines = readmeContent.split(/\r?\n/);
+
+  // 找标题后的第一个非空非标题行
+  let foundTitle = false;
+  for (let i = 0; i < readmeLines.length; i++) {
+    const line = readmeLines[i].trim();
+    if (!foundTitle && line.startsWith('# ')) {
+      foundTitle = true;
+      continue;
+    }
+    if (foundTitle && line && !line.startsWith('#') && !line.startsWith('[')) {
+      description = line.replace(/^>/, '').trim();
+      break;
+    }
+  }
+
+  if (!description) {
+    console.error(
+      '❌ ERROR: README.md must have a description after the title'
+    );
+    console.error('   Example: # My Awesome List');
+    console.error('   ');
+    console.error('   A curated list of awesome resources');
+    process.exit(1);
+  }
+
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i].trim();
 
@@ -131,7 +167,13 @@ function parseReadme() {
     }
   }
 
-  return { tools, categoryDescriptions, subcategoryDescriptions };
+  return {
+    title,
+    description,
+    tools,
+    categoryDescriptions,
+    subcategoryDescriptions,
+  };
 }
 
 // 生成分类数据
@@ -178,8 +220,13 @@ function generateCategories(
 function main() {
   console.log('Parsing README.md...');
 
-  const { tools, categoryDescriptions, subcategoryDescriptions } =
-    parseReadme();
+  const {
+    title,
+    description,
+    tools,
+    categoryDescriptions,
+    subcategoryDescriptions,
+  } = parseReadme();
   const categories = generateCategories(
     tools,
     categoryDescriptions,
@@ -197,6 +244,16 @@ function main() {
   const toolsJson = JSON.stringify(tools, null, 2);
   fs.writeFileSync(path.join(publicDataDir, 'tools.json'), toolsJson);
 
+  // 写入项目信息
+  const projectInfo = {
+    title,
+    description,
+    itemCount: tools.length,
+    categoryCount: Object.keys(categories).length,
+  };
+  const projectInfoJson = JSON.stringify(projectInfo, null, 2);
+  fs.writeFileSync(path.join(publicDataDir, 'project.json'), projectInfoJson);
+
   // 写入分类数据
   const categoriesJson = JSON.stringify(categories, null, 2);
   fs.writeFileSync(path.join(publicDataDir, 'categories.json'), categoriesJson);
@@ -209,6 +266,8 @@ function main() {
 
   console.log(`Parsing complete! Found ${tools.length} items`);
   console.log(`Categories: ${Object.keys(categories).length}`);
+  console.log(`Title: ${title}`);
+  console.log(`Description: ${description}`);
 
   // 输出统计信息
   Object.keys(categories).forEach((category) => {
