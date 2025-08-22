@@ -3,6 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "author": "0xWelt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0xWelt/Awesome-Vibe-Coding"
+  },
+  "bugs": {
+    "url": "https://github.com/0xWelt/Awesome-Vibe-Coding/issues"
+  },
+  "homepage": "https://0xWelt.github.io/Awesome-Vibe-Coding/",
   "scripts": {
     "dev": "npm run parse-readme && next dev",
     "build": "npm run parse-readme && next build",

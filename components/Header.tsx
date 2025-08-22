@@ -18,7 +18,7 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <ThemeToggle />
             <a
-              href="https://github.com/Admal-Foundation/Awesome-Vibe-Coding"
+              href="https://github.com/0xWelt/Awesome-Vibe-Coding"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-gray-700 shadow-sm transition-all hover:border-gray-400 hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-500 dark:hover:bg-gray-700"

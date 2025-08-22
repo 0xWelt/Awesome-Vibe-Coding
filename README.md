@@ -1,14 +1,14 @@
 # Awesome-Vibe-Coding
 
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fadmal-foundation.github.io%2FAwesome-Vibe-Coding%2F&label=Live%20Site)](https://admal-foundation.github.io/Awesome-Vibe-Coding/)
-[![GitHub stars](https://img.shields.io/github/stars/Admal-Foundation/Awesome-Vibe-Coding?style=social)](https://github.com/Admal-Foundation/Awesome-Vibe-Coding)
-[![GitHub forks](https://img.shields.io/github/forks/Admal-Foundation/Awesome-Vibe-Coding?style=social)](https://github.com/Admal-Foundation/Awesome-Vibe-Coding/fork)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2F0xWelt.github.io%2FAwesome-Vibe-Coding%2F&label=Live%20Site)](https://0xWelt.github.io/Awesome-Vibe-Coding/)
+[![GitHub stars](https://img.shields.io/github/stars/0xWelt/Awesome-Vibe-Coding?style=social)](https://github.com/0xWelt/Awesome-Vibe-Coding)
+[![GitHub forks](https://img.shields.io/github/forks/0xWelt/Awesome-Vibe-Coding?style=social)](https://github.com/0xWelt/Awesome-Vibe-Coding/fork)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resources
 
-🌐 **Live Website**: [https://admal-foundation.github.io/Awesome-Vibe-Coding/](https://admal-foundation.github.io/Awesome-Vibe-Coding/)
+🌐 **Live Website**: [https://0xWelt.github.io/Awesome-Vibe-Coding/](https://0xWelt.github.io/Awesome-Vibe-Coding/)
 
 ## Table of Contents
 
@@ -476,7 +476,7 @@ deploying and hosting your vibe-coded web applications.
 
 > Projects created through vibe coding.
 
-### [Awesome-Vibe-Coding](https://github.com/Admal-Foundation/Awesome-Vibe-Coding)
+### [Awesome-Vibe-Coding](https://github.com/0xWelt/Awesome-Vibe-Coding)
 
 This very project - a comprehensive directory of vibe coding tools and resources built entirely through vibe coding practices using Next.js 14 with TypeScript, Tailwind CSS, automated README parsing, GitHub Actions CI/CD and GitHub Pages deployment, covering Development Toolkits, Web-based IDEs, Cloud Agents, Community Tools, MCP Servers, Deployment Platforms, Vibe Coding Projects and Learning Resources.
 
@@ -506,14 +506,14 @@ Dive deep into the Model Context Protocol (MCP) with this comprehensive 1-hour 3
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Admal-Foundation/Awesome-Vibe-Coding&type=Date)](https://star-history.com/#Admal-Foundation/Awesome-Vibe-Coding&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=0xWelt/Awesome-Vibe-Coding&type=Date)](https://star-history.com/#0xWelt/Awesome-Vibe-Coding&Date)
 
 ## Contributors
 
 This project exists thanks to all the people who contribute.
 
-<a href="https://github.com/Admal-Foundation/Awesome-Vibe-Coding/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Admal-Foundation/Awesome-Vibe-Coding" />
+<a href="https://github.com/0xWelt/Awesome-Vibe-Coding/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=0xWelt/Awesome-Vibe-Coding" />
 </a>
 
 ## License

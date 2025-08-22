@@ -7,9 +7,9 @@ updates:
       interval: 'weekly'
     open-pull-requests-limit: 10
     reviewers:
-      - 'Admal-Foundation/maintainers'
+      - '0xWelt/maintainers'
     assignees:
-      - 'Admal-Foundation/maintainers'
+      - '0xWelt/maintainers'
     commit-message:
       prefix: 'chore'
       include: 'scope'
@@ -36,9 +36,9 @@ updates:
       interval: 'weekly'
     open-pull-requests-limit: 5
     reviewers:
-      - 'Admal-Foundation/maintainers'
+      - '0xWelt/maintainers'
     assignees:
-      - 'Admal-Foundation/maintainers'
+      - '0xWelt/maintainers'
     commit-message:
       prefix: 'chore'
       include: 'scope'
