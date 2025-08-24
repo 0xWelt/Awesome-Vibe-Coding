@@ -17,17 +17,22 @@ jobs:
         uses: actions/checkout@v5
         with:
           fetch-depth: 0 # Get full history
-          submodules: true
 
       - name: Check if build is needed
         id: check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Monitor README.md, yaal.config.yaml, and yaal submodule changes
-          README_PATTERN="^README.md"
-          CONFIG_PATTERN="^yaal.config.yaml"
-          SUBMODULE_PATTERN="^yaal"
+          # Define file patterns to monitor
+          PATTERNS="README.md|app/|components/|scripts/|package.json|package-lock.json|next.config.mjs|tsconfig.json|tailwind.config.js|.github/workflows/|yaal.config.yaml"
+
+          # Define detailed file categories
+          README_PATTERN="README.md"
+          APP_PATTERN="^app/"
+          COMPONENTS_PATTERN="^components/"
+          SCRIPTS_PATTERN="^scripts/"
+          CONFIG_PATTERN="(package\.json|package-lock\.json|next\.config\.js|tsconfig\.json|tailwind\.config\.js)"
+          WORKFLOW_PATTERN="^\.github/workflows/"
 
           # Use GitHub API to find last successful build-and-deploy commit
           echo "🔍 Querying last successful build-and-deploy commit..."
@@ -60,36 +65,55 @@ jobs:
                 echo "  - $file"
               done
               
-              # Check if README.md, yaal.config.yaml, or yaal submodule changed
+              # Analyze matching files
+              MATCHING_FILES=""
               README_CHANGED=false
+              APP_CHANGED=false
+              COMPONENTS_CHANGED=false
+              SCRIPTS_CHANGED=false
               CONFIG_CHANGED=false
-              SUBMODULE_CHANGED=false
+              WORKFLOW_CHANGED=false
+              
               while IFS= read -r file; do
                 if echo "$file" | grep -qE "$README_PATTERN"; then
                   README_CHANGED=true
-                fi
-                if echo "$file" | grep -qE "$CONFIG_PATTERN"; then
+                  MATCHING_FILES="$MATCHING_FILES README"
+                elif echo "$file" | grep -qE "$APP_PATTERN"; then
+                  APP_CHANGED=true
+                  MATCHING_FILES="$MATCHING_FILES APP"
+                elif echo "$file" | grep -qE "$COMPONENTS_PATTERN"; then
+                  COMPONENTS_CHANGED=true
+                  MATCHING_FILES="$MATCHING_FILES COMPONENTS"
+                elif echo "$file" | grep -qE "$SCRIPTS_PATTERN"; then
+                  SCRIPTS_CHANGED=true
+                  MATCHING_FILES="$MATCHING_FILES SCRIPTS"
+                elif echo "$file" | grep -qE "$CONFIG_PATTERN"; then
                   CONFIG_CHANGED=true
-                fi
-                if echo "$file" | grep -qE "$SUBMODULE_PATTERN"; then
-                  SUBMODULE_CHANGED=true
+                  MATCHING_FILES="$MATCHING_FILES CONFIG"
+                elif echo "$file" | grep -qE "$WORKFLOW_PATTERN"; then
+                  WORKFLOW_CHANGED=true
+                  MATCHING_FILES="$MATCHING_FILES WORKFLOW"
                 fi
               done <<< "$CHANGED_FILES"
               
               # Build detailed reason
               REASON="Changes detected:"
               [ "$README_CHANGED" = true ] && REASON="$REASON README.md"
-              [ "$CONFIG_CHANGED" = true ] && REASON="$REASON config file"
-              [ "$SUBMODULE_CHANGED" = true ] && REASON="$REASON yaal submodule"
+              [ "$APP_CHANGED" = true ] && REASON="$REASON app files"
+              [ "$COMPONENTS_CHANGED" = true ] && REASON="$REASON component files"
+              [ "$SCRIPTS_CHANGED" = true ] && REASON="$REASON script files"
+              [ "$CONFIG_CHANGED" = true ] && REASON="$REASON config files"
+              [ "$WORKFLOW_CHANGED" = true ] && REASON="$REASON workflow files"
               
-              if [ "$README_CHANGED" = true ] || [ "$CONFIG_CHANGED" = true ] || [ "$SUBMODULE_CHANGED" = true ]; then
-                echo "🔍 $REASON - rebuild needed"
+              # Check if matching files exist
+              if [ -n "$MATCHING_FILES" ]; then
+                echo "🔍 Matched file types requiring rebuild: $MATCHING_FILES"
                 echo "build-reason=$REASON" >> $GITHUB_OUTPUT
                 echo "changed-files=$(echo "$CHANGED_FILES" | head -20 | sed ':a;N;$!ba;s/\n/, /g')" >> $GITHUB_OUTPUT
                 BUILD_NEEDED=true
               else
-                echo "ℹ️  No relevant changes - no rebuild needed"
-                echo "build-reason=No relevant changes" >> $GITHUB_OUTPUT
+                echo "ℹ️  Changed files do not affect build"
+                echo "build-reason=Changed files do not affect build" >> $GITHUB_OUTPUT
                 echo "changed-files=$(echo "$CHANGED_FILES" | head -10 | sed ':a;N;$!ba;s/\n/, /g')" >> $GITHUB_OUTPUT
                 BUILD_NEEDED=false
               fi
@@ -111,30 +135,23 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
-        with:
-          submodules: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: yaal/package-lock.json
 
       - name: Install dependencies
-        working-directory: ./yaal
         run: npm ci
 
       - name: Generate configuration
-        working-directory: ./yaal
         run: node scripts/generate-github-config.js
 
       - name: Parse README and generate data
-        working-directory: ./yaal
-        run: node scripts/parse-readme.js
+        run: npm run parse-readme
 
       - name: Build website
-        working-directory: ./yaal
         run: npm run build
 
       - name: Build Summary
@@ -152,7 +169,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./yaal/out
+          path: ./out
 
       - name: Deploy to GitHub Pages
         id: deployment

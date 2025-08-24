@@ -1,48 +1,15 @@
 version: 2
 updates:
-  # Enable version updates for npm
-  - package-ecosystem: 'npm'
-    directory: '/'
+  - package-ecosystem: "gitsubmodule"
+    directory: "/"                    # 仓库根目录
     schedule:
-      interval: 'weekly'
-    open-pull-requests-limit: 10
-    reviewers:
-      - '0xWelt/maintainers'
-    assignees:
-      - '0xWelt/maintainers'
+      interval: "daily"               # 每天检查一次
+      time: "04:00"                   # UTC 时间 04:00（中国时间中午12点）
     commit-message:
-      prefix: 'chore'
-      include: 'scope'
+      prefix: "chore(deps)"           # 提交信息前缀
     labels:
-      - 'dependencies'
-      - 'automated'
-    # Group updates to reduce PR noise
-    groups:
-      development-dependencies:
-        dependency-type: 'development'
-        update-types:
-          - 'minor'
-          - 'patch'
-      production-dependencies:
-        dependency-type: 'production'
-        update-types:
-          - 'minor'
-          - 'patch'
+      - "dependencies"
+      - "submodules"
+      - "auto-merge"                 # 用于触发自动合并
+    open-pull-requests-limit: 10      # 最多同时打开 10 个子模块 PR
 
-  # Enable version updates for GitHub Actions
-  - package-ecosystem: 'github-actions'
-    directory: '/'
-    schedule:
-      interval: 'weekly'
-    open-pull-requests-limit: 5
-    reviewers:
-      - '0xWelt/maintainers'
-    assignees:
-      - '0xWelt/maintainers'
-    commit-message:
-      prefix: 'chore'
-      include: 'scope'
-    labels:
-      - 'dependencies'
-      - 'github-actions'
-      - 'automated'

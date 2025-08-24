@@ -137,3 +137,6 @@ analyze/
 
 # Generated data
 data/
+
+# Auto-generated configuration
+/lib/githubConfig.ts

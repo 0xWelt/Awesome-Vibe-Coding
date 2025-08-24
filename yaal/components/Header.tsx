@@ -1,4 +1,5 @@
 import ThemeToggle from './ThemeToggle';
+import { githubConfig } from '@/lib/githubConfig';
 
 interface HeaderProps {
   title: string;
@@ -6,28 +7,6 @@ interface HeaderProps {
 }
 
 export default function Header({ title, description }: HeaderProps) {
-  // 从当前URL推断GitHub仓库
-  const getGitHubUrl = () => {
-    if (typeof window !== 'undefined') {
-      const hostname = window.location.hostname;
-      const pathname = window.location.pathname;
-
-      if (hostname.includes('github.io')) {
-        // GitHub Pages: username.github.io/repo-name
-        const parts = pathname.split('/').filter((p) => p);
-        if (parts.length > 0) {
-          const repo = parts[0];
-          const username = hostname.replace('.github.io', '');
-          return `https://github.com/${username}/${repo}`;
-        }
-      }
-
-      // 默认返回当前域名
-      return window.location.origin;
-    }
-    return '#';
-  };
-
   return (
     <header className="border-b border-gray-200 bg-white shadow-sm transition-colors duration-200 dark:border-gray-700 dark:bg-gray-800">
       <div className="container mx-auto px-4 py-6">
@@ -44,7 +23,7 @@ export default function Header({ title, description }: HeaderProps) {
           <div className="flex items-center space-x-4">
             <ThemeToggle />
             <a
-              href={getGitHubUrl()}
+              href={githubConfig.url}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-gray-700 shadow-sm transition-all hover:border-gray-400 hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-500 dark:hover:bg-gray-700"

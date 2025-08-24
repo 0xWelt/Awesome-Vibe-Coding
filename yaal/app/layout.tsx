@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import React from 'react';
 import './globals.css';
+import { siteConfig } from '@/lib/githubConfig';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Awesome Vibe Coding',
-  description:
-    'A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resources',
+  title: siteConfig.title,
+  description: siteConfig.description,
 };
 
 export default function RootLayout({

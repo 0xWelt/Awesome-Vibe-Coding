@@ -1,20 +1,20 @@
 {
-  "name": "awesome-vibe-coding-website",
+  "name": "yaal",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "author": "0xWelt",
   "repository": {
     "type": "git",
-    "url": "https://github.com/0xWelt/Awesome-Vibe-Coding"
+    "url": "https://github.com/0xWelt/yaal"
   },
   "bugs": {
-    "url": "https://github.com/0xWelt/Awesome-Vibe-Coding/issues"
+    "url": "https://github.com/0xWelt/yaal/issues"
   },
-  "homepage": "https://0xWelt.github.io/Awesome-Vibe-Coding/",
+  "homepage": "https://0xWelt.github.io/yaal/",
   "scripts": {
-    "dev": "npm run parse-readme && next dev",
-    "build": "npm run parse-readme && next build",
+    "dev": "node scripts/generate-github-config.js && node scripts/parse-readme.js && next dev",
+    "build": "node scripts/generate-github-config.js && node scripts/parse-readme.js && next build",
     "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -37,6 +37,7 @@
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.33.0",
     "@tailwindcss/postcss": "^4.1.12",
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "^24.3.0",
     "@types/react": "^19.1.9",
     "@types/react-dom": "^19.1.7",
@@ -46,6 +47,7 @@
     "eslint-config-next": "^15.4.6",
     "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
+    "js-yaml": "^4.1.0",
     "lint-staged": "^16.1.5",
     "postcss": "^8.5.1",
     "prettier": "^3.3.3",

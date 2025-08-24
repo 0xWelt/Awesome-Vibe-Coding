@@ -1,0 +1,3 @@
+[submodule "yaal"]
+	path = yaal
+	url = https://github.com/0xWelt/yaal.git

@@ -14,7 +14,6 @@ interface Tool {
   description: string;
   category: string;
   subcategory: string;
-  tags: string[];
 }
 
 interface CategoryData {
@@ -128,9 +127,8 @@ export default function Home() {
         (tool) =>
           tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
           tool.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          tool.tags.some((tag) =>
-            tag.toLowerCase().includes(searchTerm.toLowerCase())
-          )
+          tool.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          tool.subcategory.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
 
