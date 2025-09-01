@@ -1,15 +1,32 @@
 version: 2
 updates:
   - package-ecosystem: "gitsubmodule"
-    directory: "/"                    # 仓库根目录
+    directory: "/"                    
     schedule:
-      interval: "daily"               # 每天检查一次
-      time: "04:00"                   # UTC 时间 04:00（中国时间中午12点）
+      interval: "daily"               
+      time: "04:00"                   
+    open-pull-requests-limit: 5
+    assignees:
+      - '0xWelt'
     commit-message:
-      prefix: "chore(deps)"           # 提交信息前缀
+      prefix: 'chore'
+      include: 'scope'  
     labels:
       - "dependencies"
       - "submodules"
-      - "auto-merge"                 # 用于触发自动合并
-    open-pull-requests-limit: 10      # 最多同时打开 10 个子模块 PR
+      - "auto-merge"                  
 
+  # Enable version updates for GitHub Actions
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    open-pull-requests-limit: 5
+    assignees:
+      - '0xWelt'
+    commit-message:
+      prefix: 'chore'
+      include: 'scope'
+    labels:
+      - 'dependencies'
+      - 'github-actions'
