@@ -16,7 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
         with:
-          fetch-depth: 0 # Get full history
+          fetch-depth: 20
           submodules: true
 
       - name: Check if build is needed
