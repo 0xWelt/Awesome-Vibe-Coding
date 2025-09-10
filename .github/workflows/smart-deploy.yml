@@ -3,6 +3,9 @@ name: Smart Build and Deploy Website
 on:
   push:
     branches: [main]
+  pull_request:
+      types: [closed]
+      branches: [main]
   workflow_dispatch:
 
 jobs:
