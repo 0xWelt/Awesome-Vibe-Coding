@@ -17,7 +17,7 @@ jobs:
       changed-files: ${{ steps.check.outputs.changed-files }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           fetch-depth: 20
           submodules: true
@@ -113,7 +113,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           submodules: true
 
