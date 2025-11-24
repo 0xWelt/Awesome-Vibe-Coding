@@ -3,6 +3,10 @@
   "extends": [
     "config:recommended"
   ],
+  "automerge": true,
+  "automergeType": "pr",
+  "platformAutomerge": true,
+  "internalChecksFilter": "strict",
   "git-submodules": {
     "enabled": true
   }
