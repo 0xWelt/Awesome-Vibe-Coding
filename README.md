@@ -10,6 +10,8 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
 
 🌐 **Live Website**: [https://0xWelt.github.io/Awesome-Vibe-Coding/](https://0xWelt.github.io/Awesome-Vibe-Coding/)
 
+![Awesome-Vibe-Coding](docs/Awesome-Vibe-Coding.png)
+
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
