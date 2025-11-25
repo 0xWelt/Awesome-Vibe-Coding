@@ -17,6 +17,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
   - [CLI Tools](#cli-tools)
     - [Claude Code](#claude-code)
     - [Gemini CLI](#gemini-cli)
+    - [Kimi CLI](#kimi-cli)
     - [Crush](#crush)
     - [OpenCode](#opencode)
     - [Cursor CLI](#cursor-cli)
@@ -121,6 +122,10 @@ Gemini CLI empowers developers to query and edit large codebases beyond the 1M
 token context window, generate apps from PDFs/sketches using multimodal
 capabilities, automate operational tasks, integrate with MCP servers for media
 generation, and ground queries with built-in Google Search.
+
+#### [Kimi CLI](https://github.com/MoonshotAI/kimi-cli)
+
+Kimi CLI is your next CLI agent that can help you with your software development tasks and terminal operations. Features include shell-like UI and shell command execution, Zsh integration for empowering your shell experience with AI agent capabilities, Agent Client Protocol (ACP) support for use with any ACP-compatible editor or IDE, MCP support following the well-established MCP config convention, and seamless terminal workflow integration. Kimi CLI provides a powerful AI coding assistant directly in your terminal.
 
 #### [Crush](https://github.com/charmbracelet/crush)
 
