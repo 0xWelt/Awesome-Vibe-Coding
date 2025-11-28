@@ -5,6 +5,7 @@
   "automerge": true,
   "automergeType": "pr",
   "platformAutomerge": true,
+  "recreateClosed": true,
   "internalChecksFilter": "strict",
   "git-submodules": {
     "enabled": true
@@ -14,7 +15,8 @@
       "description": "Group patch and minor updates together",
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "dependencies (minor and patch)",
-      "groupSlug": "dependencies-minor-patch"
+      "groupSlug": "dependencies-minor-patch",
+      "automerge": true
     }
   ]
 }
