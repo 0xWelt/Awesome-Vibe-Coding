@@ -100,9 +100,12 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
   - [Railway](#railway)
   - [Render](#render)
 - [Vibe Coding Projects](#vibe-coding-projects)
+  - [yaal](#yaal)
   - [Awesome-Vibe-Coding](#awesome-vibe-coding-1)
-  - [taxi\_calculator](#taxi_calculator)
+  - [Awesome-LLM-RL](#awesome-llm-rl)
+  - [TradeMasterOnline](#trademasteronline)
   - [VibeRL](#viberl)
+  - [taxi\_calculator](#taxi_calculator)
 - [Learning Resources](#learning-resources)
   - [DeepLearning.AI](#deeplearningai)
     - [Vibe Coding 101 with Replit](#vibe-coding-101-with-replit)
@@ -544,17 +547,29 @@ Render is a unified cloud platform that makes it easy to build and run all your 
 
 > Projects created through vibe coding.
 
+### [yaal](https://github.com/0xWelt/yaal)
+
+Yet Another Awesome List (YAAL) - a meta awesome list generator that creates curated collections of awesome lists. Built with Next.js, TypeScript, and Tailwind CSS, yaal automatically parses README files to generate beautiful, organized awesome list websites. Features automated README parsing, GitHub Actions CI/CD integration, GitHub Pages deployment, and a modern web interface for browsing and discovering awesome lists across various categories including AI, development tools, and learning resources.
+
 ### [Awesome-Vibe-Coding](https://github.com/0xWelt/Awesome-Vibe-Coding)
 
 This very project - a comprehensive directory of vibe coding tools and resources built entirely through vibe coding practices using Next.js 14 with TypeScript, Tailwind CSS, automated README parsing, GitHub Actions CI/CD and GitHub Pages deployment, covering Development Toolkits, Web-based IDEs, Cloud Agents, Community Tools, MCP Servers, Deployment Platforms, Vibe Coding Projects and Learning Resources.
 
-### [taxi_calculator](https://github.com/0xWelt/taxi_calculator)
+### [Awesome-LLM-RL](https://github.com/0xWelt/Awesome-LLM-RL)
 
-A Japanese taxi fare calculator web application created entirely with Cursor AI using vibe coding principles. Features interactive OpenStreetMap integration, real-time route planning with OSRM, intelligent location search supporting Chinese/Japanese/English, and accurate fare calculations based on Tokyo taxi rates (410 yen base + 80 yen per 237m + night surcharge). Built with Python Flask backend and responsive frontend, deployed on Vercel with one-click setup.
+A curated list of open-source projects, tools, and learning resources about Reinforcement Learning with Large Language Models (LLMs). Features comprehensive coverage of RLHF (Reinforcement Learning from Human Feedback) frameworks, training infrastructure, evaluation tools, and research papers. Includes popular frameworks like OpenRLHF built on Ray, vLLM, ZeRO-3, and HuggingFace Transformers, as well as distributed training solutions like DeepSpeed and PyTorch FSDP for training billion-parameter models.
+
+### [TradeMasterOnline](https://github.com/0xWelt/TradeMasterOnline)
+
+A multi-agent trading simulation game built almost entirely using Vibe Coding and Kimi K2. Provides an interactive trading environment for users to experience and research trading behaviors in multi-agent systems. Features realistic trading mechanics, agent-based simulation, and comprehensive game mechanics that demonstrate the power of vibe coding in building complex interactive applications.
 
 ### [VibeRL](https://github.com/0xWelt/VibeRL)
 
 A modern reinforcement learning framework built through vibe coding with Kimi K2 and Claude Code. Features REINFORCE, PPO, and DQN algorithms with Gymnasium integration, async vector environments for parallel training, comprehensive testing with 50+ unit tests, and modern Python tooling including UV package management, Ruff linting, and Weights & Biases integration. Includes Snake Game environment and supports TensorBoard visualization for educational RL research.
+
+### [taxi_calculator](https://github.com/0xWelt/taxi_calculator)
+
+A Japanese taxi fare calculator web application created entirely with Cursor AI using vibe coding principles. Features interactive OpenStreetMap integration, real-time route planning with OSRM, intelligent location search supporting Chinese/Japanese/English, and accurate fare calculations based on Tokyo taxi rates (410 yen base + 80 yen per 237m + night surcharge). Built with Python Flask backend and responsive frontend, deployed on Vercel with one-click setup.
 
 ## Learning Resources
 
