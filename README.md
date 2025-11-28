@@ -110,8 +110,9 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
   - [DeepLearning.AI](#deeplearningai)
     - [Vibe Coding 101 with Replit](#vibe-coding-101-with-replit)
     - [MCP: Build Rich Context AI Apps with Anthropic](#mcp-build-rich-context-ai-apps-with-anthropic)
-- [Star History](#star-history)
+- [Repo Status](#repo-status)
 - [Contributors](#contributors)
+- [Star History](#star-history)
 - [License](#license)
 
 ## Development Toolkits
@@ -587,9 +588,9 @@ Master the art of vibe coding with this hands-on course created in partnership w
 
 Dive deep into the Model Context Protocol (MCP) with this comprehensive 1-hour 38-minute course developed with Anthropic. Learn to build standardized AI applications that seamlessly connect to external tools and data sources. Master MCP server creation, client implementation, and deployment strategies for building rich-context AI applications with minimal integration overhead.
 
-## Star History
+## Repo Status
 
-[![Star History Chart](https://api.star-history.com/svg?repos=0xWelt/Awesome-Vibe-Coding&type=Date)](https://star-history.com/#0xWelt/Awesome-Vibe-Coding&Date)
+![Alt](https://repobeats.axiom.co/api/embed/4b9660ab5b37e6ebaa2f2e036eea18e08787410d.svg "Repobeats analytics image")
 
 ## Contributors
 
@@ -598,6 +599,10 @@ This project exists thanks to all the people who contribute.
 <a href="https://github.com/0xWelt/Awesome-Vibe-Coding/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=0xWelt/Awesome-Vibe-Coding" />
 </a>
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=0xWelt/Awesome-Vibe-Coding&type=Date)](https://star-history.com/#0xWelt/Awesome-Vibe-Coding&Date)
 
 ## License
 
