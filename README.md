@@ -87,6 +87,13 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
   - [ArXiv MCP Server](#arxiv-mcp-server)
   - [Zotero MCP](#zotero-mcp)
   - [Notion MCP Server](#notion-mcp-server)
+- [Agents](#agents)
+  - [Agent SDKs](#agent-sdks)
+    - [Claude Agent SDK](#claude-agent-sdk)
+    - [Google ADK](#google-adk)
+    - [OpenAI Agents SDK](#openai-agents-sdk)
+    - [Vercel AI SDK](#vercel-ai-sdk)
+    - [Kosong](#kosong)
 - [Supporting Tools](#supporting-tools)
   - [Vercel](#vercel)
   - [Netlify](#netlify)
@@ -475,6 +482,34 @@ API and web API with configurable embedding models (OpenAI, Gemini, or default).
 ### [Notion MCP Server](https://github.com/makenotion/notion-mcp-server)
 
 The official Notion MCP server from MakeNotion that provides comprehensive access to Notion workspaces through the Model Context Protocol. Features include seamless integration with Notion databases, pages, and blocks, OAuth-based authentication for easy setup, optimized token consumption for AI agents, support for both STDIO and Streamable HTTP transport modes, Docker support for containerized deployments, and comprehensive CRUD operations for Notion content. Includes tools for searching, creating, updating, and managing Notion pages, databases, comments, and more with built-in security controls and read-only integration options.
+
+## Agents
+
+> Development frameworks and SDKs for building AI agents and autonomous coding assistants.
+
+### Agent SDKs
+
+> Software development kits for building AI agents and integrating with AI coding assistants.
+
+#### [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-python)
+
+Anthropic's official Python SDK for building AI agents with Claude Code capabilities. Features include programmatic access to Claude Code through both simple `query()` function and advanced `ClaudeSDKClient` for bidirectional conversations, custom tools as in-process MCP servers that run directly within your Python application, hooks for deterministic processing and automated feedback, support for streaming responses, and comprehensive error handling. The SDK eliminates subprocess management overhead and provides better performance with direct Python function calls, making it ideal for building production-ready AI agent applications.
+
+#### [Google ADK](https://github.com/google/adk-python)
+
+Google's Agent Development Kit (ADK) for Python that helps developers build and manage AI agents. Provides comprehensive tools and frameworks for creating intelligent agents with Google's AI models, supporting various agent architectures and deployment scenarios.
+
+#### [OpenAI Agents SDK](https://github.com/openai/openai-agents-python)
+
+OpenAI's lightweight Python SDK for building intelligent agent applications powered by large language models. The SDK provides essential components with minimal abstraction, making it easy to create agentic AI systems. Features include Agent instances configured with instructions and tools for executing specific tasks, Handoffs that allow agents to delegate tasks to other agents for multi-agent collaboration, Guardrails for input and output validation to ensure system safety and reliability, Session management that automatically maintains conversation history across multiple runs with persistent storage support (e.g., SQLite), Tools that convert any Python function into callable tools for agents, and built-in Tracing functionality for visualizing, debugging, and monitoring agent workflows. The SDK is designed for developers who want a lightweight, easy-to-use framework for building multi-agent systems, conversational agents, and other agentic AI applications.
+
+#### [Vercel AI SDK](https://github.com/vercel/ai)
+
+Vercel's unified AI SDK that provides a consistent interface for working with multiple AI providers including OpenAI, Anthropic, and more. Features include text generation, embeddings, function calling, streaming responses, and React hooks for building AI-powered applications. Supports both server-side and client-side usage with TypeScript-first design and comprehensive framework integrations.
+
+#### [Kosong](https://github.com/MoonshotAI/kosong)
+
+MoonshotAI's agent development framework (Kosong means "empty" or "void" in Malay and Indonesian, representing a flexible and lightweight foundation) for building sophisticated AI agent systems. The framework provides comprehensive tools and abstractions for creating, managing, and deploying AI agents with support for various agent architectures and integration patterns. Features include flexible agent composition that allows developers to build complex multi-agent systems, seamless integration with MoonshotAI's models and services, extensible architecture supporting custom agent behaviors and workflows, deployment tools for production-ready agent applications, and comprehensive abstractions that simplify agent development while maintaining flexibility. Designed for developers building enterprise-grade AI agent solutions with MoonshotAI's technology stack.
 
 ## Supporting Tools
 
