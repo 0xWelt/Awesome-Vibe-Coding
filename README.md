@@ -14,106 +14,117 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [Development Toolkits](#development-toolkits)
-  - [CLI Tools](#cli-tools)
-    - [Claude Code](#claude-code)
-    - [Gemini CLI](#gemini-cli)
-    - [Kimi CLI](#kimi-cli)
-    - [Crush](#crush)
-    - [OpenCode](#opencode)
-    - [Cursor CLI](#cursor-cli)
-    - [Goose](#goose)
-    - [MyCoder.ai](#mycoderai)
-    - [RA.Aid](#raaid)
-    - [CodeSelect](#codeselect)
-    - [OpenAI Codex](#openai-codex)
-    - [Qwen Code](#qwen-code)
-  - [Standalone IDEs](#standalone-ides)
-    - [Cursor](#cursor)
-    - [Trae](#trae)
-    - [Qoder](#qoder)
-    - [Windsurf Editor](#windsurf-editor)
-    - [Void](#void)
-    - [Dyad](#dyad)
-    - [Kiro](#kiro)
-  - [IDE Extensions](#ide-extensions)
-    - [Github Copilot](#github-copilot)
-    - [Continue](#continue)
-    - [Windsurf Plugins](#windsurf-plugins)
-    - [Amazon Q Developer](#amazon-q-developer)
-    - [Superdesign.dev](#superdesigndev)
-    - [Roo Code](#roo-code)
-    - [Avante.nvim](#avantenvim)
-    - [Prompt Tower](#prompt-tower)
-    - [Augment Code](#augment-code)
-  - [Web-based IDEs](#web-based-ides)
-    - [Replit](#replit)
-    - [Bolt.new](#boltnew)
-    - [Firebase Studio](#firebase-studio)
-    - [Capacity](#capacity)
-    - [Command.new](#commandnew)
-    - [Create.xyz](#createxyz)
-    - [Tempo.new](#temponew)
-    - [Softgen](#softgen)
-    - [HeyBoss](#heyboss)
-    - [Creatr](#creatr)
-    - [Rork](#rork)
-    - [Napkins.dev](#napkinsdev)
-    - [Rocket.new](#rocketnew)
-    - [Supabase](#supabase)
-    - [HeroUI Chat](#heroui-chat)
-    - [Open Lovable](#open-lovable)
-    - [Lazy AI](#lazy-ai)
-  - [Cloud-based Agents](#cloud-based-agents)
-    - [Devin](#devin)
-    - [Cursor Background Agents](#cursor-background-agents)
-    - [Replit Ghostwriter](#replit-ghostwriter)
-  - [Task Management](#task-management)
-    - [Boomerang Tasks](#boomerang-tasks)
-    - [Taskmaster AI](#taskmaster-ai)
-  - [Vibe Coding Community](#vibe-coding-community)
-    - [v0](#v0)
-    - [Lovable](#lovable)
-    - [YouWare](#youware)
-    - [Trickle](#trickle)
-  - [Mobile-first tools](#mobile-first-tools)
-    - [vibecode](#vibecode)
-- [MCP Servers](#mcp-servers)
-  - [MCP Server Hub](#mcp-server-hub)
-    - [Glama MCP Servers](#glama-mcp-servers)
-    - [ModelScope MCP](#modelscope-mcp)
-  - [GitHub MCP Server](#github-mcp-server)
-  - [ArXiv MCP Server](#arxiv-mcp-server)
-  - [Zotero MCP](#zotero-mcp)
-  - [Notion MCP Server](#notion-mcp-server)
-- [Agents](#agents)
-  - [Agent SDKs](#agent-sdks)
-    - [Claude Agent SDK](#claude-agent-sdk)
-    - [Google ADK](#google-adk)
-    - [OpenAI Agents SDK](#openai-agents-sdk)
-    - [Vercel AI SDK](#vercel-ai-sdk)
-    - [Kosong](#kosong)
-- [Supporting Tools](#supporting-tools)
-  - [Vercel](#vercel)
-  - [Netlify](#netlify)
-  - [Railway](#railway)
-  - [Render](#render)
-- [Vibe Coding Projects](#vibe-coding-projects)
-  - [yaal](#yaal)
-  - [Awesome-Vibe-Coding](#awesome-vibe-coding-1)
-  - [Awesome-LLM-RL](#awesome-llm-rl)
-  - [TradeMasterOnline](#trademasteronline)
-  - [VibeRL](#viberl)
-  - [taxi\_calculator](#taxi_calculator)
-- [Learning Resources](#learning-resources)
-  - [DeepLearning.AI](#deeplearningai)
-    - [Vibe Coding 101 with Replit](#vibe-coding-101-with-replit)
-    - [MCP: Build Rich Context AI Apps with Anthropic](#mcp-build-rich-context-ai-apps-with-anthropic)
-- [Repo Status](#repo-status)
-- [Contributors](#contributors)
-- [Star History](#star-history)
-- [License](#license)
+- [Awesome-Vibe-Coding](#awesome-vibe-coding)
+  - [Table of Contents](#table-of-contents)
+  - [Development Toolkits](#development-toolkits)
+    - [CLI Tools](#cli-tools)
+      - [Claude Code](#claude-code)
+      - [Gemini CLI](#gemini-cli)
+      - [Kimi CLI](#kimi-cli)
+      - [Crush](#crush)
+      - [OpenCode](#opencode)
+      - [Cursor CLI](#cursor-cli)
+      - [Goose](#goose)
+      - [MyCoder.ai](#mycoderai)
+      - [RA.Aid](#raaid)
+      - [CodeSelect](#codeselect)
+      - [OpenAI Codex](#openai-codex)
+      - [Qwen Code](#qwen-code)
+      - [Amp](#amp)
+      - [Aider](#aider)
+    - [Standalone IDEs](#standalone-ides)
+      - [Cursor](#cursor)
+      - [Trae](#trae)
+      - [Qoder](#qoder)
+      - [Windsurf Editor](#windsurf-editor)
+      - [Void](#void)
+      - [Dyad](#dyad)
+      - [Kiro](#kiro)
+      - [Zed](#zed)
+    - [IDE Extensions](#ide-extensions)
+      - [Github Copilot](#github-copilot)
+      - [Continue](#continue)
+      - [Windsurf Plugins](#windsurf-plugins)
+      - [Amazon Q Developer](#amazon-q-developer)
+      - [Superdesign.dev](#superdesigndev)
+      - [Roo Code](#roo-code)
+      - [Avante.nvim](#avantenvim)
+      - [Prompt Tower](#prompt-tower)
+      - [Augment Code](#augment-code)
+    - [Web-based IDEs](#web-based-ides)
+      - [Replit](#replit)
+      - [Bolt.new](#boltnew)
+      - [Firebase Studio](#firebase-studio)
+      - [Capacity](#capacity)
+      - [Command.new](#commandnew)
+      - [Create.xyz](#createxyz)
+      - [Tempo.new](#temponew)
+      - [Softgen](#softgen)
+      - [HeyBoss](#heyboss)
+      - [Creatr](#creatr)
+      - [Rork](#rork)
+      - [Napkins.dev](#napkinsdev)
+      - [Rocket.new](#rocketnew)
+      - [Supabase](#supabase)
+      - [HeroUI Chat](#heroui-chat)
+      - [Open Lovable](#open-lovable)
+      - [Lazy AI](#lazy-ai)
+      - [Phoenix.new](#phoenixnew)
+    - [Cloud-based Agents](#cloud-based-agents)
+      - [Devin](#devin)
+      - [Cursor Background Agents](#cursor-background-agents)
+      - [Replit Ghostwriter](#replit-ghostwriter)
+      - [Jules](#jules)
+      - [Factory](#factory)
+      - [Ona](#ona)
+    - [Task Management](#task-management)
+      - [Boomerang Tasks](#boomerang-tasks)
+      - [Taskmaster AI](#taskmaster-ai)
+    - [Vibe Coding Community](#vibe-coding-community)
+      - [v0](#v0)
+      - [Lovable](#lovable)
+      - [YouWare](#youware)
+      - [Trickle](#trickle)
+    - [Mobile-first tools](#mobile-first-tools)
+      - [vibecode](#vibecode)
+  - [MCP Servers](#mcp-servers)
+    - [MCP Server Hub](#mcp-server-hub)
+      - [Glama MCP Servers](#glama-mcp-servers)
+      - [ModelScope MCP](#modelscope-mcp)
+    - [GitHub MCP Server](#github-mcp-server)
+    - [ArXiv MCP Server](#arxiv-mcp-server)
+    - [Zotero MCP](#zotero-mcp)
+    - [Notion MCP Server](#notion-mcp-server)
+  - [Agents](#agents)
+    - [Agent SDKs](#agent-sdks)
+      - [Claude Agent SDK](#claude-agent-sdk)
+      - [Google ADK](#google-adk)
+      - [OpenAI Agents SDK](#openai-agents-sdk)
+      - [Vercel AI SDK](#vercel-ai-sdk)
+      - [Kosong](#kosong)
+  - [Supporting Tools](#supporting-tools)
+    - [Vercel](#vercel)
+    - [Netlify](#netlify)
+    - [Railway](#railway)
+    - [Render](#render)
+    - [Semgrep](#semgrep)
+    - [Warp](#warp)
+    - [UiPath Python](#uipath-python)
+  - [Vibe Coding Projects](#vibe-coding-projects)
+    - [yaal](#yaal)
+    - [Awesome-Vibe-Coding](#awesome-vibe-coding-1)
+    - [Awesome-LLM-RL](#awesome-llm-rl)
+    - [TradeMasterOnline](#trademasteronline)
+    - [VibeRL](#viberl)
+    - [taxi\_calculator](#taxi_calculator)
+  - [Learning Resources](#learning-resources)
+    - [DeepLearning.AI](#deeplearningai)
+      - [Vibe Coding 101 with Replit](#vibe-coding-101-with-replit)
+      - [MCP: Build Rich Context AI Apps with Anthropic](#mcp-build-rich-context-ai-apps-with-anthropic)
+  - [Repo Status](#repo-status)
+  - [Contributors](#contributors)
+  - [Star History](#star-history)
+  - [License](#license)
 
 ## Development Toolkits
 
@@ -185,6 +196,14 @@ OpenAI Codex CLI is a lightweight coding agent that runs locally in your termina
 
 Qwen Code is a powerful command-line AI workflow tool adapted from Google Gemini CLI and optimized for Qwen3-Coder models. It provides intelligent coding assistance with features like code understanding and editing beyond traditional context windows, workflow automation for operational tasks, enhanced parser specifically optimized for Qwen-Coder models, and multiple free usage options including Qwen OAuth with 2,000 requests/day, Alibaba Cloud Bailian, ModelScope, and OpenRouter. With 9.2k+ stars, it offers comprehensive development acceleration capabilities including codebase exploration, refactoring, testing, and documentation generation.
 
+#### [Amp](https://ampcode.com/)
+
+Amp is the frontier coding agent that lets you wield the full power of leading models. Available in the terminal and in editors including VS Code, Cursor, Windsurf, JetBrains, and Neovim, Amp provides a premium coding experience with agentic capabilities. Features include multi-model support with Claude Opus 4.5, Gemini 3 Pro, and other frontier models, TUI and CLI interfaces for terminal workflows, editor extensions that integrate seamlessly into your IDE, Rush Mode for faster and cheaper execution of small, well-defined tasks, workspace settings for per-workspace configuration, and a community showcase of real coding projects built with Amp.
+
+#### [Aider](https://aider.chat/)
+
+Aider is an AI pair programming assistant that lets you write code, chat with your codebase, and commit changes using natural language. It runs directly in your terminal, supports multiple LLM providers including OpenAI, Anthropic, Gemini, and Ollama, and can work with any git repository. Features include natural language code editing with automatic file operations, git integration that automatically commits changes with clear messages, support for coding conventions via CONVENTIONS.md files, voice-to-code capabilities, image and web page context for multimodal coding, prompt caching for faster responses, linting and testing integration, and IDE notifications. Aider respects your workflow and enhances it with AI assistance.
+
 ### Standalone IDEs
 
 > IDEs build for AI native experiences.
@@ -216,6 +235,10 @@ Dyad is a free, local, open-source AI app builder that serves as an alternative 
 #### [Kiro](https://kiro.dev)
 
 Kiro is an AI IDE designed for taking projects from prototype to production through spec-driven development. It transforms prompts into clear requirements, system design, and discrete tasks while enabling collaboration on specifications and architecture. Features include agent hooks for automated task execution on events like file saves, multimodal chat support, native MCP integration for connecting to docs, databases, and APIs, autopilot mode for autonomous large task execution, VS Code compatibility with Open VSX plugins and themes, and enterprise-grade security. Currently in beta with waitlist access, Kiro helps structure AI coding with mature engineering practices.
+
+#### [Zed](https://zed.dev/)
+
+Zed is a high-performance, multiplayer code editor built in Rust with a focus on speed and collaboration. While primarily a code editor, Zed includes AI capabilities through its rules system that allows you to configure AI behavior for code generation, completions, and assistance. Features include blazing-fast performance with low latency, real-time multiplayer collaboration, AI rules configuration for consistent code generation patterns, built-in AI assistant integration, and a modern editor experience with features like vim mode, search, and project management. Zed is designed for teams that need both performance and AI assistance.
 
 ### IDE Extensions
 
@@ -362,6 +385,10 @@ Open Lovable is an open-source AI-powered React app builder that lets you chat w
 
 Lazy AI is a prompt-to-app platform that enables users to create full-stack web applications and prototypes for various purposes, including SaaS apps, APIs, and internal tools. It leverages advanced AI models to facilitate the development process, making it accessible for product managers, developers, and marketers. Features include instant full-stack app generation from natural language prompts, support for complex SaaS applications and APIs, built-in database and authentication systems, deployment-ready code generation, and collaborative tools for teams.
 
+#### [Phoenix.new](https://phoenix.new/)
+
+Phoenix.new is the Remote AI Runtime for Phoenix that lets you describe your app and watch it take shape. Prototype quickly, experiment freely, and share instantly. Built on top of the Phoenix framework, it starts with a fully designed mockup and builds all the way to a working real-time app. Features include real-time Phoenix app building in minutes, fully designed mockup to working app workflow, dev server with shareable URL for showing off in-progress work, integration with Phoenix's strengths in clustering, pubsub, and presence, and ideal for building simple multiplayer games and collaborative apps. Phoenix's real-time capabilities pair well with LLM-generated code, making it fun to build interactive applications.
+
 ### Cloud-based Agents
 
 > AI software engineers that work autonomously in the cloud.
@@ -377,6 +404,18 @@ Cursor Background Agents are asynchronous remote agents that run in isolated Ubu
 #### [Replit Ghostwriter](https://replit.com/learn/intro-to-ghostwriter)
 
 Ghostwriter is Replit's AI-powered coding assistant that serves as your partner in code. Features complete code completion, explain code functionality in plain English, transform and refactor code between languages and styles, and generate complete programs from simple prompts. Includes a 5-day beginner-friendly course to master AI-assisted programming.
+
+#### [Jules](https://jules.google/)
+
+Jules is Google's coding agent that does coding tasks you don't want to do, from bug fixing and version bumps to tests and feature building. It integrates directly with GitHub, allowing you to assign tasks by using the "jules" label in an issue or writing a detailed prompt. Jules fetches your repository, clones it to a Cloud VM, develops a plan utilizing the latest Gemini 3 Pro model, provides a diff of the changes for review, and creates a PR ready for approval and merging. With plans ranging from 15 tasks per day (Jules) to 300 tasks per day (Jules in Ultra), it scales with your workflow from quick fixes to fully async, multi-agent development.
+
+#### [Factory](https://factory.ai/)
+
+Factory is the only agent-native software development platform that works everywhere you do. Droids embed directly into your workflow - IDE, Web, CLI, Slack, Linear - allowing you to delegate tasks as they come to mind, wherever you are. Features include IDE integration for VS Code, JetBrains, Vim, and more without forcing a switch, web browser interface for instant task delegation, command line interface for scripting and parallelizing at massive scale for CI/CD, Slack/Teams integration for incident triage and bug fixes, and project manager integration that automatically triggers agents from issue assignment. Factory is designed for modern enterprise teams with industry-grade security, vendor agnostic architecture, and full integration across your development stack.
+
+#### [Ona](https://ona.com/)
+
+Ona is the AI software engineer you can rely on, working with and for your teams across the entire development lifecycle. It automatically sets up with your code, secrets, and policies, providing enterprise-grade AI development capabilities. Features include Ona Agents for keeping momentum across any device with your personal team of professional software engineering agents, Ona Environments with API-first, sandboxed development environments with full OS-level isolation, Ona Guardrails for fine-grained organizational permissions and policies with detailed audit trails, seamless integration with VS Code Web, desktop IDEs, and mobile devices, enterprise-grade integrations with GitHub, GitLab, MongoDB, AWS, Redis, and more, and complete compliance with GDPR, SOC2 certification, and Fortune 500 trust. Ona is deployed across America's biggest banks and Europe's leading pharmaceutical companies.
 
 ### Task Management
 
@@ -543,6 +582,18 @@ applications with minimal configuration.
 ### [Render](https://render.com)
 
 Render is a unified cloud platform that makes it easy to build and run all your apps and websites. It offers built-in preview environments, autoscaling, private networking, and infrastructure as code - no Kubernetes required. Features include automatic scaling for 100× burst traffic, point-in-time recovery for Postgres databases, zero-downtime deploys, and enterprise-grade security with SOC 2 Type 2, HIPAA, ISO 27001, and GDPR compliance. Render supports static sites, web services, background workers, cron jobs, and managed PostgreSQL databases, making it perfect for deploying vibe-coded applications from prototype to production.
+
+### [Semgrep](https://semgrep.dev/)
+
+Semgrep is a fast, open-source static analysis tool for finding bugs and enforcing code standards. While not exclusively an AI tool, Semgrep can be integrated into vibe coding workflows to ensure AI-generated code meets security and quality standards. Features include pattern-based code analysis that can catch bugs and security issues in AI-generated code, support for 30+ languages including Python, JavaScript, TypeScript, and more, CI/CD integration for automated code review, custom rules for enforcing coding standards, and free tier for open-source projects. Semgrep helps maintain code quality when using AI-assisted development by catching issues before they reach production.
+
+### [Warp](https://www.warp.dev/)
+
+Warp is a modern, Rust-based terminal with AI-powered features that enhance the developer workflow. It integrates AI assistance directly into the terminal experience, making it easier to work with AI coding agents and tools. Features include AI command suggestions and completion, project-scoped rules for consistent AI behavior across teams, knowledge base integration for team collaboration, modern UI with blocks instead of traditional scrollback, workflow sharing and collaboration, and seamless integration with existing tools. Warp enhances the vibe coding experience by providing an intelligent terminal interface that works alongside AI coding agents.
+
+### [UiPath Python](https://uipath.github.io/uipath-python/)
+
+UiPath Python SDK allows developers to build custom automations and agents using Python, extending the capabilities of the UiPath automation platform. While primarily an RPA tool, it can be used to create AI-powered automation workflows for software development tasks. Features include Python SDK for interacting with UiPath robots and orchestrators, automation of repetitive development tasks, integration with AI models for intelligent automation, workflow orchestration for complex development processes, and enterprise-grade automation capabilities. UiPath Python enables developers to automate coding workflows and integrate AI agents into enterprise automation pipelines.
 
 ## Vibe Coding Projects
 
