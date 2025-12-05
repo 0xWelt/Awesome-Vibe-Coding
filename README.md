@@ -87,6 +87,11 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [Trickle](#trickle)
     - [Mobile-first tools](#mobile-first-tools)
       - [vibecode](#vibecode)
+  - [Development Standards](#development-standards)
+    - [AGENTS.md](#agentsmd)
+    - [Model Context Protocol (MCP)](#model-context-protocol-mcp)
+    - [Agent Communication Protocol (ACP)](#agent-communication-protocol-acp)
+    - [Claude Agent Skills](#claude-agent-skills)
   - [MCP Servers](#mcp-servers)
     - [MCP Server Hub](#mcp-server-hub)
       - [Glama MCP Servers](#glama-mcp-servers)
@@ -471,6 +476,26 @@ Vibecode from the App Store, enter your idea, and within minutes you'll have
 your fully native iOS app running on your phone. You can then share this app
 with your friends in 1 click, and they can use the app without downloading
 anything.
+
+## Development Standards
+
+> Open standards and formats for building interoperable AI coding agents and applications.
+
+### [AGENTS.md](https://agents.md/)
+
+AGENTS.md is a simple, open format for guiding coding agents, used by over 20k open-source projects. Think of AGENTS.md as a **README for agents**: a dedicated, predictable place to provide the context and instructions to help AI coding agents work on your project. It complements README.md by containing the extra, sometimes detailed context coding agents need: build steps, tests, and conventions that might clutter a README or aren't relevant to human contributors. AGENTS.md works across many agents including OpenAI Codex, Jules from Google, Factory, Aider, Kilo Code, Phoenix, Semgrep, GitHub Copilot, Ona, UiPath, Amp, Cursor, Roo Code, Gemini CLI, OpenCode, Zed, Warp, VS Code, and Devin. Features include project overview sections, build and test commands, code style guidelines, testing instructions, security considerations, and support for nested AGENTS.md files in monorepos where agents automatically read the nearest file in the directory tree. AGENTS.md is just standard Markdown with no required fields, allowing you to use any headings you like.
+
+### [Model Context Protocol (MCP)](https://modelcontextprotocol.io/)
+
+The Model Context Protocol (MCP) is an open-source standard for connecting AI applications to external systems. Think of MCP like a USB-C port for AI applications—it provides a standardized way to connect AI applications to data sources (e.g. local files, databases), tools (e.g. search engines, calculators) and workflows (e.g. specialized prompts). Using MCP, AI applications like Claude or ChatGPT can access key information and perform tasks. MCP enables agents to access Google Calendar and Notion for personalized assistance, Claude Code can generate web apps using Figma designs, enterprise chatbots can connect to multiple databases for data analysis, and AI models can create 3D designs and print them using 3D printers. The protocol benefits developers by reducing development time and complexity when building or integrating with AI applications, provides AI applications access to an ecosystem of data sources and tools, and results in more capable AI applications that can access user data and take actions when necessary. MCP is designed to work across different platforms and AI applications, creating a universal foundation for AI integration.
+
+### [Agent Communication Protocol (ACP)](https://agentcommunicationprotocol.dev/)
+
+The Agent Communication Protocol (ACP) is an open protocol for agent interoperability that solves the growing challenge of connecting AI agents, applications, and humans. Developed as an open standard under the Linux Foundation, ACP enables agents to communicate through a standardized RESTful API that supports all forms of modality, synchronous and asynchronous communication, streaming interactions, both stateful and stateless operation patterns, online and offline agent discovery, and long running tasks. The protocol remains agnostic to internal implementations, requiring only minimal specifications for compatibility, whether your agent is built with BeeAI framework, LangChain, CrewAI, or custom code. Key features include REST-based communication using simple, well-defined REST endpoints, support for all message types using MimeTypes for content identification, no SDK required (but available for Python and TypeScript), offline discovery by embedding metadata in distribution packages, and async-first design with sync support. ACP addresses integration barriers, duplicated effort, scalability challenges, and inconsistent developer experience by providing a shared communication standard that works across any technology stack. Use cases include flexible agent replacement, multi-agent collaboration, cross-platform integration, and inter-company partnerships for secure agent collaboration between organizations.
+
+### [Claude Agent Skills](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview)
+
+Claude Agent Skills are modular capabilities that extend Claude's functionality. Each Skill packages instructions, metadata, and optional resources (scripts, templates) that Claude uses automatically when relevant. Skills are reusable, filesystem-based resources that provide Claude with domain-specific expertise: workflows, context, and best practices that transform general-purpose agents into specialists. Unlike prompts (conversation-level instructions for one-off tasks), Skills load on-demand and eliminate the need to repeatedly provide the same guidance across multiple conversations. Key benefits include specializing Claude for domain-specific tasks, reducing repetition by creating once and using automatically, and composing capabilities by combining Skills to build complex workflows. Skills can include project-specific context, workflow instructions, tool usage guidelines, and structured data that Claude references automatically. Anthropic provides pre-built Agent Skills for common document formats, and developers can create custom Skills tailored to their specific needs. Skills work seamlessly with Claude Code, Claude API, and the Agent SDK, providing a consistent way to extend Claude's capabilities across different interfaces.
 
 ## MCP Servers
 
