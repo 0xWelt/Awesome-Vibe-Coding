@@ -145,6 +145,10 @@ Unleash Claude's raw power directly in your terminal. Search million-line
 codebases instantly. Turn hours-long workflows into a single command. Your
 tools. Your workflow. Your codebase, evolving at thought speed.
 
+#### [MyVibe](https://www.myvibe.so)
+
+Instant publishing skill for Claude Code. Deploy AI-generated projects to live URLs with `/myvibe:publish`. Auto-detects project type and handles builds automatically.
+
 #### [Gemini CLI](https://github.com/google-gemini/gemini-cli)
 
 Gemini CLI empowers developers to query and edit large codebases beyond the 1M
