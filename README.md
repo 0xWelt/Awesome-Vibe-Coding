@@ -130,6 +130,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
   - [Contributors](#contributors)
   - [Star History](#star-history)
   - [License](#license)
+- [Mysti](https://github.com/DeepMyst/Mysti) - Multi-agent AI coding assistant for VS Code. Claude Code, Codex, Gemini, and Copilot brainstorm together via 5 collaboration strategies.
 
 ## Development Toolkits
 
