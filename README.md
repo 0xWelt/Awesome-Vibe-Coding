@@ -73,6 +73,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
     - [Cloud-based Agents](#cloud-based-agents)
       - [Devin](#devin)
       - [Cursor Background Agents](#cursor-background-agents)
+      - [Oz (Warp)](#oz-warp)
       - [Replit Ghostwriter](#replit-ghostwriter)
       - [Jules](#jules)
       - [Factory](#factory)
@@ -114,6 +115,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
     - [Render](#render)
     - [Semgrep](#semgrep)
     - [Warp](#warp)
+    - [Warp Drive](#warp-drive)
     - [UiPath Python](#uipath-python)
   - [Vibe Coding Projects](#vibe-coding-projects)
     - [yaal](#yaal)
@@ -406,6 +408,10 @@ Devin is the world's first fully autonomous AI software engineer developed by Co
 
 Cursor Background Agents are asynchronous remote agents that run in isolated Ubuntu-based cloud environments and can edit and run code autonomously while you continue working on other tasks, providing a true background coding experience. These agents feature asynchronous operation that spawns agents working independently while you focus on other tasks, remote environment execution in isolated VMs with internet access and package installation capabilities, GitHub integration that automatically clones repos, works on separate branches, and pushes changes, environment customization via `.cursor/environment.json` with custom Docker setups, terminal management with persistent tmux sessions for running background processes, and privacy mode availability to ensure code isn't used for training. Background agents support Max Mode-compatible models and can be accessed via the sidebar or `Ctrl+E` shortcut, requiring GitHub read-write access and storing encrypted secrets for development environments.
 
+#### [Oz (Warp)](https://www.warp.dev/oz)
+
+Oz is Warp's orchestration platform for cloud coding agents. Spin up parallel cloud agents that are programmable, auditable, and steerable from the Warp app, web ([oz.warp.dev](https://oz.warp.dev/)), CLI, or mobile. Features include scheduling and triggers (cron-like runs, Slack, Linear, GitHub, webhooks), multi-repo changes in a single agent run, Skills-based agents for quick onboarding, Oz CLI and API/SDK for automation and CI, optional self-hosting for data residency and control, and multi-model support (Claude, Codex, Gemini). Oz powers both local interactive agents in the Warp terminal and autonomous cloud agents, with unified observability and handoff between local and cloud.
+
 #### [Replit Ghostwriter](https://replit.com/learn/intro-to-ghostwriter)
 
 Ghostwriter is Replit's AI-powered coding assistant that serves as your partner in code. Features complete code completion, explain code functionality in plain English, transform and refactor code between languages and styles, and generate complete programs from simple prompts. Includes a 5-day beginner-friendly course to master AI-assisted programming.
@@ -614,7 +620,11 @@ Semgrep is a fast, open-source static analysis tool for finding bugs and enforci
 
 ### [Warp](https://www.warp.dev/)
 
-Warp is a modern, Rust-based terminal with AI-powered features that enhance the developer workflow. It integrates AI assistance directly into the terminal experience, making it easier to work with AI coding agents and tools. Features include AI command suggestions and completion, project-scoped rules for consistent AI behavior across teams, knowledge base integration for team collaboration, modern UI with blocks instead of traditional scrollback, workflow sharing and collaboration, and seamless integration with existing tools. Warp enhances the vibe coding experience by providing an intelligent terminal interface that works alongside AI coding agents.
+Warp is an agentic development environment that combines a modern Rust-based terminal, a built-in code editor with LSP and file tree, and AI agents (powered by Oz) in one app. Run a team of agents—including Warp's own agent, Claude Code, Codex, and Gemini CLI—directly from the terminal. Features include block-based terminal UI with syntax highlighting and multi-line editing, in-app code editor for editing agent output and writing code, interactive local agents for planning and debugging, WARP.md (compatible with agents.md and claude.md) for agent context, Universal Input with @-mentions for files and images, MCP support, and fine-grained control over agent autonomy. Warp works across the full development lifecycle from coding to deploy and maintain.
+
+### [Warp Drive](https://warp.dev/drive)
+
+Warp Drive centralizes knowledge and context for agents and teammates. It provides shared workflows, prompts, and rules so AI and humans build with consistent context. Features include MCP integration to connect Warp to external data (e.g. Figma, Sentry, Linear, Slack), reusable Notebooks and Workflows for onboarding and processes, Rules that tailor AI responses to your codebase and preferences, and Drive objects included automatically as agent context. Warp Drive works with Warp's terminal and agents to keep team knowledge in one place and reduce repetition.
 
 ### [UiPath Python](https://uipath.github.io/uipath-python/)
 
