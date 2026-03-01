@@ -32,6 +32,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [Qwen Code](#qwen-code)
       - [Amp](#amp)
       - [Aider](#aider)
+      - [OpenPaw](#openpaw)
     - [Standalone IDEs](#standalone-ides)
       - [Cursor](#cursor)
       - [Trae](#trae)
@@ -210,6 +211,10 @@ Amp is the frontier coding agent that lets you wield the full power of leading m
 #### [Aider](https://aider.chat/)
 
 Aider is an AI pair programming assistant that lets you write code, chat with your codebase, and commit changes using natural language. It runs directly in your terminal, supports multiple LLM providers including OpenAI, Anthropic, Gemini, and Ollama, and can work with any git repository. Features include natural language code editing with automatic file operations, git integration that automatically commits changes with clear messages, support for coding conventions via CONVENTIONS.md files, voice-to-code capabilities, image and web page context for multimodal coding, prompt caching for faster responses, linting and testing integration, and IDE notifications. Aider respects your workflow and enhances it with AI assistance.
+
+#### [OpenPaw](https://github.com/daxaur/openpaw)
+
+OpenPaw is an open-source CLI tool (`npx pawmode`) that turns Claude Code into a personal assistant with 38 skills. It extends Claude Code beyond coding into everyday tasks like email, calendar, Spotify, smart home control, Slack, GitHub, and more. Users describe what they want in natural language and Claude handles it using the appropriate skill. Features include a modular skill catalog, MCP server integration, Obsidian memory, daily briefings, and support for Telegram and Discord. MIT licensed.
 
 ### Standalone IDEs
 
