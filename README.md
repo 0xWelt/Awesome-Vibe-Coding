@@ -101,6 +101,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
     - [ArXiv MCP Server](#arxiv-mcp-server)
     - [Zotero MCP](#zotero-mcp)
     - [Notion MCP Server](#notion-mcp-server)
+    - [BGPT MCP](#bgpt-mcp)
   - [Agents](#agents)
     - [Agent SDKs](#agent-sdks)
       - [Claude Agent SDK](#claude-agent-sdk)
@@ -556,6 +557,10 @@ API and web API with configurable embedding models (OpenAI, Gemini, or default).
 ### [Notion MCP Server](https://github.com/makenotion/notion-mcp-server)
 
 The official Notion MCP server from MakeNotion that provides comprehensive access to Notion workspaces through the Model Context Protocol. Features include seamless integration with Notion databases, pages, and blocks, OAuth-based authentication for easy setup, optimized token consumption for AI agents, support for both STDIO and Streamable HTTP transport modes, Docker support for containerized deployments, and comprehensive CRUD operations for Notion content. Includes tools for searching, creating, updating, and managing Notion pages, databases, comments, and more with built-in security controls and read-only integration options.
+
+### [BGPT MCP](https://github.com/connerlambden/bgpt-mcp)
+
+A hosted MCP server for searching scientific papers with full-text experimental data. Features SSE and Streamable HTTP endpoints with the `search_papers` tool for querying biomedical and scientific literature. Offers 50 free searches with no API key required, making it easy to integrate research paper search capabilities into AI-assisted development workflows.
 
 ## Agents
 
