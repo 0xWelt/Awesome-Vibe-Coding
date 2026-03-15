@@ -103,6 +103,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
     - [Zotero MCP](#zotero-mcp)
     - [Notion MCP Server](#notion-mcp-server)
     - [BGPT MCP](#bgpt-mcp)
+    - [onUI](#onui)
   - [Agents](#agents)
     - [Agent SDKs](#agent-sdks)
       - [Claude Agent SDK](#claude-agent-sdk)
@@ -568,6 +569,10 @@ The official Notion MCP server from MakeNotion that provides comprehensive acces
 ### [BGPT MCP](https://github.com/connerlambden/bgpt-mcp)
 
 A hosted MCP server for searching scientific papers with full-text experimental data. Features SSE and Streamable HTTP endpoints with the `search_papers` tool for querying biomedical and scientific literature. Offers 50 free searches with no API key required, making it easy to integrate research paper search capabilities into AI-assisted development workflows.
+
+### [onUI](https://github.com/onllm-dev/onUI)
+
+Open-source browser extension and MCP server for annotation-first UI pair programming. Annotate any webpage and let AI coding agents (Claude Code, Cursor, Windsurf) understand UI context through 8 MCP tools. Perfect for vibe coding workflows where you point at UI elements and let AI fix them.
 
 ## Agents
 
