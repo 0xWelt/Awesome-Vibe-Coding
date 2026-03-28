@@ -119,6 +119,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
     - [Warp](#warp)
     - [Warp Drive](#warp-drive)
     - [UiPath Python](#uipath-python)
+    - [claude-dash](#claude-dash)
   - [Vibe Coding Projects](#vibe-coding-projects)
     - [yaal](#yaal)
     - [Awesome-Vibe-Coding](#awesome-vibe-coding-1)
@@ -641,6 +642,10 @@ Warp Drive centralizes knowledge and context for agents and teammates. It provid
 ### [UiPath Python](https://uipath.github.io/uipath-python/)
 
 UiPath Python SDK allows developers to build custom automations and agents using Python, extending the capabilities of the UiPath automation platform. While primarily an RPA tool, it can be used to create AI-powered automation workflows for software development tasks. Features include Python SDK for interacting with UiPath robots and orchestrators, automation of repetitive development tasks, integration with AI models for intelligent automation, workflow orchestration for complex development processes, and enterprise-grade automation capabilities. UiPath Python enables developers to automate coding workflows and integrate AI agents into enterprise automation pipelines.
+
+### [claude-dash](https://github.com/krabat-l/claude-dash)
+
+claude-dash is a real-time statusline plugin for Claude Code that displays context health, cost, quota, cache efficiency, tool activity, and git status directly in your terminal. Zero npm dependencies, updates every 300ms, and works with any terminal setup.
 
 ## Vibe Coding Projects
 
