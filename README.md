@@ -33,6 +33,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [Amp](#amp)
       - [Aider](#aider)
       - [OpenPaw](#openpaw)
+      - [Bernstein](#bernstein)
     - [Standalone IDEs](#standalone-ides)
       - [Cursor](#cursor)
       - [Trae](#trae)
@@ -218,6 +219,10 @@ Aider is an AI pair programming assistant that lets you write code, chat with yo
 #### [OpenPaw](https://github.com/daxaur/openpaw)
 
 OpenPaw is an open-source CLI tool (`npx pawmode`) that turns Claude Code into a personal assistant with 38 skills. It extends Claude Code beyond coding into everyday tasks like email, calendar, Spotify, smart home control, Slack, GitHub, and more. Users describe what they want in natural language and Claude handles it using the appropriate skill. Features include a modular skill catalog, MCP server integration, Obsidian memory, daily briefings, and support for Telegram and Discord. MIT licensed.
+
+#### [Bernstein](https://github.com/chernistry/bernstein)
+
+Parallel multi-agent orchestrator for vibe coding at scale. One command spawns Claude Code, Codex CLI, and Gemini CLI simultaneously — each in an isolated git worktree. A deterministic Python scheduler (zero LLM tokens on coordination) breaks your goal into tasks, dispatches agents, verifies results with your test suite, and auto-commits only passing code.
 
 ### Standalone IDEs
 
