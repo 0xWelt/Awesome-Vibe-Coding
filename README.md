@@ -223,6 +223,10 @@ Aider is an AI pair programming assistant that lets you write code, chat with yo
 
 OpenPaw is an open-source CLI tool (`npx pawmode`) that turns Claude Code into a personal assistant with 38 skills. It extends Claude Code beyond coding into everyday tasks like email, calendar, Spotify, smart home control, Slack, GitHub, and more. Users describe what they want in natural language and Claude handles it using the appropriate skill. Features include a modular skill catalog, MCP server integration, Obsidian memory, daily briefings, and support for Telegram and Discord. MIT licensed.
 
+#### [Sober Coding](https://github.com/voidborne-d/sober-coding)
+
+The hangover cure for vibe coding. A language-agnostic CLI tool that scans AI-generated codebases for 27 types of issues across 7 dimensions: security (hardcoded secrets, SQL injection, path traversal), architecture (god files, circular deps, deep nesting), duplication (exact clones, near clones, structural clones), error handling, dependencies, testing, and dead code. Features a sobriety scoring system (SOBER/TIPSY/HUNGOVER/BLACKOUT), fix suggestions via `sober fix <ID>`, `.soberrc.json` config support, and CI mode with `--fail-on` severity gating. Zero config, zero API keys, runs 100% locally.
+
 ### Standalone IDEs
 
 > IDEs build for AI native experiences.
