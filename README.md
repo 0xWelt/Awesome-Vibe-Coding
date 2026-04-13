@@ -151,6 +151,10 @@ Unleash Claude's raw power directly in your terminal. Search million-line
 codebases instantly. Turn hours-long workflows into a single command. Your
 tools. Your workflow. Your codebase, evolving at thought speed.
 
+#### [Toprank](https://github.com/nowork-studio/toprank)
+
+Toprank is an open-source Claude Code plugin for SEO, Google Ads, content writing, CMS setup, and search optimization workflows. It packages reusable marketing and growth skills so teams can run keyword research, landing page optimization, ad copy generation, and structured SEO execution directly inside Claude Code.
+
 #### [Gemini CLI](https://github.com/google-gemini/gemini-cli)
 
 Gemini CLI empowers developers to query and edit large codebases beyond the 1M
