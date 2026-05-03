@@ -643,6 +643,10 @@ Render is a unified cloud platform that makes it easy to build and run all your 
 
 Semgrep is a fast, open-source static analysis tool for finding bugs and enforcing code standards. While not exclusively an AI tool, Semgrep can be integrated into vibe coding workflows to ensure AI-generated code meets security and quality standards. Features include pattern-based code analysis that can catch bugs and security issues in AI-generated code, support for 30+ languages including Python, JavaScript, TypeScript, and more, CI/CD integration for automated code review, custom rules for enforcing coding standards, and free tier for open-source projects. Semgrep helps maintain code quality when using AI-assisted development by catching issues before they reach production.
 
+### [agenttrace](https://github.com/luoyuctl/agenttrace)
+
+agenttrace is a local TUI for inspecting AI coding-agent session logs across tools such as Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI, Cursor, and Amp. It helps developers review usage, cost, latency, tool failures, anomalies, reports, diffs, and CI gates during AI-assisted development.
+
 ### [Warp](https://www.warp.dev/)
 
 Warp is an agentic development environment that combines a modern Rust-based terminal, a built-in code editor with LSP and file tree, and AI agents (powered by Oz) in one app. Run a team of agents—including Warp's own agent, Claude Code, Codex, and Gemini CLI—directly from the terminal. Features include block-based terminal UI with syntax highlighting and multi-line editing, in-app code editor for editing agent output and writing code, interactive local agents for planning and debugging, WARP.md (compatible with agents.md and claude.md) for agent context, Universal Input with @-mentions for files and images, MCP support, and fine-grained control over agent autonomy. Warp works across the full development lifecycle from coding to deploy and maintain.
