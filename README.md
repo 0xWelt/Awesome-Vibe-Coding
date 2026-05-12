@@ -668,6 +668,8 @@ UiPath Python SDK allows developers to build custom automations and agents using
 > Projects created through vibe coding.
 
 ### [yaal](https://github.com/0xWelt/yaal)
+### [Qonspekt](https://github.com/DerTill123/qonspekt)
+Browser tool: paste any article, get atomic Obsidian/Markdown notes via Claude AI. BYOK, no backend. [Live](https://dertill123.github.io/qonspekt/)
 
 Yet Another Awesome List (YAAL) - a meta awesome list generator that creates curated collections of awesome lists. Built with Next.js, TypeScript, and Tailwind CSS, yaal automatically parses README files to generate beautiful, organized awesome list websites. Features automated README parsing, GitHub Actions CI/CD integration, GitHub Pages deployment, and a modern web interface for browsing and discovering awesome lists across various categories including AI, development tools, and learning resources.
 
