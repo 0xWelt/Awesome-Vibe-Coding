@@ -30,6 +30,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [CodeSelect](#codeselect)
       - [DevProjex](#devprojex)
       - [OpenAI Codex](#openai-codex)
+      - [Parallel Code](#parallel-code)
       - [Qwen Code](#qwen-code)
       - [Amp](#amp)
       - [Aider](#aider)
@@ -234,6 +235,10 @@ OpenAI Codex CLI is a lightweight coding agent that runs locally in your termina
 codex-profiles is a small Bash utility for switching Codex CLI and Codex Desktop
 accounts with isolated `CODEX_HOME` profiles. It keeps auth, config, sessions,
 connectors, logs, and local Codex state separated without copying token files.
+
+#### [Parallel Code](https://github.com/johannesjo/parallel-code)
+
+Parallel Code is an open-source desktop app for running multiple terminal-based coding agents in parallel. It supports Claude Code, Codex CLI, Gemini CLI, and other CLI agents, creates an isolated git branch and worktree per task, and includes terminal panes, diff review, merge controls, and optional local remote monitoring.
 
 #### [Qwen Code](https://github.com/QwenLM/qwen-code)
 
