@@ -33,6 +33,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [Amp](#amp)
       - [Aider](#aider)
       - [OpenPaw](#openpaw)
+      - [ax](#ax)
     - [Standalone IDEs](#standalone-ides)
       - [Cursor](#cursor)
       - [Trae](#trae)
@@ -227,6 +228,13 @@ OpenPaw is an open-source CLI tool (`npx pawmode`) that turns Claude Code into a
 #### [Sober Coding](https://github.com/voidborne-d/sober-coding)
 
 The hangover cure for vibe coding. A language-agnostic CLI tool that scans AI-generated codebases for 27 types of issues across 7 dimensions: security (hardcoded secrets, SQL injection, path traversal), architecture (god files, circular deps, deep nesting), duplication (exact clones, near clones, structural clones), error handling, dependencies, testing, and dead code. Features a sobriety scoring system (SOBER/TIPSY/HUNGOVER/BLACKOUT), fix suggestions via `sober fix <ID>`, `.soberrc.json` config support, and CI mode with `--fail-on` severity gating. Zero config, zero API keys, runs 100% locally.
+
+#### [ax](https://github.com/Necmttn/ax)
+
+ax is a local-first telemetry and recall graph for AI coding agents. It
+ingests Claude Code, Codex, Cursor, OpenCode, and Pi session history into
+SurrealDB so developers can inspect turns, tool calls, skills, cost,
+dispatches, and OTLP telemetry from a CLI, dashboard, or read-only MCP server.
 
 ### Standalone IDEs
 
