@@ -112,6 +112,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [Vercel AI SDK](#vercel-ai-sdk)
       - [Kosong](#kosong)
   - [Supporting Tools](#supporting-tools)
+    - [Pixel Snapper](https://github.com/Hugo-Dz/spritefusion-pixel-snapper)
     - [Vercel](#vercel)
     - [Netlify](#netlify)
     - [Railway](#railway)
@@ -617,6 +618,10 @@ MoonshotAI's agent development framework (Kosong means "empty" or "void" in Mala
 ## Supporting Tools
 
 > Essential tools that enhance your vibe coding workflow.
+
+### [Pixel Snapper](https://github.com/Hugo-Dz/spritefusion-pixel-snapper)
+
+Open-source tool for cleaning AI-generated pixel art for game development.
 
 ### [Vercel](https://vercel.com)
 
