@@ -120,6 +120,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
     - [Warp](#warp)
     - [Warp Drive](#warp-drive)
     - [UiPath Python](#uipath-python)
+    - [Vibe Coding Profiler](#vibe-coding-profiler)
   - [Vibe Coding Projects](#vibe-coding-projects)
     - [yaal](#yaal)
     - [Awesome-Vibe-Coding](#awesome-vibe-coding-1)
@@ -650,6 +651,10 @@ Semgrep is a fast, open-source static analysis tool for finding bugs and enforci
 ### [agenttrace](https://github.com/luoyuctl/agenttrace)
 
 agenttrace is a local TUI for inspecting AI coding-agent session logs across tools such as Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI, Cursor, and Amp. It helps developers review usage, cost, latency, tool failures, anomalies, reports, diffs, and CI gates during AI-assisted development.
+
+### [Vibe Coding Profiler](https://www.vibe-coding-profiler.com/)
+
+Vibe Coding Profiler analyzes git history to reveal a developer's AI-assisted engineering style and vibe coding persona. It helps vibe coders reflect on session rhythm, commit patterns, and workflow habits across repositories.
 
 ### [Warp](https://www.warp.dev/)
 
