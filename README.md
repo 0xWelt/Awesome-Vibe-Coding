@@ -29,6 +29,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [RA.Aid](#raaid)
       - [CodeSelect](#codeselect)
       - [OpenAI Codex](#openai-codex)
+      - [Parallel Code](#parallel-code)
       - [Qwen Code](#qwen-code)
       - [Amp](#amp)
       - [Aider](#aider)
@@ -207,6 +208,10 @@ CodeSelect is a lightweight CLI tool that helps developers share code with AI as
 #### [OpenAI Codex](https://github.com/openai/codex)
 
 OpenAI Codex CLI is a lightweight coding agent that runs locally in your terminal. It provides intelligent coding assistance with features like autonomous code generation, debugging, refactoring, and testing. Codex offers three levels of autonomy from read-only to full write access, runs in a secure sandbox environment, supports both interactive and non-interactive modes, integrates with ChatGPT plans for usage-based billing, and can work with open-source models via Ollama. With 34.5k+ stars, it's one of the most popular AI coding agents available.
+
+#### [Parallel Code](https://github.com/johannesjo/parallel-code)
+
+Parallel Code is an open-source desktop app for running multiple terminal-based coding agents in parallel. It supports Claude Code, Codex CLI, Gemini CLI, and other CLI agents, creates an isolated git branch and worktree per task, and includes terminal panes, diff review, merge controls, and optional local remote monitoring.
 
 #### [Qwen Code](https://github.com/QwenLM/qwen-code)
 
