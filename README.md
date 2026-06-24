@@ -70,6 +70,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [HeroUI Chat](#heroui-chat)
       - [Open Lovable](#open-lovable)
       - [Lazy AI](#lazy-ai)
+      - [Roblox GUI Maker](#roblox-gui-maker)
       - [Phoenix.new](#phoenixnew)
     - [Cloud-based Agents](#cloud-based-agents)
       - [Devin](#devin)
@@ -408,6 +409,10 @@ Open Lovable is an open-source AI-powered React app builder that lets you chat w
 #### [Lazy AI](https://getlazy.ai/)
 
 Lazy AI is a prompt-to-app platform that enables users to create full-stack web applications and prototypes for various purposes, including SaaS apps, APIs, and internal tools. It leverages advanced AI models to facilitate the development process, making it accessible for product managers, developers, and marketers. Features include instant full-stack app generation from natural language prompts, support for complex SaaS applications and APIs, built-in database and authentication systems, deployment-ready code generation, and collaborative tools for teams.
+
+#### [Roblox GUI Maker](https://robloxguimaker.dev/)
+
+Roblox GUI Maker is a browser-based AI tool for generating Roblox Studio GUI layouts and Lua starter code from natural language prompts. It helps creators quickly draft menus, HUDs, shop panels, and inventory screens for Roblox projects, making it useful for vibe coding workflows where developers describe an interface and iterate on generated implementation code.
 
 #### [Phoenix.new](https://phoenix.new/)
 
