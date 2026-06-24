@@ -62,6 +62,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [Tempo.new](#temponew)
       - [Softgen](#softgen)
       - [HeyBoss](#heyboss)
+      - [Playcode](#playcode)
       - [Creatr](#creatr)
       - [Rork](#rork)
       - [Napkins.dev](#napkinsdev)
@@ -374,6 +375,10 @@ Softgen is an AI web app builder that turns your ideas into stunning web applica
 #### [HeyBoss](https://www.heyboss.xyz)
 
 HeyBoss AI is the easiest no-code AI builder for sites and apps where everyone can vibe code. Create apps and websites by simply chatting with AI. Features include built-in database, AI app store, payment acceptance, visual editor, and SEO optimization. Free plan available with community support.
+
+#### [Playcode](https://playcode.io/ai-website-builder)
+
+Playcode is an AI website and app builder for creating hosted sites and web apps from natural-language prompts. It combines chat-based generation, visual editing, one-click publishing, custom domains, and Playcode Cloud hosting so users can build and update projects directly in the browser.
 
 #### [Creatr](https://getcreatr.com)
 
