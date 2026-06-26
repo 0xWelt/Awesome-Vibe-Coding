@@ -89,6 +89,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [Trickle](#trickle)
     - [Mobile-first tools](#mobile-first-tools)
       - [vibecode](#vibecode)
+      - [VibeKit.bot](#vibekitbot)
   - [Development Standards](#development-standards)
     - [AGENTS.md](#agentsmd)
     - [Model Context Protocol (MCP)](#model-context-protocol-mcp)
@@ -499,6 +500,14 @@ Vibecode from the App Store, enter your idea, and within minutes you'll have
 your fully native iOS app running on your phone. You can then share this app
 with your friends in 1 click, and they can use the app without downloading
 anything.
+
+#### [VibeKit.bot](https://vibekit.bot/)
+
+VibeKit.bot gives every app its own persistent AI agent that builds, deploys, and
+maintains the app over time — driven from your phone. The agent runs on hosted
+containers (not your device), so each app ships to a live URL and keeps running
+24/7. Supports bring-your-own-key for Claude and OpenAI, with a native iOS app
+and web dashboard.
 
 ## Development Standards
 
