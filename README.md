@@ -133,6 +133,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [MCP: Build Rich Context AI Apps with Anthropic](#mcp-build-rich-context-ai-apps-with-anthropic)
     - [Guides & Resources](#guides--resources)
       - [CodingButVibes — AI Coding Tools Guide](#codingbutvibes--ai-coding-tools-guide)
+      - [Fix AI UI Slop With Real UI Context](#fix-ai-ui-slop-with-real-ui-context)
   - [Repo Status](#repo-status)
   - [Contributors](#contributors)
   - [Star History](#star-history)
@@ -714,6 +715,10 @@ Dive deep into the Model Context Protocol (MCP) with this comprehensive 1-hour 3
 #### [CodingButVibes — AI Coding Tools Guide](https://www.codingbutvibes.com/what-is-vibe-coding)
 
 Practical breakdown of the vibe coding approach for developers actually shipping things. Covers what vibe coding is, how to approach AI-assisted development without losing control of your codebase, and honest comparisons of the tools (Cursor, Lovable, ElevenLabs, and more) that matter for real projects. No hype — just what works.
+
+#### [Fix AI UI Slop With Real UI Context](https://uizze.com/ai-ui-slop)
+
+UIZZE's three-step workflow gives coding agents real UI context before they build: research public screens, flows, and UI elements; use the Agent Connector and hosted MCP workflow when the agent needs UI evidence; then check the implementation with the documented design-contract, validation, audit, and critique workflow.
 
 ## Repo Status
 
