@@ -132,6 +132,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [Vibe Coding 101 with Replit](#vibe-coding-101-with-replit)
       - [MCP: Build Rich Context AI Apps with Anthropic](#mcp-build-rich-context-ai-apps-with-anthropic)
     - [Guides & Resources](#guides--resources)
+      - [AI Coding Tools Guide — Cursor Alternatives](#ai-coding-tools-guide--cursor-alternatives)
       - [CodingButVibes — AI Coding Tools Guide](#codingbutvibes--ai-coding-tools-guide)
   - [Repo Status](#repo-status)
   - [Contributors](#contributors)
@@ -710,6 +711,10 @@ Dive deep into the Model Context Protocol (MCP) with this comprehensive 1-hour 3
 ### Guides & Resources
 
 > Practical guides, tool comparisons, and editorial resources for developers building with AI.
+
+#### [AI Coding Tools Guide — Cursor Alternatives](https://ai-coding-tools-guide.vercel.app/cursor-alternatives/)
+
+Workflow-based comparison of Cursor alternatives for developers choosing between Windsurf, Claude Code, Cline, GitHub Copilot, Trae, Aider, Continue, and MCP-enabled AI coding setups.
 
 #### [CodingButVibes — AI Coding Tools Guide](https://www.codingbutvibes.com/what-is-vibe-coding)
 
