@@ -488,6 +488,14 @@ the work of others to enhance collaboration and creativity.
 
 Trickle is an AI-powered platform that transforms your ideas into production-ready web applications through natural language. Simply describe what you want to build, and Trickle generates complete full-stack applications with modern frameworks, responsive design, and deployment-ready code. Features include instant app generation from text prompts, support for complex multi-page applications, built-in database integration, automatic responsive design, and one-click deployment to the cloud.
 
+#### [Vibes DIY](https://vibes.diy/)
+
+Vibes DIY is an [open-source](https://github.com/VibesDIY/vibes.diy) (Apache-2.0)
+AI app builder for vibe coding. You describe an app in plain English and its AI
+codegen agent produces a real, live web app at its own URL — instantly
+shareable, remixable, and collaborative, with a built-in local-first database.
+No setup or backend wiring required.
+
 ### Mobile-first tools
 
 > Create Apps directly on your phone
