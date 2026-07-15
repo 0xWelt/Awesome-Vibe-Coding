@@ -618,6 +618,10 @@ MoonshotAI's agent development framework (Kosong means "empty" or "void" in Mala
 
 > Essential tools that enhance your vibe coding workflow.
 
+### [Agent Island](https://agent-island.dev)
+
+Agent Island is an open-source desktop status companion for Claude Code and Codex. Its native macOS and Windows apps show live session state and surface your-turn alerts while keeping session monitoring local, with no Agent Island account or product telemetry.
+
 ### [Vercel](https://vercel.com)
 
 Vercel is a cloud platform for static sites and Serverless Functions that fits
