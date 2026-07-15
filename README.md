@@ -156,6 +156,10 @@ tools. Your workflow. Your codebase, evolving at thought speed.
 
 Toprank is an open-source Claude Code plugin for SEO, Google Ads, content writing, CMS setup, and search optimization workflows. It packages reusable marketing and growth skills so teams can run keyword research, landing page optimization, ad copy generation, and structured SEO execution directly inside Claude Code.
 
+#### [NotFair](https://github.com/nowork-studio/NotFair)
+
+NotFair is an open-source set of Claude Code agent skills for SEO, GEO, Google Ads, and Meta Ads. It connects to live data through the Google Ads MCP, Meta Ads MCP, Google Search Console MCP, and Google Analytics (GA4) MCP, enabling teams to run site audits, keyword research, schema markup, wasted-spend detection, search-term cleanup, and Meta (Facebook + Instagram) ROAS analysis directly inside Claude Code.
+
 #### [Gemini CLI](https://github.com/google-gemini/gemini-cli)
 
 Gemini CLI empowers developers to query and edit large codebases beyond the 1M
