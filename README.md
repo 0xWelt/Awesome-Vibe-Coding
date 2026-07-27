@@ -204,6 +204,10 @@ RA.Aid (pronounced "raid") is a standalone coding agent built on LangGraph's age
 
 CodeSelect is a lightweight CLI tool that helps developers share code with AI assistants like Claude or ChatGPT. It provides a simple interactive interface to select files from a project and exports them in an AI-friendly format with intelligent context about project structure and relationships between files. Features include visual file selection with checkboxes, intelligent code analysis that detects imports and file relationships, multi-language support, zero dependencies, clipboard integration, and AI-optimized output formats including LLM, Markdown, and plain text.
 
+#### [DevProjex](https://github.com/Avazbek22/DevProjex)
+
+DevProjex is an open-source cross-platform GUI and CLI for selecting project files and building clean, token-counted context for AI coding workflows. It supports folder trees, file contents, Smart Ignore, preview, and multi-format export, and performs without modifying the source project.
+
 #### [OpenAI Codex](https://github.com/openai/codex)
 
 OpenAI Codex CLI is a lightweight coding agent that runs locally in your terminal. It provides intelligent coding assistance with features like autonomous code generation, debugging, refactoring, and testing. Codex offers three levels of autonomy from read-only to full write access, runs in a secure sandbox environment, supports both interactive and non-interactive modes, integrates with ChatGPT plans for usage-based billing, and can work with open-source models via Ollama. With 34.5k+ stars, it's one of the most popular AI coding agents available.
