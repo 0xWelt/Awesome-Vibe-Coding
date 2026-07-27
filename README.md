@@ -28,6 +28,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [MyCoder.ai](#mycoderai)
       - [RA.Aid](#raaid)
       - [CodeSelect](#codeselect)
+      - [DevProjex](#devprojex)
       - [OpenAI Codex](#openai-codex)
       - [Qwen Code](#qwen-code)
       - [Amp](#amp)
