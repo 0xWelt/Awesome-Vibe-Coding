@@ -651,6 +651,10 @@ Semgrep is a fast, open-source static analysis tool for finding bugs and enforci
 
 agenttrace is a local TUI for inspecting AI coding-agent session logs across tools such as Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI, Cursor, and Amp. It helps developers review usage, cost, latency, tool failures, anomalies, reports, diffs, and CI gates during AI-assisted development.
 
+### [Claudescope](https://github.com/vladar107/claudescope)
+
+Claudescope is a local, read-only web app (launched by a single npm CLI, `claudescope start`) for browsing, reading, searching, and analyzing AI coding-agent transcripts across Claude Code, Codex, Junie, pi, opencode, and Copilot CLI. It merges sessions by working directory into one project per repo and adds DuckDB-backed full-text search, token-cost analytics, and a files-changed view, letting developers review their AI-assisted sessions across agents in one place. Cross-platform and MIT-licensed.
+
 ### [Warp](https://www.warp.dev/)
 
 Warp is an agentic development environment that combines a modern Rust-based terminal, a built-in code editor with LSP and file tree, and AI agents (powered by Oz) in one app. Run a team of agents—including Warp's own agent, Claude Code, Codex, and Gemini CLI—directly from the terminal. Features include block-based terminal UI with syntax highlighting and multi-line editing, in-app code editor for editing agent output and writing code, interactive local agents for planning and debugging, WARP.md (compatible with agents.md and claude.md) for agent context, Universal Input with @-mentions for files and images, MCP support, and fine-grained control over agent autonomy. Warp works across the full development lifecycle from coding to deploy and maintain.
