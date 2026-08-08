@@ -618,6 +618,13 @@ MoonshotAI's agent development framework (Kosong means "empty" or "void" in Mala
 
 > Essential tools that enhance your vibe coding workflow.
 
+### [Agent FM](https://github.com/agentfm-ai/agent-fm)
+
+Agent FM is a local, open-source macOS companion for Claude Code and Codex
+sessions. It turns active local sessions into narrated stations with Global
+Mix, blocker alerts, and BYOK Gemini/OpenAI narration, so developers can follow
+parallel agents without reading every terminal.
+
 ### [Vercel](https://vercel.com)
 
 Vercel is a cloud platform for static sites and Serverless Functions that fits
