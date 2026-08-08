@@ -208,6 +208,12 @@ CodeSelect is a lightweight CLI tool that helps developers share code with AI as
 
 OpenAI Codex CLI is a lightweight coding agent that runs locally in your terminal. It provides intelligent coding assistance with features like autonomous code generation, debugging, refactoring, and testing. Codex offers three levels of autonomy from read-only to full write access, runs in a secure sandbox environment, supports both interactive and non-interactive modes, integrates with ChatGPT plans for usage-based billing, and can work with open-source models via Ollama. With 34.5k+ stars, it's one of the most popular AI coding agents available.
 
+#### [codex-profiles](https://github.com/Ducksss/codex-profiles)
+
+codex-profiles is a small Bash utility for switching Codex CLI and Codex Desktop
+accounts with isolated `CODEX_HOME` profiles. It keeps auth, config, sessions,
+connectors, logs, and local Codex state separated without copying token files.
+
 #### [Qwen Code](https://github.com/QwenLM/qwen-code)
 
 Qwen Code is a powerful command-line AI workflow tool adapted from Google Gemini CLI and optimized for Qwen3-Coder models. It provides intelligent coding assistance with features like code understanding and editing beyond traditional context windows, workflow automation for operational tasks, enhanced parser specifically optimized for Qwen-Coder models, and multiple free usage options including Qwen OAuth with 2,000 requests/day, Alibaba Cloud Bailian, ModelScope, and OpenRouter. With 9.2k+ stars, it offers comprehensive development acceleration capabilities including codebase exploration, refactoring, testing, and documentation generation.
