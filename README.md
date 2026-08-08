@@ -715,6 +715,10 @@ Dive deep into the Model Context Protocol (MCP) with this comprehensive 1-hour 3
 
 Practical breakdown of the vibe coding approach for developers actually shipping things. Covers what vibe coding is, how to approach AI-assisted development without losing control of your codebase, and honest comparisons of the tools (Cursor, Lovable, ElevenLabs, and more) that matter for real projects. No hype — just what works.
 
+#### [vibeprompt — the vibe coding cookbook](https://vibeprompt.tech)
+
+Free, open-source resource for vibe coders. Bundles a 10-step interactive workflow (from idea to shipped), 56 battle-tested prompts grouped by stage, 17 long-form articles with real receipts from shipped apps, 46 field-tested fixes for problems indie devs hit (security, conversion, burnout), and an interactive AGENTS.md + PRD generator. MIT licensed, no sign-up, runs in the browser.
+
 ## Repo Status
 
 ![Alt](https://repobeats.axiom.co/api/embed/4b9660ab5b37e6ebaa2f2e036eea18e08787410d.svg "Repobeats analytics image")
