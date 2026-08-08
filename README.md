@@ -133,6 +133,8 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [MCP: Build Rich Context AI Apps with Anthropic](#mcp-build-rich-context-ai-apps-with-anthropic)
     - [Guides & Resources](#guides--resources)
       - [CodingButVibes — AI Coding Tools Guide](#codingbutvibes--ai-coding-tools-guide)
+    - [Handbooks](#handbooks)
+      - [Vibe Coding with Confidence](#vibe-coding-with-confidence)
   - [Repo Status](#repo-status)
   - [Contributors](#contributors)
   - [Star History](#star-history)
@@ -714,6 +716,14 @@ Dive deep into the Model Context Protocol (MCP) with this comprehensive 1-hour 3
 #### [CodingButVibes — AI Coding Tools Guide](https://www.codingbutvibes.com/what-is-vibe-coding)
 
 Practical breakdown of the vibe coding approach for developers actually shipping things. Covers what vibe coding is, how to approach AI-assisted development without losing control of your codebase, and honest comparisons of the tools (Cursor, Lovable, ElevenLabs, and more) that matter for real projects. No hype — just what works.
+
+### Handbooks
+
+> Book-length guides that go deep on building production software with AI.
+
+#### [Vibe Coding with Confidence](https://zalt.me/guides/vibe-coding)
+
+Build apps that work beyond the demo: plan, build, debug, harden, ship, operate, and scale.
 
 ## Repo Status
 
