@@ -133,6 +133,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [MCP: Build Rich Context AI Apps with Anthropic](#mcp-build-rich-context-ai-apps-with-anthropic)
     - [Guides & Resources](#guides--resources)
       - [CodingButVibes — AI Coding Tools Guide](#codingbutvibes--ai-coding-tools-guide)
+      - [Codex First Task Prompt Generator](#codex-first-task-prompt-generator)
   - [Repo Status](#repo-status)
   - [Contributors](#contributors)
   - [Star History](#star-history)
@@ -714,6 +715,10 @@ Dive deep into the Model Context Protocol (MCP) with this comprehensive 1-hour 3
 #### [CodingButVibes — AI Coding Tools Guide](https://www.codingbutvibes.com/what-is-vibe-coding)
 
 Practical breakdown of the vibe coding approach for developers actually shipping things. Covers what vibe coding is, how to approach AI-assisted development without losing control of your codebase, and honest comparisons of the tools (Cursor, Lovable, ElevenLabs, and more) that matter for real projects. No hype — just what works.
+
+#### [Codex First Task Prompt Generator](https://ronnie2025.github.io/ai-agent-workbench-starter-pack/codex-first-task-prompt-generator.html)
+
+Free browser tool for turning a vague Codex CLI project goal into a scoped first-task prompt before asking an agent to edit a repository. It captures project type, task size, current environment, allowed scope, constraints, and acceptance checks so beginners can start with a smaller, reviewable AI coding task.
 
 ## Repo Status
 
