@@ -28,6 +28,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [MyCoder.ai](#mycoderai)
       - [RA.Aid](#raaid)
       - [CodeSelect](#codeselect)
+      - [DevProjex](#devprojex)
       - [OpenAI Codex](#openai-codex)
       - [Qwen Code](#qwen-code)
       - [Amp](#amp)
@@ -203,6 +204,10 @@ RA.Aid (pronounced "raid") is a standalone coding agent built on LangGraph's age
 #### [CodeSelect](https://github.com/maynetee/codeselect)
 
 CodeSelect is a lightweight CLI tool that helps developers share code with AI assistants like Claude or ChatGPT. It provides a simple interactive interface to select files from a project and exports them in an AI-friendly format with intelligent context about project structure and relationships between files. Features include visual file selection with checkboxes, intelligent code analysis that detects imports and file relationships, multi-language support, zero dependencies, clipboard integration, and AI-optimized output formats including LLM, Markdown, and plain text.
+
+#### [DevProjex](https://github.com/Avazbek22/DevProjex)
+
+DevProjex is an open-source cross-platform GUI and CLI for selecting project files and building clean, token-counted context for AI coding workflows. It supports folder trees, file contents, Smart Ignore, preview, and multi-format export, and performs without modifying the source project.
 
 #### [OpenAI Codex](https://github.com/openai/codex)
 
