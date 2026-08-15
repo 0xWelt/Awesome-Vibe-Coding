@@ -146,6 +146,10 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
 
 > Integrate AI directly into your terminal.
 
+#### [agent-qa](https://github.com/vostride/agent-qa)
+
+agent-qa is the self-improving QA agent for software teams. It runs natural-language web and mobile tests from the command line, learns from prior runs, heals around UI drift, and exposes MCP tools and skills for coding-agent workflows.
+
 #### [Claude Code](https://www.anthropic.com/claude-code)
 
 Unleash Claude's raw power directly in your terminal. Search million-line
