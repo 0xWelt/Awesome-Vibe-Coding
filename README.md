@@ -814,6 +814,10 @@ Practical breakdown of the vibe coding approach for developers actually shipping
 
 Free browser tool for turning a vague Codex CLI project goal into a scoped first-task prompt before asking an agent to edit a repository. It captures project type, task size, current environment, allowed scope, constraints, and acceptance checks so beginners can start with a smaller, reviewable AI coding task.
 
+#### [Wikivibe](https://wikivibe.ru/en/)
+
+Practical knowledge base for AI-assisted development with guides, a glossary, jobs, and a public MCP endpoint for agent-readable site context.
+
 ### Handbooks
 
 > Book-length guides that go deep on building production software with AI.
