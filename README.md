@@ -12,13 +12,17 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
 
 ![Awesome-Vibe-Coding](docs/Awesome-Vibe-Coding.png)
 
+
 ## Table of Contents
 
 - [Awesome-Vibe-Coding](#awesome-vibe-coding)
   - [Table of Contents](#table-of-contents)
-  - [Development Toolkits](#development-toolkits)
-    - [CLI Tools](#cli-tools)
+  - [Harnesses](#harnesses)
+    - [Terminal CLIs](#terminal-clis)
+      - [agent-qa](#agent-qa)
       - [Claude Code](#claude-code)
+      - [Toprank](#toprank)
+      - [NotFair](#notfair)
       - [Gemini CLI](#gemini-cli)
       - [Kimi CLI](#kimi-cli)
       - [Crush](#crush)
@@ -30,11 +34,13 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [CodeSelect](#codeselect)
       - [DevProjex](#devprojex)
       - [OpenAI Codex](#openai-codex)
+      - [codex-profiles](#codex-profiles)
       - [Parallel Code](#parallel-code)
       - [Qwen Code](#qwen-code)
       - [Amp](#amp)
       - [Aider](#aider)
       - [OpenPaw](#openpaw)
+      - [Sober Coding](#sober-coding)
       - [ax](#ax)
     - [Standalone IDEs](#standalone-ides)
       - [Cursor](#cursor)
@@ -85,6 +91,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [Jules](#jules)
       - [Factory](#factory)
       - [Ona](#ona)
+  - [Development Toolkits](#development-toolkits)
     - [Task Management](#task-management)
       - [Boomerang Tasks](#boomerang-tasks)
       - [Taskmaster AI](#taskmaster-ai)
@@ -93,8 +100,27 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [Lovable](#lovable)
       - [YouWare](#youware)
       - [Trickle](#trickle)
+      - [Vibes DIY](#vibes-diy)
     - [Mobile-first tools](#mobile-first-tools)
       - [vibecode](#vibecode)
+      - [VibeKit.bot](#vibekitbot)
+  - [Platform CLIs](#platform-clis)
+    - [Code Hosting](#code-hosting)
+      - [GitHub CLI (gh)](#github-cli-gh)
+      - [GitLab CLI (glab)](#gitlab-cli-glab)
+    - [Collaboration & IM](#collaboration--im)
+      - [Lark CLI (lark-cli)](#lark-cli-lark-cli)
+      - [Slack CLI](#slack-cli)
+    - [Cloud & Infrastructure](#cloud--infrastructure)
+      - [AWS CLI](#aws-cli)
+      - [Azure CLI (az)](#azure-cli-az)
+      - [Google Cloud CLI (gcloud)](#google-cloud-cli-gcloud)
+      - [kubectl](#kubectl)
+      - [Vercel CLI](#vercel-cli)
+      - [Netlify CLI](#netlify-cli)
+      - [Supabase CLI](#supabase-cli)
+    - [Project Management](#project-management)
+      - [Linear CLI](#linear-cli)
   - [Development Standards](#development-standards)
     - [AGENTS.md](#agentsmd)
     - [Model Context Protocol (MCP)](#model-context-protocol-mcp)
@@ -134,7 +160,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
     - [Awesome-LLM-RL](#awesome-llm-rl)
     - [TradeMasterOnline](#trademasteronline)
     - [VibeRL](#viberl)
-    - [taxi\_calculator](#taxi_calculator)
+    - [taxi_calculator](#taxi_calculator)
   - [Learning Resources](#learning-resources)
     - [DeepLearning.AI](#deeplearningai)
       - [Vibe Coding 101 with Replit](#vibe-coding-101-with-replit)
@@ -151,13 +177,13 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
   - [Star History](#star-history)
   - [License](#license)
 
-## Development Toolkits
+## Harnesses
 
-> Comprehensive collection of AI-powered development tools, IDEs, extensions, and platforms for modern software development.
+> Tools that run AI coding agents — terminal CLIs, standalone IDEs, editor extensions, web-based environments, and autonomous cloud agents.
 
-### CLI Tools
+### Terminal CLIs
 
-> Integrate AI directly into your terminal.
+> AI coding agents that run in your terminal.
 
 #### [agent-qa](https://github.com/vostride/agent-qa)
 
@@ -499,6 +525,10 @@ Factory is the only agent-native software development platform that works everyw
 
 Ona is the AI software engineer you can rely on, working with and for your teams across the entire development lifecycle. It automatically sets up with your code, secrets, and policies, providing enterprise-grade AI development capabilities. Features include Ona Agents for keeping momentum across any device with your personal team of professional software engineering agents, Ona Environments with API-first, sandboxed development environments with full OS-level isolation, Ona Guardrails for fine-grained organizational permissions and policies with detailed audit trails, seamless integration with VS Code Web, desktop IDEs, and mobile devices, enterprise-grade integrations with GitHub, GitLab, MongoDB, AWS, Redis, and more, and complete compliance with GDPR, SOC2 certification, and Fortune 500 trust. Ona is deployed across America's biggest banks and Europe's leading pharmaceutical companies.
 
+## Development Toolkits
+
+> AI-powered development tools, platforms, and community resources for modern software development.
+
 ### Task Management
 
 > AI-powered project management tools for breaking down complex development tasks.
@@ -572,6 +602,74 @@ machine to keep awake and it survives a dropped connection, so you can kick off
 a change and close the app. Bring your own Claude or OpenAI key, or pay as you
 go — no bundled-credit lock-in. Each app ships on a live domain with an optional
 database add-on.
+
+## Platform CLIs
+
+> Command-line tools for operating external platforms — code hosting, collaboration, cloud infrastructure, and project management. These are the "hands" that let you and your AI agents act on services directly from the terminal.
+
+### Code Hosting
+
+> Official CLIs for code hosting platforms.
+
+#### [GitHub CLI (gh)](https://cli.github.com/)
+
+The official command-line tool for GitHub. Manage repositories, issues, pull requests, Actions, releases, and more from the terminal, with first-class JSON output (`gh api`, `--json`) that makes it ideal for scripts and AI agents. Supports authentication via `gh auth login`, including machine tokens for CI.
+
+#### [GitLab CLI (glab)](https://gitlab.com/gitlab-org/cli)
+
+The official command-line tool for GitLab. Work with projects, issues, merge requests, pipelines, and CI/CD from the terminal. Like `gh`, it provides JSON output for scripting and agent-friendly automation.
+
+### Collaboration & IM
+
+> Official CLIs for messaging and collaboration platforms.
+
+#### [Lark CLI (lark-cli)](https://github.com/larksuite/cli)
+
+The official Lark/Feishu CLI, built for humans and AI Agents. Covers Messenger, Docs, Base, Sheets, Calendar, Mail, Tasks, Meetings, and more, with 200+ commands and 20+ AI Agent Skills — letting agents operate a full collaboration platform directly from the terminal.
+
+#### [Slack CLI](https://api.slack.com/automation/cli)
+
+The official Slack command-line tool for building and managing Slack apps and automations with the Slack Platform SDK. Create workflows, triggers, and functions, and manage your workspace programmatically.
+
+### Cloud & Infrastructure
+
+> Official CLIs for cloud platforms and infrastructure.
+
+#### [AWS CLI](https://aws.amazon.com/cli/)
+
+The official command-line interface for Amazon Web Services. Manage EC2, S3, Lambda, IAM, and 200+ AWS services with `aws` subcommands, JSON output, and profile-based multi-account workflows.
+
+#### [Azure CLI (az)](https://learn.microsoft.com/cli/azure/)
+
+The official command-line interface for Microsoft Azure. Manage resources across Azure with `az` subcommands, supporting JSON output and role-based access control.
+
+#### [Google Cloud CLI (gcloud)](https://cloud.google.com/sdk/gcloud)
+
+The official command-line interface for Google Cloud. Manage Compute Engine, GKE, Cloud Run, and other GCP services with `gcloud` subcommands, filters, and machine-readable output.
+
+#### [kubectl](https://kubernetes.io/docs/reference/kubectl/)
+
+The official command-line tool for Kubernetes. Deploy, inspect, and manage container workloads with `kubectl` commands, `kubectl get -o json/yaml` output, and declarative manifests.
+
+#### [Vercel CLI](https://vercel.com/docs/cli)
+
+The official command-line interface for Vercel. Deploy frontend projects, manage environments and domains, and run local previews with `vercel` commands — a natural fit for agent-driven deployment workflows.
+
+#### [Netlify CLI](https://docs.netlify.com/cli/overview/)
+
+The official command-line interface for Netlify. Build, deploy, and manage Netlify sites and functions from the terminal, including edge functions and environment variables.
+
+#### [Supabase CLI](https://supabase.com/docs/guides/cli)
+
+The official command-line interface for Supabase. Manage Postgres databases, auth, storage, edge functions, and local development environments with `supabase` commands.
+
+### Project Management
+
+> Official CLIs for project management platforms.
+
+#### [Linear CLI](https://github.com/linearapp/linear)
+
+The official command-line interface for Linear. Create and manage issues, cycles, and projects from the terminal, with JSON output that makes it easy to script issue intake and agent-driven workflow automation.
 
 ## Development Standards
 
@@ -862,4 +960,3 @@ This work is licensed under a
 [Freeware Icon]: https://jaywcjlove.github.io/sb/ico/min-free.svg 'Freeware'
 [app-store Icon]: https://jaywcjlove.github.io/sb/ico/min-app-store.svg 'App Store Software'
 [awesome-list Icon]: https://jaywcjlove.github.io/sb/ico/min-awesome.svg 'Awesome List'
-
