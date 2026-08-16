@@ -51,7 +51,6 @@ flowchart TB
         direction LR
         C1["MCP Servers"]
         C2["Agent Skills"]
-        C3["Development Standards"]
     end
 
     Comm["✨ Vibe Coding Communities"]
@@ -79,10 +78,10 @@ flowchart TB
 
 | Category | Description | Location |
 | --- | --- | --- |
-| Harnesses | Tools that run AI coding agents — terminal CLIs, standalone IDEs, IDE extensions, web-based IDEs, cloud agents, mobile apps, SDKs, and their general capabilities (plan, goal, compact, PTC, hooks). | [contents/harnesses/](contents/harnesses/) |
+| Harnesses | Tools that run AI coding agents — terminal CLIs, standalone IDEs, IDE extensions, web-based IDEs, cloud agents, mobile apps, SDKs, and their general capabilities (plan, goal, compact, PTC, hooks, standards & protocols). | [contents/harnesses/](contents/harnesses/) |
 | Vibe Coding Communities | Create apps with AI and share them with the community — AI app builders and remixable creation platforms. | [contents/vibe-coding-community/](contents/vibe-coding-community/) |
 | Platforms | Platforms that provide services — code hosting, collaboration, cloud, hosting, project and task management — together with the CLIs (gh, glab, aws, lark-cli) that operate them. | [contents/platforms/](contents/platforms/) |
-| Harness Extensions | What extends coding agents beyond the box — standards & protocols (AGENTS.md, MCP, ACP, Skills), MCP servers, and agent skills. | [contents/harness-extensions/](contents/harness-extensions/) |
+| Harness Extensions | What plugs into harnesses to extend them beyond the box — MCP servers and reusable agent skills. | [contents/harness-extensions/](contents/harness-extensions/) |
 | Supporting Tools | Non-platform tools that support agent workflows — observability, context preparation, code quality, and specialized utilities. | [contents/supporting-tools/](contents/supporting-tools/) |
 | Awesome Projects | Projects created through vibe coding. | [contents/awesome-projects/](contents/awesome-projects/) |
 | Awesome Learning Resources | Essential courses and educational resources to master vibe coding. | [contents/awesome-learning-resources/](contents/awesome-learning-resources/) |

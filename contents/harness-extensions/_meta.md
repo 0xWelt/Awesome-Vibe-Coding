@@ -1,4 +1,4 @@
 ---
 title: Harness Extensions
 ---
-What extends coding agents beyond the box — open standards and protocols, MCP servers, and reusable skills.
+What plugs into harnesses to extend them beyond the box — MCP servers and reusable agent skills.
