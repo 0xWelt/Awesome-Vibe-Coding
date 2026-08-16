@@ -110,17 +110,41 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [GitLab CLI (glab)](#gitlab-cli-glab)
     - [Collaboration & IM](#collaboration--im)
       - [Lark CLI (lark-cli)](#lark-cli-lark-cli)
-      - [Slack CLI](#slack-cli)
-    - [Cloud & Infrastructure](#cloud--infrastructure)
-      - [AWS CLI](#aws-cli)
+      - [Slack CLI (slack)](#slack-cli-slack)
+    - [Cloud Platforms](#cloud-platforms)
+      - [AWS CLI (aws)](#aws-cli-aws)
       - [Azure CLI (az)](#azure-cli-az)
       - [Google Cloud CLI (gcloud)](#google-cloud-cli-gcloud)
-      - [kubectl](#kubectl)
-      - [Vercel CLI](#vercel-cli)
-      - [Netlify CLI](#netlify-cli)
-      - [Supabase CLI](#supabase-cli)
+      - [Alibaba Cloud CLI (aliyun)](#alibaba-cloud-cli-aliyun)
+      - [Tencent Cloud CLI (tccli)](#tencent-cloud-cli-tccli)
+      - [Huawei Cloud CLI (hcloud)](#huawei-cloud-cli-hcloud)
+      - [Oracle Cloud CLI (oci)](#oracle-cloud-cli-oci)
+      - [IBM Cloud CLI (ibmcloud)](#ibm-cloud-cli-ibmcloud)
+      - [DigitalOcean CLI (doctl)](#digitalocean-cli-doctl)
+      - [Hetzner Cloud CLI (hcloud)](#hetzner-cloud-cli-hcloud)
+      - [Vultr CLI (vultr-cli)](#vultr-cli-vultr-cli)
+      - [Scaleway CLI (scw)](#scaleway-cli-scw)
+      - [Linode CLI (linode-cli)](#linode-cli-linode-cli)
+    - [Containers & Orchestration](#containers--orchestration)
+      - [kubectl (kubectl)](#kubectl-kubectl)
+      - [Docker CLI (docker)](#docker-cli-docker)
+      - [Helm (helm)](#helm-helm)
+      - [k9s (k9s)](#k9s-k9s)
+    - [Hosting & PaaS](#hosting--paas)
+      - [Vercel CLI (vercel)](#vercel-cli-vercel)
+      - [Turborepo (turbo)](#turborepo-turbo)
+      - [Next.js CLI (next)](#nextjs-cli-next)
+      - [create-next-app (create-next-app)](#create-next-app-create-next-app)
+      - [Netlify CLI (netlify)](#netlify-cli-netlify)
+      - [Cloudflare CLI (cf)](#cloudflare-cli-cf)
+      - [Fly.io CLI (flyctl)](#flyio-cli-flyctl)
+      - [Railway CLI (railway)](#railway-cli-railway)
+      - [Render CLI (render)](#render-cli-render)
+      - [Heroku CLI (heroku)](#heroku-cli-heroku)
+      - [Firebase CLI (firebase)](#firebase-cli-firebase)
+      - [Supabase CLI (supabase)](#supabase-cli-supabase)
     - [Project Management](#project-management)
-      - [Linear CLI](#linear-cli)
+      - [Linear CLI (linear)](#linear-cli-linear)
   - [Development Standards](#development-standards)
     - [AGENTS.md](#agentsmd)
     - [Model Context Protocol (MCP)](#model-context-protocol-mcp)
@@ -627,15 +651,15 @@ The official command-line tool for GitLab. Work with projects, issues, merge req
 
 The official Lark/Feishu CLI, built for humans and AI Agents. Covers Messenger, Docs, Base, Sheets, Calendar, Mail, Tasks, Meetings, and more, with 200+ commands and 20+ AI Agent Skills — letting agents operate a full collaboration platform directly from the terminal.
 
-#### [Slack CLI](https://api.slack.com/automation/cli)
+#### [Slack CLI (slack)](https://api.slack.com/automation/cli)
 
 The official Slack command-line tool for building and managing Slack apps and automations with the Slack Platform SDK. Create workflows, triggers, and functions, and manage your workspace programmatically.
 
-### Cloud & Infrastructure
+### Cloud Platforms
 
-> Official CLIs for cloud platforms and infrastructure.
+> Official CLIs for public cloud platforms.
 
-#### [AWS CLI](https://aws.amazon.com/cli/)
+#### [AWS CLI (aws)](https://aws.amazon.com/cli/)
 
 The official command-line interface for Amazon Web Services. Manage EC2, S3, Lambda, IAM, and 200+ AWS services with `aws` subcommands, JSON output, and profile-based multi-account workflows.
 
@@ -647,19 +671,115 @@ The official command-line interface for Microsoft Azure. Manage resources across
 
 The official command-line interface for Google Cloud. Manage Compute Engine, GKE, Cloud Run, and other GCP services with `gcloud` subcommands, filters, and machine-readable output.
 
-#### [kubectl](https://kubernetes.io/docs/reference/kubectl/)
+#### [Alibaba Cloud CLI (aliyun)](https://help.aliyun.com/zh/aliyun-cli/)
+
+The official command-line interface for Alibaba Cloud. Manage ECS, OSS, VPC, and other Alibaba Cloud services with `aliyun` subcommands, JSON output, and multi-profile workflows.
+
+#### [Tencent Cloud CLI (tccli)](https://cloud.tencent.com/document/product/440)
+
+The official command-line interface for Tencent Cloud. Manage CVM, COS, and other Tencent Cloud services with `tccli` subcommands, JSON output, and API-key authentication.
+
+#### [Huawei Cloud CLI (hcloud)](https://github.com/huaweicloud/huaweicloud-cli)
+
+The official command-line interface for Huawei Cloud. Manage ECS, OBS, and other Huawei Cloud services with `hcloud` subcommands and JSON output.
+
+#### [Oracle Cloud CLI (oci)](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cli.htm)
+
+The official command-line interface for Oracle Cloud Infrastructure. Manage compute, storage, networking, and IAM with `oci` subcommands and JSON output.
+
+#### [IBM Cloud CLI (ibmcloud)](https://cloud.ibm.com/docs/cli)
+
+The official command-line interface for IBM Cloud. Manage resources, services, and Kubernetes clusters with `ibmcloud` subcommands.
+
+#### [DigitalOcean CLI (doctl)](https://docs.digitalocean.com/reference/doctl/)
+
+The official command-line interface for DigitalOcean. Manage droplets, apps, databases, and container registries with `doctl` subcommands.
+
+#### [Hetzner Cloud CLI (hcloud)](https://github.com/hetznercloud/cli)
+
+The official command-line interface for Hetzner Cloud. Manage servers, networks, and volumes with `hcloud` subcommands and JSON output.
+
+#### [Vultr CLI (vultr-cli)](https://github.com/vultr/vultr-cli)
+
+The official command-line interface for Vultr. Manage instances, bare metal, and Kubernetes clusters with `vultr-cli` subcommands.
+
+#### [Scaleway CLI (scw)](https://github.com/scaleway/scaleway-cli)
+
+The official command-line interface for Scaleway. Manage instances, containers, and object storage with `scw` subcommands.
+
+#### [Linode CLI (linode-cli)](https://techdocs.akamai.com/cloud-computing/docs/linode-cli)
+
+The official command-line interface for Linode (Akamai). Manage instances, volumes, and networking with `linode-cli` subcommands.
+
+### Containers & Orchestration
+
+> Official CLIs for containers and Kubernetes.
+
+#### [kubectl (kubectl)](https://kubernetes.io/docs/reference/kubectl/)
 
 The official command-line tool for Kubernetes. Deploy, inspect, and manage container workloads with `kubectl` commands, `kubectl get -o json/yaml` output, and declarative manifests.
 
-#### [Vercel CLI](https://vercel.com/docs/cli)
+#### [Docker CLI (docker)](https://docs.docker.com/reference/cli/docker/)
+
+The official command-line interface for Docker. Build, run, and manage containers, images, and compose stacks with `docker` subcommands.
+
+#### [Helm (helm)](https://helm.sh/docs/helm/)
+
+The package manager for Kubernetes. Install, upgrade, and manage Kubernetes applications with `helm` charts, with JSON/YAML output for scripting.
+
+#### [k9s (k9s)](https://k9scli.io/)
+
+A terminal UI for managing Kubernetes clusters. Navigate and manage pods, deployments, services, and more with a keyboard-driven `k9s` interface.
+
+### Hosting & PaaS
+
+> Official CLIs for hosting platforms and backend-as-a-service.
+
+#### [Vercel CLI (vercel)](https://vercel.com/docs/cli)
 
 The official command-line interface for Vercel. Deploy frontend projects, manage environments and domains, and run local previews with `vercel` commands — a natural fit for agent-driven deployment workflows.
 
-#### [Netlify CLI](https://docs.netlify.com/cli/overview/)
+#### [Turborepo (turbo)](https://turbo.build/repo/docs)
+
+The official command-line interface for Turborepo, Vercel's monorepo build system. Run tasks across JavaScript and TypeScript monorepos with automatic caching, dependency-aware execution, and remote caching for CI.
+
+#### [Next.js CLI (next)](https://nextjs.org/docs/app/api-reference/cli/next)
+
+The official command-line interface for Next.js, the React framework by Vercel. Develop, build, and start Next.js applications with `next dev`, `next build`, and `next start` — the core loop of frontend deployments on Vercel.
+
+#### [create-next-app (create-next-app)](https://nextjs.org/docs/app/api-reference/cli/create-next-app)
+
+The official scaffolding tool for Next.js. Bootstrap new applications with a single command, choosing TypeScript, Tailwind CSS, ESLint, App Router, and more — a fast, reproducible entry point for agent-driven project setup.
+
+#### [Netlify CLI (netlify)](https://docs.netlify.com/cli/overview/)
 
 The official command-line interface for Netlify. Build, deploy, and manage Netlify sites and functions from the terminal, including edge functions and environment variables.
 
-#### [Supabase CLI](https://supabase.com/docs/guides/cli)
+#### [Cloudflare CLI (cf)](https://developers.cloudflare.com/fundamentals/cli/)
+
+The official command-line tool for Cloudflare. Manage DNS records, Pages deployments, and account-level settings from the terminal. For Workers and modern Cloudflare development, Cloudflare recommends `wrangler`.
+
+#### [Fly.io CLI (flyctl)](https://fly.io/docs/flyctl/)
+
+The official command-line interface for Fly.io. Launch and scale containerized apps on edge hardware with `flyctl` (or `fly`) commands.
+
+#### [Railway CLI (railway)](https://docs.railway.com/develop/cli)
+
+The official command-line interface for Railway. Deploy and manage projects, services, and variables with `railway` subcommands.
+
+#### [Render CLI (render)](https://render.com/docs/cli)
+
+The official command-line interface for Render. Deploy and manage services, databases, and cron jobs with `render` subcommands.
+
+#### [Heroku CLI (heroku)](https://devcenter.heroku.com/articles/heroku-cli)
+
+The official command-line interface for Heroku. Manage apps, dynos, add-ons, and logs with `heroku` subcommands.
+
+#### [Firebase CLI (firebase)](https://firebase.google.com/docs/cli)
+
+The official command-line interface for Firebase. Deploy Functions and Hosting, and manage Firestore, authentication, and other Firebase services with `firebase` subcommands.
+
+#### [Supabase CLI (supabase)](https://supabase.com/docs/guides/cli)
 
 The official command-line interface for Supabase. Manage Postgres databases, auth, storage, edge functions, and local development environments with `supabase` commands.
 
@@ -667,7 +787,7 @@ The official command-line interface for Supabase. Manage Postgres databases, aut
 
 > Official CLIs for project management platforms.
 
-#### [Linear CLI](https://github.com/linearapp/linear)
+#### [Linear CLI (linear)](https://github.com/linearapp/linear)
 
 The official command-line interface for Linear. Create and manage issues, cycles, and projects from the terminal, with JSON output that makes it easy to script issue intake and agent-driven workflow automation.
 
