@@ -126,6 +126,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
     - [Warp](#warp)
     - [Warp Drive](#warp-drive)
     - [UiPath Python](#uipath-python)
+    - [Vibe Coding Profiler](#vibe-coding-profiler)
   - [Vibe Coding Projects](#vibe-coding-projects)
     - [yaal](#yaal)
     - [Awesome-Vibe-Coding](#awesome-vibe-coding-1)
@@ -724,6 +725,10 @@ agenttrace is a local TUI for inspecting AI coding-agent session logs across too
 ### [Claudescope](https://github.com/vladar107/claudescope)
 
 Claudescope is a local, read-only web app (launched by a single npm CLI, `claudescope start`) for browsing, reading, searching, and analyzing AI coding-agent transcripts across Claude Code, Codex, Junie, pi, opencode, and Copilot CLI. It merges sessions by working directory into one project per repo and adds DuckDB-backed full-text search, token-cost analytics, and a files-changed view, letting developers review their AI-assisted sessions across agents in one place. Cross-platform and MIT-licensed.
+
+### [Vibe Coding Profiler](https://www.vibe-coding-profiler.com/)
+
+Vibe Coding Profiler analyzes git history to reveal a developer's AI-assisted engineering style and vibe coding persona. It helps vibe coders reflect on session rhythm, commit patterns, and workflow habits across repositories.
 
 ### [Warp](https://www.warp.dev/)
 
