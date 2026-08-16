@@ -143,6 +143,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
       - [AI Coding Tools Guide — Cursor Alternatives](#ai-coding-tools-guide--cursor-alternatives)
       - [CodingButVibes — AI Coding Tools Guide](#codingbutvibes--ai-coding-tools-guide)
       - [Codex First Task Prompt Generator](#codex-first-task-prompt-generator)
+      - [Vibe Coding UI Specification](#vibe-coding-ui-specification)
     - [Handbooks](#handbooks)
       - [Vibe Coding with Confidence](#vibe-coding-with-confidence)
   - [Repo Status](#repo-status)
@@ -822,6 +823,10 @@ Practical knowledge base for AI-assisted development with guides, a glossary, jo
 
 Free, open-source resource for vibe coders. Bundles a 10-step interactive workflow (from idea to shipped), 56 battle-tested prompts grouped by stage, 17 long-form articles with real receipts from shipped apps, 46 field-tested fixes for problems indie devs hit (security, conversion, burnout), and an interactive AGENTS.md + PRD generator. MIT licensed, no sign-up, runs in the browser.
 
+#### [Vibe Coding UI Specification](https://horizonx.so/resources/vibe-coding-ui-specification)
+
+A free, MIT-licensed interface contract for AI-assisted frontend work. It defines design tokens, component states, responsive behavior, WCAG 2.2 AA, reduced motion, production review gates, and a reusable YAML template so teams can keep generated React and Tailwind interfaces consistent beyond the first prompt.
+
 ### Handbooks
 
 > Book-length guides that go deep on building production software with AI.
@@ -857,3 +862,4 @@ This work is licensed under a
 [Freeware Icon]: https://jaywcjlove.github.io/sb/ico/min-free.svg 'Freeware'
 [app-store Icon]: https://jaywcjlove.github.io/sb/ico/min-app-store.svg 'App Store Software'
 [awesome-list Icon]: https://jaywcjlove.github.io/sb/ico/min-awesome.svg 'Awesome List'
+
