@@ -114,28 +114,26 @@ jobs:
         with:
           submodules: true
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v7
+      - name: Setup Vite+
+        uses: voidzero-dev/setup-vp@v1
         with:
           node-version: '24'
-          cache: 'npm'
-          cache-dependency-path: yaal/package-lock.json
 
       - name: Install dependencies
         working-directory: ./yaal
-        run: npm ci
+        run: vp install --frozen-lockfile
 
       - name: Generate configuration
         working-directory: ./yaal
-        run: node scripts/generate-github-config.js
+        run: vp node scripts/generate-github-config.js
 
       - name: Parse README and generate data
         working-directory: ./yaal
-        run: node scripts/parse-readme.js
+        run: vp node scripts/parse-readme.js
 
       - name: Build website
         working-directory: ./yaal
-        run: npm run build
+        run: vp run build
 
       - name: Build Summary
         run: |
