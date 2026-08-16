@@ -34,7 +34,7 @@ flowchart TB
         H5["Cloud-based Agents"]
         H6["Mobile Harnesses"]
         H7["Agent SDKs"]
-        H8["General Capabilities"]
+        H8["General Capabilities & Standards"]
     end
 
     subgraph platforms["🌐 Platforms — services agents operate"]
