@@ -1,0 +1,6 @@
+---
+name: "Claude Agent Skills"
+link: "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview"
+---
+
+Claude Agent Skills are modular capabilities that extend Claude's functionality. Each Skill packages instructions, metadata, and optional resources (scripts, templates) that Claude uses automatically when relevant. Skills are reusable, filesystem-based resources that provide Claude with domain-specific expertise: workflows, context, and best practices that transform general-purpose agents into specialists. Unlike prompts (conversation-level instructions for one-off tasks), Skills load on-demand and eliminate the need to repeatedly provide the same guidance across multiple conversations. Key benefits include specializing Claude for domain-specific tasks, reducing repetition by creating once and using automatically, and composing capabilities by combining Skills to build complex workflows. Skills can include project-specific context, workflow instructions, tool usage guidelines, and structured data that Claude references automatically. Anthropic provides pre-built Agent Skills for common document formats, and developers can create custom Skills tailored to their specific needs. Skills work seamlessly with Claude Code, Claude API, and the Agent SDK, providing a consistent way to extend Claude's capabilities across different interfaces.

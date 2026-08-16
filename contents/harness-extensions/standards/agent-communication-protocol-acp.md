@@ -1,0 +1,7 @@
+---
+name: "Agent Communication Protocol (ACP)"
+link: "https://agentcommunicationprotocol.dev/"
+command: "ACP"
+---
+
+The Agent Communication Protocol (ACP) is an open protocol for agent interoperability that solves the growing challenge of connecting AI agents, applications, and humans. Developed as an open standard under the Linux Foundation, ACP enables agents to communicate through a standardized RESTful API that supports all forms of modality, synchronous and asynchronous communication, streaming interactions, both stateful and stateless operation patterns, online and offline agent discovery, and long running tasks. The protocol remains agnostic to internal implementations, requiring only minimal specifications for compatibility, whether your agent is built with BeeAI framework, LangChain, CrewAI, or custom code. Key features include REST-based communication using simple, well-defined REST endpoints, support for all message types using MimeTypes for content identification, no SDK required (but available for Python and TypeScript), offline discovery by embedding metadata in distribution packages, and async-first design with sync support. ACP addresses integration barriers, duplicated effort, scalability challenges, and inconsistent developer experience by providing a shared communication standard that works across any technology stack. Use cases include flexible agent replacement, multi-agent collaboration, cross-platform integration, and inter-company partnerships for secure agent collaboration between organizations.
