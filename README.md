@@ -140,6 +140,7 @@ A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resource
     - [Guides & Resources](#guides--resources)
       - [AI Coding Tools Guide — Cursor Alternatives](#ai-coding-tools-guide--cursor-alternatives)
       - [CodingButVibes — AI Coding Tools Guide](#codingbutvibes--ai-coding-tools-guide)
+      - [Codex First Task Prompt Generator](#codex-first-task-prompt-generator)
     - [Handbooks](#handbooks)
       - [Vibe Coding with Confidence](#vibe-coding-with-confidence)
   - [Repo Status](#repo-status)
@@ -791,6 +792,10 @@ Workflow-based comparison of Cursor alternatives for developers choosing between
 #### [CodingButVibes — AI Coding Tools Guide](https://www.codingbutvibes.com/what-is-vibe-coding)
 
 Practical breakdown of the vibe coding approach for developers actually shipping things. Covers what vibe coding is, how to approach AI-assisted development without losing control of your codebase, and honest comparisons of the tools (Cursor, Lovable, ElevenLabs, and more) that matter for real projects. No hype — just what works.
+
+#### [Codex First Task Prompt Generator](https://ronnie2025.github.io/ai-agent-workbench-starter-pack/codex-first-task-prompt-generator.html)
+
+Free browser tool for turning a vague Codex CLI project goal into a scoped first-task prompt before asking an agent to edit a repository. It captures project type, task size, current environment, allowed scope, constraints, and acceptance checks so beginners can start with a smaller, reviewable AI coding task.
 
 ### Handbooks
 
