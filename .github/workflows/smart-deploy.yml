@@ -24,35 +24,37 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Monitor README.md, yaal.config.yaml, and yaal submodule changes
-          README_PATTERN="^README.md"
-          CONFIG_PATTERN="^yaal.config.yaml"
-          SUBMODULE_PATTERN="^yaal"
+          # Monitor README.md, contents/, yaal.config.yaml, yaal submodule, and workflow changes
+          README_PATTERN="^README\.md$"
+          CONTENTS_PATTERN="^contents/"
+          CONFIG_PATTERN="^yaal\.config\.yaml$"
+          SUBMODULE_PATTERN="^yaal$"
+          WORKFLOW_PATTERN="^\.github/workflows/"
 
           # Use GitHub API to find last successful build-and-deploy commit
           echo "🔍 Querying last successful build-and-deploy commit..."
 
           # Get last successful build-and-deploy workflow run
           RESPONSE=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
-            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/smart-deploy.yml/runs?status=success&per_page=1&branch=main")
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/smart-deploy.yml/runs?status=success&per_page=1&branch=main")
 
           LAST_BUILD_SHA=$(echo "$RESPONSE" | jq -r '.workflow_runs[0].head_sha // empty')
 
           if [ -z "$LAST_BUILD_SHA" ] || [ "$LAST_BUILD_SHA" = "null" ]; then
             echo "🚀 First build - no previous successful build found"
-            echo "build-reason=First build - no previous successful build found" >> $GITHUB_OUTPUT
-            echo "changed-files=All files (first build)" >> $GITHUB_OUTPUT
+            echo "build-reason=First build - no previous successful build found" >> "$GITHUB_OUTPUT"
+            echo "changed-files=All files (first build)" >> "$GITHUB_OUTPUT"
             BUILD_NEEDED=true
           else
             echo "📊 Last successful build: $LAST_BUILD_SHA"
             
             # Get list of changed files
-            CHANGED_FILES=$(git diff --name-only $LAST_BUILD_SHA HEAD)
+            CHANGED_FILES=$(git diff --name-only "$LAST_BUILD_SHA" HEAD)
             
             if [ -z "$CHANGED_FILES" ]; then
               echo "✅ No file changes"
-              echo "build-reason=No file changes" >> $GITHUB_OUTPUT
-              echo "changed-files=None" >> $GITHUB_OUTPUT
+              echo "build-reason=No file changes" >> "$GITHUB_OUTPUT"
+              echo "changed-files=None" >> "$GITHUB_OUTPUT"
               BUILD_NEEDED=false
             else
               echo "📁 Detected changed files:"
@@ -60,13 +62,18 @@ jobs:
                 echo "  - $file"
               done
               
-              # Check if README.md, yaal.config.yaml, or yaal submodule changed
+              # Check if README.md, contents/, yaal.config.yaml, yaal submodule, or workflows changed
               README_CHANGED=false
+              CONTENTS_CHANGED=false
               CONFIG_CHANGED=false
               SUBMODULE_CHANGED=false
+              WORKFLOW_CHANGED=false
               while IFS= read -r file; do
                 if echo "$file" | grep -qE "$README_PATTERN"; then
                   README_CHANGED=true
+                fi
+                if echo "$file" | grep -qE "$CONTENTS_PATTERN"; then
+                  CONTENTS_CHANGED=true
                 fi
                 if echo "$file" | grep -qE "$CONFIG_PATTERN"; then
                   CONFIG_CHANGED=true
@@ -74,29 +81,34 @@ jobs:
                 if echo "$file" | grep -qE "$SUBMODULE_PATTERN"; then
                   SUBMODULE_CHANGED=true
                 fi
+                if echo "$file" | grep -qE "$WORKFLOW_PATTERN"; then
+                  WORKFLOW_CHANGED=true
+                fi
               done <<< "$CHANGED_FILES"
               
               # Build detailed reason
               REASON="Changes detected:"
               [ "$README_CHANGED" = true ] && REASON="$REASON README.md"
+              [ "$CONTENTS_CHANGED" = true ] && REASON="$REASON contents"
               [ "$CONFIG_CHANGED" = true ] && REASON="$REASON config file"
               [ "$SUBMODULE_CHANGED" = true ] && REASON="$REASON yaal submodule"
+              [ "$WORKFLOW_CHANGED" = true ] && REASON="$REASON workflows"
               
-              if [ "$README_CHANGED" = true ] || [ "$CONFIG_CHANGED" = true ] || [ "$SUBMODULE_CHANGED" = true ]; then
+              if [ "$README_CHANGED" = true ] || [ "$CONTENTS_CHANGED" = true ] || [ "$CONFIG_CHANGED" = true ] || [ "$SUBMODULE_CHANGED" = true ] || [ "$WORKFLOW_CHANGED" = true ]; then
                 echo "🔍 $REASON - rebuild needed"
-                echo "build-reason=$REASON" >> $GITHUB_OUTPUT
-                echo "changed-files=$(echo "$CHANGED_FILES" | head -20 | sed ':a;N;$!ba;s/\n/, /g')" >> $GITHUB_OUTPUT
+                echo "build-reason=$REASON" >> "$GITHUB_OUTPUT"
+                echo "changed-files=$(echo "$CHANGED_FILES" | head -20 | sed ':a;N;$!ba;s/\n/, /g')" >> "$GITHUB_OUTPUT"
                 BUILD_NEEDED=true
               else
                 echo "ℹ️  No relevant changes - no rebuild needed"
-                echo "build-reason=No relevant changes" >> $GITHUB_OUTPUT
-                echo "changed-files=$(echo "$CHANGED_FILES" | head -10 | sed ':a;N;$!ba;s/\n/, /g')" >> $GITHUB_OUTPUT
+                echo "build-reason=No relevant changes" >> "$GITHUB_OUTPUT"
+                echo "changed-files=$(echo "$CHANGED_FILES" | head -10 | sed ':a;N;$!ba;s/\n/, /g')" >> "$GITHUB_OUTPUT"
                 BUILD_NEEDED=false
               fi
             fi
           fi
 
-          echo "build-needed=$BUILD_NEEDED" >> $GITHUB_OUTPUT
+          echo "build-needed=$BUILD_NEEDED" >> "$GITHUB_OUTPUT"
           echo "Final decision: Build needed = $BUILD_NEEDED"
 
   build-and-deploy:
@@ -136,13 +148,16 @@ jobs:
         run: vp run build
 
       - name: Build Summary
+        env:
+          BUILD_REASON: ${{ needs.check-changes.outputs.build-reason }}
+          CHANGED_FILES: ${{ needs.check-changes.outputs.changed-files }}
         run: |
-          echo "## 📋 Build Details" >> $GITHUB_STEP_SUMMARY
-          echo "- **Build Reason**: ${{ needs.check-changes.outputs.build-reason }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Changed Files**: ${{ needs.check-changes.outputs.changed-files }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Build Time**: $(date)" >> $GITHUB_STEP_SUMMARY
-          echo "- **Node Version**: $(node --version)" >> $GITHUB_STEP_SUMMARY
-          echo "- **NPM Version**: $(npm --version)" >> $GITHUB_STEP_SUMMARY
+          echo "## 📋 Build Details" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Build Reason**: $BUILD_REASON" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Changed Files**: $CHANGED_FILES" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Build Time**: $(date)" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Node Version**: $(node --version)" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **NPM Version**: $(npm --version)" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Setup Pages
         uses: actions/configure-pages@v6
@@ -162,9 +177,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Skip build notification
+        env:
+          BUILD_REASON: ${{ needs.check-changes.outputs.build-reason }}
+          CHANGED_FILES: ${{ needs.check-changes.outputs.changed-files }}
         run: |
-          echo "## ⏭️ Skip Build" >> $GITHUB_STEP_SUMMARY
-          echo "- **Skip Reason**: ${{ needs.check-changes.outputs.build-reason }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Changed Files**: ${{ needs.check-changes.outputs.changed-files }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Check Time**: $(date)" >> $GITHUB_STEP_SUMMARY
+          echo "## ⏭️ Skip Build" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Skip Reason**: $BUILD_REASON" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Changed Files**: $CHANGED_FILES" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Check Time**: $(date)" >> "$GITHUB_STEP_SUMMARY"
           echo "✅ Detected changed files do not affect website build, skipping deployment"
