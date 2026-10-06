@@ -16,7 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v7
         with:
-          fetch-depth: 20
+          fetch-depth: 0
           submodules: true
 
       - name: Check if build is needed
@@ -44,6 +44,11 @@ jobs:
             echo "🚀 First build - no previous successful build found"
             echo "build-reason=First build - no previous successful build found" >> "$GITHUB_OUTPUT"
             echo "changed-files=All files (first build)" >> "$GITHUB_OUTPUT"
+            BUILD_NEEDED=true
+          elif ! git cat-file -e "${LAST_BUILD_SHA}^{commit}" 2>/dev/null; then
+            echo "⚠️  Last successful build commit $LAST_BUILD_SHA is not in history - rebuilding"
+            echo "build-reason=Last build commit not found in history" >> "$GITHUB_OUTPUT"
+            echo "changed-files=All files (unknown base)" >> "$GITHUB_OUTPUT"
             BUILD_NEEDED=true
           else
             echo "📊 Last successful build: $LAST_BUILD_SHA"
