@@ -24,10 +24,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Monitor README.md, yaal.config.yaml, and yaal submodule changes
-          README_PATTERN="^README.md"
-          CONFIG_PATTERN="^yaal.config.yaml"
-          SUBMODULE_PATTERN="^yaal"
+          # Monitor README.md, contents/, yaal.config.yaml, yaal submodule, and workflow changes
+          README_PATTERN="^README\.md$"
+          CONTENTS_PATTERN="^contents/"
+          CONFIG_PATTERN="^yaal\.config\.yaml$"
+          SUBMODULE_PATTERN="^yaal$"
+          WORKFLOW_PATTERN="^\.github/workflows/"
 
           # Use GitHub API to find last successful build-and-deploy commit
           echo "🔍 Querying last successful build-and-deploy commit..."
@@ -60,13 +62,18 @@ jobs:
                 echo "  - $file"
               done
               
-              # Check if README.md, yaal.config.yaml, or yaal submodule changed
+              # Check if README.md, contents/, yaal.config.yaml, yaal submodule, or workflows changed
               README_CHANGED=false
+              CONTENTS_CHANGED=false
               CONFIG_CHANGED=false
               SUBMODULE_CHANGED=false
+              WORKFLOW_CHANGED=false
               while IFS= read -r file; do
                 if echo "$file" | grep -qE "$README_PATTERN"; then
                   README_CHANGED=true
+                fi
+                if echo "$file" | grep -qE "$CONTENTS_PATTERN"; then
+                  CONTENTS_CHANGED=true
                 fi
                 if echo "$file" | grep -qE "$CONFIG_PATTERN"; then
                   CONFIG_CHANGED=true
@@ -74,15 +81,20 @@ jobs:
                 if echo "$file" | grep -qE "$SUBMODULE_PATTERN"; then
                   SUBMODULE_CHANGED=true
                 fi
+                if echo "$file" | grep -qE "$WORKFLOW_PATTERN"; then
+                  WORKFLOW_CHANGED=true
+                fi
               done <<< "$CHANGED_FILES"
               
               # Build detailed reason
               REASON="Changes detected:"
               [ "$README_CHANGED" = true ] && REASON="$REASON README.md"
+              [ "$CONTENTS_CHANGED" = true ] && REASON="$REASON contents"
               [ "$CONFIG_CHANGED" = true ] && REASON="$REASON config file"
               [ "$SUBMODULE_CHANGED" = true ] && REASON="$REASON yaal submodule"
+              [ "$WORKFLOW_CHANGED" = true ] && REASON="$REASON workflows"
               
-              if [ "$README_CHANGED" = true ] || [ "$CONFIG_CHANGED" = true ] || [ "$SUBMODULE_CHANGED" = true ]; then
+              if [ "$README_CHANGED" = true ] || [ "$CONTENTS_CHANGED" = true ] || [ "$CONFIG_CHANGED" = true ] || [ "$SUBMODULE_CHANGED" = true ] || [ "$WORKFLOW_CHANGED" = true ]; then
                 echo "🔍 $REASON - rebuild needed"
                 echo "build-reason=$REASON" >> "$GITHUB_OUTPUT"
                 echo "changed-files=$(echo "$CHANGED_FILES" | head -20 | sed ':a;N;$!ba;s/\n/, /g')" >> "$GITHUB_OUTPUT"
