@@ -4,4 +4,4 @@ link: "https://dropthehassle.com"
 command: "dropthehassle"
 ---
 
-Publishes a built static site to a free HTTPS link or your own domain with `npx -y dropthehassle deploy`, no account needed for the first deploy. The same service has an MCP server (`dropthehassle-mcp`, remote `https://dropthehassle.com/mcp`) so a coding agent can deploy, check domain availability and attach a domain; no tool can buy anything.
+Your AI puts your site live on a free HTTPS link with `npx -y dropthehassle@latest deploy`, with no account needed for the first deploy. A .com is €19/$19: the AI hands you a payment link and the site goes live on it with no DNS. A real mailbox is optional. The same service has an MCP server (`dropthehassle-mcp`, remote `https://dropthehassle.com/mcp`); no tool can buy anything, purchases go through a payment link.
