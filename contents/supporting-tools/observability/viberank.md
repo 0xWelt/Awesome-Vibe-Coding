@@ -1,7 +1,6 @@
 ---
 name: "viberank"
 link: "https://viberank.app"
-command: "npx viberank-cli"
 ---
 
 viberank is a public leaderboard and open dataset for AI coding spend. It reads the
