@@ -4,4 +4,4 @@ link: "https://dropthehassle.com"
 command: "dropthehassle"
 ---
 
-Publishes a built static site to a free HTTPS link or your own domain with `npx -y dropthehassle deploy`, no account needed for the first deploy. The same service has an MCP server (`dropthehassle-mcp`, remote `https://dropthehassle.com/mcp`) so a coding agent can deploy, check domain availability and attach a domain; no tool can buy anything.
+CLI that publishes a built site or web app to a free HTTPS link with `npx -y dropthehassle@latest deploy`. No account needed for the first deploy. Same service has an MCP server (`dropthehassle-mcp`, remote `https://dropthehassle.com/mcp`). No tool can buy anything; purchases go through a payment link outside the tools.
