@@ -94,7 +94,6 @@ To add a tool, create a markdown file in the matching `contents/` folder:
 ---
 name: Tool Name
 link: https://example.com
-command: tool-cmd        # optional
 ---
 
 Short description of the tool.

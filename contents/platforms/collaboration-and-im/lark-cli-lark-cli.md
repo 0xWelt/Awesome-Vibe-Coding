@@ -1,7 +1,6 @@
 ---
 name: "Lark CLI (lark-cli)"
 link: "https://github.com/larksuite/cli"
-command: "lark-cli"
 tags: [agent-skills]
 ---
 
