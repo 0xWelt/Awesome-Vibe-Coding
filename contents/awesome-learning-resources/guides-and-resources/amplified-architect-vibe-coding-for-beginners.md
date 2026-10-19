@@ -1,6 +1,6 @@
 ---
 name: "Vibe Coding for Beginners (Amplified Architect)"
-link: "https://github.com/amplifiedarchitect/vibe-coding-for-beginners"
+link: "https://www.youtube.com/playlist?list=PLLRVNOCjAuec"
 ---
 
-Seven-video course for people who have never built software, free to watch, with the exact prompts and terminal commands from every video. Videos 1 to 4 use only free tools (VS Code and GitHub Copilot's free plan): the setup, a browser game from one prompt, how an app is put together, and web vs native apps. Videos 5 to 7 use Claude Code, which needs a paid Claude plan, plus a small rented server: Plan mode, securing a VPS, and putting a site online with HTTPS. Each video is a complete follow-along recorded on a real machine.
+Eleven-video YouTube course for people who have never built software, free to watch, with every prompt and command linked from each video's description. Videos 1 to 4 use only free tools (VS Code and GitHub Copilot's free plan): the setup, a browser game from one prompt, how an app is put together, and web vs native apps. Video 8 runs a local AI agent for free on an 8 GB graphics card with Ollama. Videos 5 to 7 and 9 to 11 use Claude Code, which needs a paid Claude plan: Plan mode, securing a VPS, putting a game and a website online, Git save points, and big projects with subagents and handoffs. Each video is a complete follow-along recorded on a real machine.
