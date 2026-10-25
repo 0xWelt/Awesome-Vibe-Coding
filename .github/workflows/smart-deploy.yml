@@ -5,6 +5,12 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# Only one Pages deploy at a time. Do not cancel in-progress runs — GitHub Pages
+# rejects overlapping create-deployment calls with HTTP 400 ("in progress deployment").
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
   check-changes:
     runs-on: ubuntu-latest
