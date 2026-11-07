@@ -6,20 +6,22 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A Curated List of Vibe Coding Open-Source Projects, Tools, and Learning Resources
+A curated list of vibe coding harnesses, Lovable-style web builders, communities, learning resources, and projects.
 
 🌐 **Live Website**: [https://0xWelt.github.io/Awesome-Vibe-Coding/](https://0xWelt.github.io/Awesome-Vibe-Coding/)
 
 ![Awesome-Vibe-Coding](docs/Awesome-Vibe-Coding.png)
 
-> **Content structure**: tools are organized in the [`contents/`](contents/) directory — one
-> markdown file per tool, grouped by category and subcategory, with `_meta.md`
+> **Content structure**: entries are organized in the [`contents/`](contents/) directory — one
+> markdown file per entry, grouped by category and subcategory, with `_meta.md`
 > files describing each folder. The live website is generated from these files
 > by `yaal/scripts/parse-readme.js`.
+
+Infrastructure platforms — AWS, Vercel, Docker, GitHub, and the rest — and supporting tools and services belong in [Awesome-Agent-Services](https://github.com/0xWelt/Awesome-Agent-Services). Lovable-style web builders such as Bolt.new, Replit, Open Lovable, and Firebase Studio stay here. Each product is listed in one repository.
+
 ## Architecture
 
-The vibe coding ecosystem, from running agents to the services they operate, the
-capabilities that extend them, and what they produce.
+Coding harnesses run the agent, including Lovable-style builders that create apps in the browser. Communities, projects, and learning resources are what people build, share, and study with them. Infrastructure platforms and supporting tools live in Awesome-Agent-Services.
 
 ```mermaid
 flowchart TB
@@ -30,65 +32,37 @@ flowchart TB
         H1["Terminal CLIs"]
         H2["Standalone IDEs"]
         H3["IDE Extensions"]
-        H4["Web-based IDEs"]
+        H4["Web builders — Bolt, Replit, Open Lovable"]
         H5["Cloud-based Agents"]
         H6["Mobile Harnesses"]
         H7["Agent SDKs"]
         H8["General Capabilities & Standards"]
     end
 
-    subgraph platforms["🌐 Platforms — services agents operate"]
-        direction LR
-        P1["Code Hosting"]
-        P2["Collaboration & IM"]
-        P3["Cloud Platforms"]
-        P4["Containers & Orchestration"]
-        P5["Hosting & PaaS"]
-        P6["Project & Task Management"]
-    end
-
-    subgraph capabilities["🔌 Harness Extensions"]
-        direction LR
-        C1["MCP Servers"]
-        C2["Agent Skills"]
-    end
-
     Comm["✨ Vibe Coding Communities"]
     Proj["📦 Awesome Projects"]
     Learn["📚 Awesome Learning Resources"]
-
-    subgraph support["🧰 Supporting Tools — non-platform tools"]
-        direction LR
-        S1["Agent Observability"]
-        S2["Context & Code Quality"]
-        S3["Utilities"]
-    end
+    AAS["🧰 Awesome Agent Services"]
 
     Dev --> harnesses
-    harnesses -->|operates| platforms
-    harnesses -->|extended by| capabilities
     harnesses -->|builds & shares in| Comm
     harnesses -->|produces| Proj
-    support -.->|supports| harnesses
     Learn -.->|teaches| Dev
+    harnesses -.->|calls infra & tools in| AAS
 ```
 
 ## Categories
 
-
 | Category | Description | Location |
 | --- | --- | --- |
-| Harnesses | Tools that run AI coding agents — terminal CLIs, standalone IDEs, IDE extensions, web-based IDEs, cloud agents, mobile apps, SDKs, and their general capabilities (plan, goal, compact, PTC, hooks, standards & protocols). | [contents/harnesses/](contents/harnesses/) |
+| Harnesses | Tools that run AI coding agents — terminal CLIs, standalone IDEs, IDE extensions, Lovable-style web builders (Bolt.new, Replit, Open Lovable, Firebase Studio), cloud coding agents, mobile apps, SDKs, and their general capabilities (plan, goal, compact, PTC, hooks, standards & protocols). | [contents/harnesses/](contents/harnesses/) |
 | Vibe Coding Communities | Create apps with AI and share them with the community — AI app builders and remixable creation platforms. | [contents/vibe-coding-community/](contents/vibe-coding-community/) |
-| Platforms | Platforms that provide services — code hosting, collaboration, cloud, hosting, project and task management — together with the CLIs (gh, glab, aws, lark-cli) that operate them. | [contents/platforms/](contents/platforms/) |
-| Harness Extensions | What plugs into harnesses to extend them beyond the box — MCP servers and reusable agent skills. | [contents/harness-extensions/](contents/harness-extensions/) |
-| Supporting Tools | Non-platform tools that support agent workflows — observability, context preparation, code quality, and specialized utilities. | [contents/supporting-tools/](contents/supporting-tools/) |
 | Awesome Projects | Projects created through vibe coding. | [contents/awesome-projects/](contents/awesome-projects/) |
 | Awesome Learning Resources | Essential courses and educational resources to master vibe coding. | [contents/awesome-learning-resources/](contents/awesome-learning-resources/) |
 
-## Adding a Tool
+## Adding an entry
 
-To add a tool, create a markdown file in the matching `contents/` folder:
+To add a coding harness, Lovable-style web builder, vibe coding community, learning resource, or vibe-coded project, create a markdown file in the matching `contents/` folder:
 
 ```markdown
 ---
@@ -96,11 +70,10 @@ name: Tool Name
 link: https://example.com
 ---
 
-Short description of the tool.
+Short description of the entry.
 ```
 
-The tool is picked up automatically when the website builds. Prefer adding a
-separate file over editing an existing one — it keeps PRs small and conflict-free.
+Leave out a `command` field. Put infrastructure platforms (AWS, Vercel, Docker, GitHub, Supabase, and similar hosting and backend services) and supporting tools and services (MCP servers, agent skills, chat and task tools, observability) in [Awesome-Agent-Services](https://github.com/0xWelt/Awesome-Agent-Services). The entry is picked up automatically when the website builds. Prefer adding a separate file over editing an existing one — it keeps PRs small and conflict-free.
 
 ## Repo Status
 

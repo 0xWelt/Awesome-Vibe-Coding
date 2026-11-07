@@ -1,5 +1,16 @@
 # CRUSH.md - Codebase Reference for Agents
 
+## Content boundary
+
+Awesome-Vibe-Coding lists coding harnesses, Lovable-style vibe-coding web builders, the vibe coding community, learning resources, and projects.
+
+- Keep `contents/harnesses/` except `contents/harnesses/web-based-ides/supabase.md`. That covers terminal CLIs, standalone IDEs, IDE extensions, web builders (Bolt.new, Replit, Open Lovable, Firebase Studio, and similar), cloud-based coding agents, mobile harnesses, agent SDKs, and general capabilities. Claude Code, Cursor, Codex, Gemini CLI, and GitHub Copilot stay here.
+- Keep `contents/vibe-coding-community/`, `contents/awesome-learning-resources/`, and `contents/awesome-projects/`.
+- Put infrastructure platforms and supporting tools and services in [Awesome-Agent-Services](https://github.com/0xWelt/Awesome-Agent-Services): AWS, Azure, GCP, Vercel, Railway, Render, Netlify, Docker, GitHub, GitLab, Supabase, other hosting and backend services, MCP servers, agent skills, Slack, Lark, Linear, task tools, and observability. List each product in one repository.
+- General capabilities that ship with a harness — including the Model Context Protocol and the Agent Skills standard — stay under `contents/harnesses/general-capabilities/`.
+- Omit `command` frontmatter.
+- Remove a category folder and its `_meta.md` when that category has no entries. Do not recreate `contents/platforms/` or `contents/harness-extensions/`.
+
 ## Toolchain
 
 This project consumes the [yaal](yaal/) submodule (Vite+ powered). Use

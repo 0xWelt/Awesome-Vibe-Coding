@@ -1,4 +1,4 @@
 ---
 title: Web-based IDEs
 ---
-Create APPs directly in the browser.
+Lovable-style vibe-coding builders that create apps in the browser, such as Bolt.new, Replit, Open Lovable, and Firebase Studio.
