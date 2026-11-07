@@ -1,5 +1,15 @@
 # CRUSH.md - Codebase Reference for Agents
 
+## Content boundary
+
+Awesome-Vibe-Coding lists coding harnesses, the vibe coding community, learning resources, and projects.
+
+- Keep `contents/harnesses/` (Claude Code, Cursor, Codex, Gemini CLI, GitHub Copilot, and the other coding harnesses), `contents/vibe-coding-community/`, `contents/awesome-learning-resources/`, and `contents/awesome-projects/`.
+- Put MCP servers, agent skills, CLIs, deploy and cloud platforms, observability, and other supporting tools and services in [Awesome-Agent-Services](https://github.com/0xWelt/Awesome-Agent-Services). List each product in one repository.
+- General capabilities that ship with a harness — including the Model Context Protocol and the Agent Skills standard — stay under `contents/harnesses/general-capabilities/`.
+- Omit `command` frontmatter.
+- Remove a category folder and its `_meta.md` when that category has no entries.
+
 ## Toolchain
 
 This project consumes the [yaal](yaal/) submodule (Vite+ powered). Use
