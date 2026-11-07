@@ -1,6 +1,7 @@
 ---
 name: "agent-qa"
 link: "https://github.com/vostride/agent-qa"
+image: "https://repository-images.githubusercontent.com/1232322871/ecb148a2-805b-44a1-93ea-8a967062320d"
 tags: [mcp, agent-skills]
 ---
 
