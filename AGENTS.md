@@ -2,10 +2,13 @@
 
 ## Content boundary
 
-Awesome-Vibe-Coding lists coding harnesses, the vibe coding community, learning resources, and projects.
+Awesome-Vibe-Coding lists coding harnesses, cloud and code platforms, the vibe coding community, learning resources, and projects.
 
-- Keep `contents/harnesses/` (Claude Code, Cursor, Codex, Gemini CLI, GitHub Copilot, and the other coding harnesses), `contents/vibe-coding-community/`, `contents/awesome-learning-resources/`, and `contents/awesome-projects/`.
-- Put MCP servers, agent skills, CLIs, deploy and cloud platforms, observability, and other supporting tools and services in [Awesome-Agent-Services](https://github.com/0xWelt/Awesome-Agent-Services). List each product in one repository.
+- Keep `contents/harnesses/` in full, including Supabase and Superdesign.dev. Claude Code, Cursor, Codex, Gemini CLI, and GitHub Copilot stay here.
+- Keep `contents/platforms/cloud-platforms/`, `contents/platforms/hosting-and-paas/`, `contents/platforms/containers-and-orchestration/`, and `contents/platforms/code-hosting/`, including their CLIs.
+- Keep `contents/harness-extensions/mcp-servers/github-mcp-server.md` with the GitHub CLI. GitHub is a code platform and stays in this repository.
+- Keep `contents/vibe-coding-community/`, `contents/awesome-learning-resources/`, and `contents/awesome-projects/`.
+- Put supporting tools and supporting services in [Awesome-Agent-Services](https://github.com/0xWelt/Awesome-Agent-Services): other MCP servers, agent skills, Slack and Lark, Linear, task-management tools, observability, context and quality tools, and utilities. List each product in one repository.
 - General capabilities that ship with a harness — including the Model Context Protocol and the Agent Skills standard — stay under `contents/harnesses/general-capabilities/`.
 - Omit `command` frontmatter.
 - Remove a category folder and its `_meta.md` when that category has no entries.

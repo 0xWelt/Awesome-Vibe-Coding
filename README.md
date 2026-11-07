@@ -6,7 +6,7 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated list of vibe coding harnesses, communities, learning resources, and projects.
+A curated list of vibe coding harnesses, cloud and code platforms, communities, learning resources, and projects.
 
 🌐 **Live Website**: [https://0xWelt.github.io/Awesome-Vibe-Coding/](https://0xWelt.github.io/Awesome-Vibe-Coding/)
 
@@ -17,11 +17,11 @@ A curated list of vibe coding harnesses, communities, learning resources, and pr
 > files describing each folder. The live website is generated from these files
 > by `yaal/scripts/parse-readme.js`.
 
-Supporting tools and services — MCP servers, agent skills, CLIs, deploy and cloud platforms, and observability — belong in [Awesome-Agent-Services](https://github.com/0xWelt/Awesome-Agent-Services). Each product is listed in one repository.
+Supporting tools and supporting services — other MCP servers, agent skills, chat and task tools, and observability — belong in [Awesome-Agent-Services](https://github.com/0xWelt/Awesome-Agent-Services). Cloud and code platform CLIs stay here. Each product is listed in one repository.
 
 ## Architecture
 
-Coding harnesses run the agent. Communities, projects, and learning resources are what people build, share, and study with them. The tools and services an agent calls are collected in Awesome-Agent-Services.
+Coding harnesses run the agent and operate cloud and code platforms. Communities, projects, and learning resources are what people build, share, and study with them. Supporting tools and supporting services are collected in Awesome-Agent-Services.
 
 ```mermaid
 flowchart TB
@@ -39,16 +39,26 @@ flowchart TB
         H8["General Capabilities & Standards"]
     end
 
+    subgraph platforms["🌐 Cloud & Code Platforms"]
+        direction LR
+        P1["Code Hosting"]
+        P2["Cloud Platforms"]
+        P3["Containers & Orchestration"]
+        P4["Hosting & PaaS"]
+        P5["GitHub MCP"]
+    end
+
     Comm["✨ Vibe Coding Communities"]
     Proj["📦 Awesome Projects"]
     Learn["📚 Awesome Learning Resources"]
     AAS["🧰 Awesome Agent Services"]
 
     Dev --> harnesses
+    harnesses -->|operates| platforms
     harnesses -->|builds & shares in| Comm
     harnesses -->|produces| Proj
     Learn -.->|teaches| Dev
-    harnesses -.->|calls| AAS
+    harnesses -.->|calls supporting tools in| AAS
 ```
 
 ## Categories
@@ -56,13 +66,15 @@ flowchart TB
 | Category | Description | Location |
 | --- | --- | --- |
 | Harnesses | Tools that run AI coding agents — terminal CLIs, standalone IDEs, IDE extensions, web-based IDEs, cloud agents, mobile apps, SDKs, and their general capabilities (plan, goal, compact, PTC, hooks, standards & protocols). | [contents/harnesses/](contents/harnesses/) |
+| Platforms | Cloud and code platforms — code hosting, public cloud, containers and orchestration, and hosting and PaaS — together with the CLIs that operate them. | [contents/platforms/](contents/platforms/) |
+| Harness Extensions | GitHub's official MCP server, kept with the GitHub CLI because GitHub is a code platform. | [contents/harness-extensions/](contents/harness-extensions/) |
 | Vibe Coding Communities | Create apps with AI and share them with the community — AI app builders and remixable creation platforms. | [contents/vibe-coding-community/](contents/vibe-coding-community/) |
 | Awesome Projects | Projects created through vibe coding. | [contents/awesome-projects/](contents/awesome-projects/) |
 | Awesome Learning Resources | Essential courses and educational resources to master vibe coding. | [contents/awesome-learning-resources/](contents/awesome-learning-resources/) |
 
 ## Adding an entry
 
-To add a coding harness, vibe coding community, learning resource, or vibe-coded project, create a markdown file in the matching `contents/` folder:
+To add a coding harness, cloud or code platform (including its CLI), vibe coding community, learning resource, or vibe-coded project, create a markdown file in the matching `contents/` folder:
 
 ```markdown
 ---
@@ -73,7 +85,7 @@ link: https://example.com
 Short description of the entry.
 ```
 
-Leave out a `command` field. Put MCP servers, agent skills, CLIs, deploy and cloud platforms, observability, and other supporting tools and services in [Awesome-Agent-Services](https://github.com/0xWelt/Awesome-Agent-Services). The entry is picked up automatically when the website builds. Prefer adding a separate file over editing an existing one — it keeps PRs small and conflict-free.
+Leave out a `command` field. Put supporting tools and supporting services — other MCP servers, agent skills, chat and task tools, and observability — in [Awesome-Agent-Services](https://github.com/0xWelt/Awesome-Agent-Services). The GitHub MCP server stays here with the GitHub CLI. The entry is picked up automatically when the website builds. Prefer adding a separate file over editing an existing one — it keeps PRs small and conflict-free.
 
 ## Repo Status
 
