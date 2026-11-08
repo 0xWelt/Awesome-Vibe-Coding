@@ -2,14 +2,22 @@
 
 ## Content boundary
 
-Awesome-Vibe-Coding lists coding harnesses, Lovable-style vibe-coding web builders, the vibe coding community, learning resources, and projects.
+This repository is one English list. Its public name is becoming Awesome Agent Ecosystem. The GitHub repository will be renamed after this structure lands. Until then, the git remote, GitHub Pages, and `yaal.config.yaml` stay on `https://github.com/0xWelt/Awesome-Vibe-Coding`.
 
-- Keep `contents/harnesses/` except `contents/harnesses/web-based-ides/supabase.md`. That covers terminal CLIs, standalone IDEs, IDE extensions, web builders (Bolt.new, Replit, Open Lovable, Firebase Studio, and similar), cloud-based coding agents, mobile harnesses, agent SDKs, and general capabilities. Claude Code, Cursor, Codex, Gemini CLI, and GitHub Copilot stay here.
-- Keep `contents/vibe-coding-community/`, `contents/awesome-learning-resources/`, and `contents/awesome-projects/`.
-- Put infrastructure platforms and supporting tools and services in [Awesome-Agent-Services](https://github.com/0xWelt/Awesome-Agent-Services): AWS, Azure, GCP, Vercel, Railway, Render, Netlify, Docker, GitHub, GitLab, Supabase, other hosting and backend services, MCP servers, agent skills, Slack, Lark, Linear, task tools, and observability. List each product in one repository.
+Four top-level sections:
+
+- `contents/harnesses/` — coding harnesses and Lovable-style web builders. That covers terminal CLIs, standalone IDEs, IDE extensions, web builders (Bolt.new, Replit, Open Lovable, Firebase Studio, and similar), cloud-based coding agents, mobile harnesses, agent SDKs, and general capabilities. Claude Code, Cursor, Codex, Gemini CLI, and GitHub Copilot stay here. Do not add Supabase here; it is listed at `contents/agent-services/infrastructure/supabase.md`.
+- `contents/vibe-coding-community/` — vibe coding communities. Do not fold these entries into `contents/harnesses/web-based-ides/`.
+- `contents/personal-agents/` — named personal agents. `vendor-cloud/` is a vendor product whose persistent runtime the vendor provides, including a desktop app or a separately named product. `self-hosted/` is an always-on agent you run on a machine or gateway you control. A general chat assistant is not an entry. Do not list ChatGPT, Claude, Gemini, or Microsoft Copilot in place of that company's named agent. Do not list Claude Code, Codex, or Gemini CLI here.
+- `contents/agent-services/` — supporting tools and services an agent can call. That includes fulfillment, infrastructure and code hosts (AWS, Azure, GCP, Vercel, Railway, Render, Netlify, Docker, GitHub, GitLab, Supabase, and similar) and their official CLIs, plus code-related tools such as observability, context, and skill directories.
+
+The same product must not appear in more than one section. Entries are the product. Do not add a second file for a protocol wrapper, CLI, or skill pack that only reaches a product already listed.
+
 - General capabilities that ship with a harness — including the Model Context Protocol and the Agent Skills standard — stay under `contents/harnesses/general-capabilities/`.
-- Omit `command` frontmatter.
-- Remove a category folder and its `_meta.md` when that category has no entries. Do not recreate `contents/platforms/` or `contents/harness-extensions/`.
+- Omit `command` frontmatter. Strip UTM, referral, and affiliate parameters. Do not invent preview image URLs. When `image` is present, it is an absolute `https` URL of the product's official preview.
+- On agent-service entries, optional `tags` record a verified connection method: `mcp`, `skill`, `grok-bot`, `cli`, or `chatgpt`. Tags do not decide the folder. A Grok Bot catalog connector is not automatically `mcp`.
+- Every folder has `_meta.md` with YAML `title:` and a short English description in the body. Remove a category folder and its `_meta.md` when that category has no entries. Do not recreate `contents/platforms/` or `contents/harness-extensions/`.
+- Agent-service entries live directly in the 17 category folders: `contents/agent-services/<category>/*.md`. The pinned `yaal` walker indexes markdown files one folder below each top-level section, so do not add another directory level under a category. Do not hand-bump the `yaal` submodule from a contents change.
 
 ## Toolchain
 
