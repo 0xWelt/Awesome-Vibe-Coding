@@ -1,6 +1,6 @@
 ---
 name: Qwen3.8 Max
-link: https://bailian.console.aliyun.com/cn-beijing/model/market/detail/qwen3.8-max
+link: https://www.alibabacloud.com/help/en/model-studio/models
 ---
 
 Alibaba's Qwen3.8 Max model for complex reasoning and coding.
