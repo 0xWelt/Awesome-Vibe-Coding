@@ -101,7 +101,7 @@ flowchart TB
 | Vendor Cloud | Named personal-agent products whose persistent runtime is provided by the vendor. This includes desktop apps and separately named products. | [contents/personal-agents/vendor-cloud/](contents/personal-agents/vendor-cloud/) |
 | Self-hosted | Named personal agents you run yourself on a machine or gateway you control. | [contents/personal-agents/self-hosted/](contents/personal-agents/self-hosted/) |
 
-A general chat assistant is not an entry, even when it has tools, connectors, computer use, or a cowork mode. ChatGPT, Claude, Gemini, and Microsoft Copilot are not listed in place of that company's named agent.
+A general chat assistant is not an entry here, even when it has tools, connectors, computer use, or a cowork mode. Conversation apps such as ChatGPT, Claude, Gemini, Microsoft Copilot, and the other chats in [General Chat](contents/general-chat/) stay there, not in place of that company's named agent. That set of examples is not a closed list.
 
 ### Agent Services
 
