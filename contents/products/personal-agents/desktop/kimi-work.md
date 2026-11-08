@@ -13,4 +13,4 @@ Kimi Work is Moonshot's desktop agent for knowledge work. It mounts local folder
 
 **Extensions:** The cron scheduler, the browser extension, and a cluster of specialist agents the page says it can coordinate on one job.
 
-**Notes:** The product FAQ distinguishes Kimi Work from Kimi on the web, which it describes as the place for short conversations and lookups. This entry is the desktop agent. Kimi chat is not listed here.
+**Notes:** The product FAQ distinguishes Kimi Work from Kimi on the web, which it describes as the place for short conversations and lookups. This entry is the desktop agent. [Kimi](../../general-chat/kimi.md) stays the conversation product. The [product comparison](https://www.kimi.com/help/others/product-comparison) places 7×24 cloud automation in [Kimi Claw](../cloud-computer/kimi-claw.md).

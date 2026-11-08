@@ -12,4 +12,4 @@ DuMate (百度搭子) is Baidu's assistant that carries out a request across app
 
 **Extensions:** Built-in skills, skills it can create, and connectors. The same page lists expert kits and an enterprise edition aimed at connecting knowledge, systems, and workflows.
 
-**Notes:** The product page publishes a free personal plan and paid Pro and Max plans. Use that page for the current prices. This entry is DuMate, the named assistant, not a general Baidu chat product.
+**Notes:** The product page publishes a free personal plan and paid Pro and Max plans. Use that page for the current prices. This entry is DuMate, the named assistant on the device. [DuClaw](../cloud-computer/duclaw.md) is Baidu's hosted cloud agent, and [Wenxin Assistant](../../general-chat/wenxin-assistant.md) is the chat product.

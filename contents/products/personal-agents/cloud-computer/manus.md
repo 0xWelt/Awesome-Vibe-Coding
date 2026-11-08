@@ -13,4 +13,4 @@ Manus is a general-purpose agent that carries out a task and returns a result. I
 
 **Extensions:** Connectors for apps you already use, the sandbox's own browser and software, and the Browser Operator extension. This entry does not list every connector.
 
-**Notes:** The same product site also offers creative generators (slides, design, and similar). This entry covers the general agent. Browser Operator is an additional way to launch browsing work; the primary home here is the Manus task runtime.
+**Notes:** The same product site also offers creative generators (slides, design, and similar). This entry covers the general agent. Browser Operator is an additional way to launch browsing work; the primary home here is the Manus task runtime. [Cue](cue.md) is the separately named personal-agent product from the same company.
