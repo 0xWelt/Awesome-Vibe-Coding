@@ -19,13 +19,13 @@ This repository is Awesome-Agent-Ecosystem.
 > files describing each folder. The live website is generated from these files
 > by `yaal/scripts/parse-readme.js`.
 
-One list with three super-classes, plus thin [Standards](contents/standards/). [Terminal Products](contents/products/) are what a person opens: [General Chat](contents/products/general-chat/), [Harnesses](contents/products/harnesses/), [Vibe Coding Communities](contents/products/vibe-coding-community/), [Personal Agents](contents/products/personal-agents/), and [AI-enhanced Apps](contents/products/ai-enhanced-apps/). [Agent Services](contents/agent-services/) are the tools and platforms those products call, including infrastructure and official CLIs. [LLMs](contents/llms/) are the models that drive agents, grouped by the company that trains them. Open protocols and formats stay in Standards. Each product is listed in one file.
+One list with three super-classes, plus thin [Standards](contents/standards/). [Terminal Products](contents/products/) are what a person opens: [General Chat](contents/products/general-chat/), [Coding Agents](contents/products/coding-agents/), [Vibe Coding Communities](contents/products/vibe-coding-community/), [Personal Agents](contents/products/personal-agents/), and [AI-enhanced Apps](contents/products/ai-enhanced-apps/). [Agent Services](contents/agent-services/) are the tools and platforms those products call, including infrastructure and official CLIs. [LLMs](contents/llms/) are the models that drive agents, grouped by the company that trains them. Open protocols and formats stay in Standards. Each product is listed in one file.
 
 ## Architecture
 
-Terminal Products are the five sections a person opens. General Chat is the conversation app itself. Coding harnesses run the agent, including Lovable-style builders that create apps in the browser. They commonly offer plan mode, goals, compact, hooks, subagents, dynamic workflows, and programmatic tool calling (PTC); those are capabilities, not entries. Vibe coding communities are where people create apps with AI and share them. Personal agents are named products that act for a person over time, on a vendor cloud computer or on a machine you run. AI-enhanced apps are traditional products whose main form is still that category, with the interaction rebuilt around AI. Agent services are the tools and platforms those products call. LLMs are the models behind them, not the chat apps and not inference hosts. Standards are open protocols and formats.
+Terminal Products are the five sections a person opens. General Chat is the conversation app itself. Coding agents run the agent, including Lovable-style builders that create apps in the browser. They commonly offer plan mode, goals, compact, hooks, subagents, dynamic workflows, and programmatic tool calling (PTC); those are capabilities, not entries. Vibe coding communities are where people create apps with AI and share them. Personal agents are named products that act for a person over time, on a vendor cloud computer or on a machine you run. AI-enhanced apps are traditional products whose main form is still that category, with the interaction rebuilt around AI. Agent services are the tools and platforms those products call. LLMs are the models behind them, not the chat apps and not inference hosts. Standards are open protocols and formats.
 
-Cowork, coding, and computer-use are capabilities, not top-level classes. A desktop client of the same conversation product, such as ChatGPT, Claude, or Kimi, stays in that one General Chat file. Mention the desktop app in the body. Do not add a second file, and do not file that desktop client under Personal Agents. Only a separately named task-execution product belongs in Personal Agents, such as Doubao Work, Kimi Work, Claude Duet, QwenWork, or Nano Work. Coding-primary products stay in Harnesses.
+Cowork, coding, and computer-use are capabilities, not top-level classes. A desktop client of the same conversation product, such as ChatGPT, Claude, or Kimi, stays in that one General Chat file. Mention the desktop app in the body. Do not add a second file, and do not file that desktop client under Personal Agents. Only a separately named task-execution product belongs in Personal Agents, such as Doubao Work, Kimi Work, Claude Duet, QwenWork, or Nano Work. Coding-primary products stay in Coding Agents.
 
 General Chat does not include Claude Code, Gemini CLI, GitHub Copilot, Doubao Work, QwenWork, Kimi Work, or Nano Work. An AI-enhanced app is an independent terminal. A suite that only added an AI button is not an entry there. The same product appears in one file.
 
@@ -39,7 +39,7 @@ flowchart TB
             direction LR
             GC1["Conversation apps"]
         end
-        subgraph harnesses["🛠 Harnesses"]
+        subgraph coding["🛠 Coding Agents"]
             direction LR
             H1["Terminal CLIs"]
             H2["Standalone IDEs"]
@@ -92,25 +92,25 @@ flowchart TB
     end
 
     Person --> chat
-    Person --> harnesses
+    Person --> coding
     Person --> community
     Person --> personal
     Person --> apps
     chat -->|calls| services
-    harnesses -->|calls| services
+    coding -->|calls| services
     personal -->|calls| services
     apps -->|calls| services
-    harnesses -.->|driven by| llms
-    harnesses -.->|follows| standards
+    coding -.->|driven by| llms
+    coding -.->|follows| standards
 ```
 
 ## Categories
 
 | Category | Description | Location |
 | --- | --- | --- |
-| Terminal Products | The products a person opens: general chat, harnesses, vibe-coding communities, personal agents, and AI-enhanced apps. | [contents/products/](contents/products/) |
+| Terminal Products | The products a person opens: general chat, coding agents, vibe-coding communities, personal agents, and AI-enhanced apps. | [contents/products/](contents/products/) |
 | General Chat | User-facing conversation apps. The chat product itself, not a coding harness and not a named personal agent that acts over time. | [contents/products/general-chat/](contents/products/general-chat/) |
-| Harnesses | Tools that run AI coding agents — terminal CLIs, standalone IDEs, IDE extensions, Lovable-style web builders (Bolt.new, Replit, Open Lovable, Firebase Studio), cloud coding agents, mobile apps, and SDKs. Coding harnesses commonly offer plan mode, goals, compact, hooks, subagents, dynamic workflows, and programmatic tool calling (PTC). | [contents/products/harnesses/](contents/products/harnesses/) |
+| Coding Agents | Coding-primary products that run AI coding agents — terminal CLIs, standalone IDEs, IDE extensions, Lovable-style web builders (Bolt.new, Replit, Open Lovable, Firebase Studio), cloud coding agents, mobile apps, and agent SDKs. Coding, cowork, and computer-use remain capabilities, not separate classes. Agent SDKs stay as a subclass here. | [contents/products/coding-agents/](contents/products/coding-agents/) |
 | Vibe Coding Communities | Create apps with AI and share them with the community — AI app builders and remixable creation platforms. | [contents/products/vibe-coding-community/](contents/products/vibe-coding-community/) |
 | Personal Agents | Named personal agents that act over time, grouped by who provides the persistent runtime: a vendor cloud computer, or a machine and gateway you run yourself. | [contents/products/personal-agents/](contents/products/personal-agents/) |
 | AI-enhanced Apps | Traditional product categories whose main form is still that category, but the interaction has been rebuilt around AI. Independent terminals only. The first entries are AI browsers. | [contents/products/ai-enhanced-apps/](contents/products/ai-enhanced-apps/) |
@@ -166,7 +166,7 @@ Short description of the entry.
 
 Required frontmatter is `name` and `link`. Leave out a `command` field. Use the canonical product URL, without UTM, referral, or affiliate parameters. An optional `image` must be an absolute `https` URL of the product's official preview. Do not invent one.
 
-Put a conversation app in [General Chat](contents/products/general-chat/). Put a coding harness or Lovable-style web builder in [Harnesses](contents/products/harnesses/). Put a vibe coding community in [Vibe Coding Communities](contents/products/vibe-coding-community/). Put a named personal agent in [Personal Agents](contents/products/personal-agents/): vendor cloud under `vendor-cloud/`, self-hosted under `self-hosted/`. Put an independent terminal whose main form is still a traditional category, such as an AI browser, in [AI-enhanced Apps](contents/products/ai-enhanced-apps/). Put a model under [LLMs](contents/llms/) in the company folder of the lab that trains it. Put an open protocol or format in [Standards](contents/standards/). Put a supporting tool or service in [Agent Services](contents/agent-services/), directly in one of the 17 category folders. The same product must not appear as two files.
+Put a conversation app in [General Chat](contents/products/general-chat/). Put a coding agent or Lovable-style web builder in [Coding Agents](contents/products/coding-agents/). Put a vibe coding community in [Vibe Coding Communities](contents/products/vibe-coding-community/). Put a named personal agent in [Personal Agents](contents/products/personal-agents/): vendor cloud under `vendor-cloud/`, self-hosted under `self-hosted/`. Put an independent terminal whose main form is still a traditional category, such as an AI browser, in [AI-enhanced Apps](contents/products/ai-enhanced-apps/). Put a model under [LLMs](contents/llms/) in the company folder of the lab that trains it. Put an open protocol or format in [Standards](contents/standards/). Put a supporting tool or service in [Agent Services](contents/agent-services/), directly in one of the 17 category folders. The same product must not appear as two files.
 
 The entry is picked up when the website builds. Prefer adding a separate file over editing an existing one — it keeps PRs small and conflict-free.
 

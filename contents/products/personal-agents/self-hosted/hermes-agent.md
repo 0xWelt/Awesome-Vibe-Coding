@@ -13,4 +13,4 @@ Hermes Agent is Nous Research's free, open-source personal agent. You install it
 
 **Extensions:** Built-in cron, persistent memory, and a learning loop that writes skills. The desktop app lists installed skills, a built-in catalog, and Skills Hub installs that wait for you to confirm. Isolated subagents can take separate tasks. You connect your own model provider, or optional Nous Portal credits.
 
-**Notes:** MIT license. Nous Portal plans price models, hosted tools, and optional cloud hosting; they are not required to run Hermes Agent. This entry is the personal agent, not a coding harness. Codex and Claude Code stay in [Harnesses](../../harnesses/).
+**Notes:** MIT license. Nous Portal plans price models, hosted tools, and optional cloud hosting; they are not required to run Hermes Agent. This entry is the personal agent, not a coding harness. Codex and Claude Code stay in [Coding Agents](../../coding-agents/).
