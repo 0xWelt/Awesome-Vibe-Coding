@@ -13,4 +13,4 @@ StepFun Desktop (阶跃AI桌面伙伴) is StepFun's agent on the operating syste
 
 **Extensions:** Skills that ship with the app, and workflows you turn into a skill so the same instruction can be triggered again. The page says you can set its character, preferences, and how the interface looks.
 
-**Notes:** This entry is the desktop partner on the download page. Other StepFun pages describe StepClaw, a separately deployed assistant with its own cloud hosting. That product is not folded into this file. The download page does not use a separate nickname for the desktop partner.
+**Notes:** This entry is the desktop partner on the download page. [StepClaw](../cloud-computer/stepclaw.md) is the separately deployed cloud assistant. The download page does not use a separate nickname for the desktop partner.

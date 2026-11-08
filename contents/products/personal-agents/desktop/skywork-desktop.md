@@ -13,4 +13,4 @@ Skywork Desktop is the desktop agent for office, coding, and design work. It pla
 
 **Extensions:** Skills and a model router. The desktop page says you can pick Claude, GPT, Gemini, DeepSeek, or another listed family, or let Skywork choose per step. Specialist sub-agents can research, analyze, write, build, and check in parallel.
 
-**Notes:** This entry is Skywork Desktop only. The same Chinese site also names SkyClaw as an assistant and keeps browser Skywork as the upload-based web product. Coding harnesses stay in [Coding Agents](../../coding-agents/). The desktop page says which models are available can depend on the account and plan.
+**Notes:** This entry is Skywork Desktop only. [SkyClaw](../cloud-computer/skyclaw.md) is the separate assistant on a 24/7 cloud computer. The same site keeps browser Skywork as the upload-based web product. Coding harnesses stay in [Coding Agents](../../coding-agents/). The desktop page says which models are available can depend on the account and plan.
