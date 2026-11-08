@@ -1,18 +1,18 @@
-# Awesome-Vibe-Coding
+# Awesome-Agent-Ecosystem
 
-[![Website](https://img.shields.io/website?url=https%3A%2F%2F0xWelt.github.io%2FAwesome-Vibe-Coding%2F&label=Live%20Site)](https://0xWelt.github.io/Awesome-Vibe-Coding/)
-[![GitHub stars](https://img.shields.io/github/stars/0xWelt/Awesome-Vibe-Coding?style=social)](https://github.com/0xWelt/Awesome-Vibe-Coding)
-[![GitHub forks](https://img.shields.io/github/forks/0xWelt/Awesome-Vibe-Coding?style=social)](https://github.com/0xWelt/Awesome-Vibe-Coding/fork)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2F0xwelt.github.io%2FAwesome-Agent-Ecosystem%2F&label=Live%20Site)](https://0xwelt.github.io/Awesome-Agent-Ecosystem/)
+[![GitHub stars](https://img.shields.io/github/stars/0xWelt/Awesome-Agent-Ecosystem?style=social)](https://github.com/0xWelt/Awesome-Agent-Ecosystem)
+[![GitHub forks](https://img.shields.io/github/forks/0xWelt/Awesome-Agent-Ecosystem?style=social)](https://github.com/0xWelt/Awesome-Agent-Ecosystem/fork)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 A curated list of coding harnesses, vibe-coding communities, named personal agents, and the tools and services agents call.
 
-The public name of this list is becoming Awesome Agent Ecosystem. This repository and the GitHub Pages site stay Awesome-Vibe-Coding until that rename.
+This repository is Awesome-Agent-Ecosystem.
 
-🌐 **Live Website**: [https://0xWelt.github.io/Awesome-Vibe-Coding/](https://0xWelt.github.io/Awesome-Vibe-Coding/)
+🌐 **Live Website**: [https://0xwelt.github.io/Awesome-Agent-Ecosystem/](https://0xwelt.github.io/Awesome-Agent-Ecosystem/)
 
-![Awesome-Vibe-Coding](docs/Awesome-Vibe-Coding.png)
+![Awesome-Agent-Ecosystem](docs/Awesome-Vibe-Coding.png)
 
 > **Content structure**: entries are organized in the [`contents/`](contents/) directory — one
 > markdown file per entry, grouped by section, category, and subcategory, with `_meta.md`
@@ -136,13 +136,13 @@ The entry is picked up when the website builds. Prefer adding a separate file ov
 
 This project exists thanks to all the people who contribute.
 
-<a href="https://github.com/0xWelt/Awesome-Vibe-Coding/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=0xWelt/Awesome-Vibe-Coding" />
+<a href="https://github.com/0xWelt/Awesome-Agent-Ecosystem/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=0xWelt/Awesome-Agent-Ecosystem" />
 </a>
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=0xWelt/Awesome-Vibe-Coding&type=Date)](https://star-history.com/#0xWelt/Awesome-Vibe-Coding&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=0xWelt/Awesome-Agent-Ecosystem&type=Date)](https://star-history.com/#0xWelt/Awesome-Agent-Ecosystem&Date)
 
 ## License
 
