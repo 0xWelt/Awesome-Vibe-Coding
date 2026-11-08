@@ -2,7 +2,7 @@
 
 ## Content boundary
 
-This repository is one English list. Its public name is becoming Awesome Agent Ecosystem. The GitHub repository will be renamed after this structure lands. Until then, the git remote, GitHub Pages, and `yaal.config.yaml` stay on `https://github.com/0xWelt/Awesome-Vibe-Coding`.
+This repository is Awesome-Agent-Ecosystem (`https://github.com/0xWelt/Awesome-Agent-Ecosystem`), one English list. The live site is `https://0xwelt.github.io/Awesome-Agent-Ecosystem/`.
 
 Four top-level sections:
 
