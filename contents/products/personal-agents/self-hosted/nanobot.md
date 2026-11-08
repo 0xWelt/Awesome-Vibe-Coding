@@ -13,4 +13,4 @@ Nanobot is a lightweight open-source personal agent you host yourself. You bring
 
 **Extensions:** MCP integrations, skills, long-term memory, and multi-agent delegation. Channels named in the README include Telegram, Discord, Slack, WeChat, email, Feishu, Microsoft Teams, Mattermost, and Linear. Model access is an OpenAI-compatible API or a local model server. Nanobot does not supply a model account.
 
-**Notes:** MIT licensed. Copyright in the [LICENSE](https://github.com/HKUDS/nanobot/blob/main/LICENSE) is held by Xubin Ren and the nanobot contributors. The code is [HKUDS/nanobot](https://github.com/HKUDS/nanobot). This entry is the self-hosted personal agent. It can run shell and code on your machine; coding harnesses stay in [Harnesses](../../harnesses/).
+**Notes:** MIT licensed. Copyright in the [LICENSE](https://github.com/HKUDS/nanobot/blob/main/LICENSE) is held by Xubin Ren and the nanobot contributors. The code is [HKUDS/nanobot](https://github.com/HKUDS/nanobot). This entry is the self-hosted personal agent. It can run shell and code on your machine; coding harnesses stay in [Coding Agents](../../coding-agents/).

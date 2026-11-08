@@ -13,4 +13,4 @@ Claude Duet is Anthropic's proactive agent, and a separate app from Claude. You 
 
 **Extensions:** The product page says Duet works with more than 6,000 connectors and plugins, and that it uses the memory, skills, and connectors on your Claude account. It asks before sensitive operations such as sending a message or paying. Approvals, logins, and safety checks run on that cloud computer.
 
-**Notes:** Research preview, on a waitlist, for Claude Pro, Max, and Ultra subscribers in the US. Team and Enterprise plans are not included yet. During the preview, Duet shares your Claude plan's usage limits, and background checks count toward them. The Claude chat app is not an entry here. Claude Code stays in [Harnesses](../../harnesses/).
+**Notes:** Research preview, on a waitlist, for Claude Pro, Max, and Ultra subscribers in the US. Team and Enterprise plans are not included yet. During the preview, Duet shares your Claude plan's usage limits, and background checks count toward them. The Claude chat app is not an entry here. Claude Code stays in [Coding Agents](../../coding-agents/).

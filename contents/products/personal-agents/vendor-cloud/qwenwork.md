@@ -13,4 +13,4 @@ QwenWork (千问办公) is Alibaba's AI office platform. You describe the outcom
 
 **Extensions:** Skills and connectors. The English page says QwenWork loads a skill for the task. The Chinese site describes a skill market, expert kits, and enterprise IM for messages, attendance and approvals, calendars, docs and sheets, knowledge bases, and mail. The Aliyun overview identifies the DingTalk workspace as that IM entry, and says a cloud scheduled task can push its result to a DingTalk message.
 
-**Notes:** This entry is QwenWork, the office platform. It is built on the Qwen model family, and the Aliyun overview contrasts it with a chat tool that only answers. Qoder is documented by Aliyun as a separate coding product and is not this entry. Coding harnesses stay in [Harnesses](../../harnesses/).
+**Notes:** This entry is QwenWork, the office platform. It is built on the Qwen model family, and the Aliyun overview contrasts it with a chat tool that only answers. Qoder is documented by Aliyun as a separate coding product and is not this entry. Coding harnesses stay in [Coding Agents](../../coding-agents/).
