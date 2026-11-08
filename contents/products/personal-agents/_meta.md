@@ -1,4 +1,4 @@
 ---
 title: Personal Agents
 ---
-Named personal agents that act over time, grouped by where the persistent runtime lives: a vendor cloud computer, your desktop, or a machine or gateway you run.
+Personal Agents are named personal agents that act over time, filed flat in this folder. Runtime and capability forms are expressed with category-scoped tags, not exclusive subfolders.
