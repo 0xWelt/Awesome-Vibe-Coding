@@ -1,6 +1,7 @@
 ---
 name: "Grok Voice"
 link: "https://x.ai/api/voice"
+image: "https://x.ai/api/voice/opengraph-image-11ktkp.png"
 tags: [skill, grok-bot]
 ---
 

@@ -1,6 +1,7 @@
 ---
 name: "Sinch"
 link: "https://www.sinch.com/"
+image: "https://sinch.com/wp-content/uploads/2026/02/SI-Powering-Trusted-Comms.png"
 tags: [skill, grok-bot]
 ---
 

@@ -1,6 +1,7 @@
 ---
 name: Genspark Super Agent
 link: https://www.genspark.ai/
+image: "https://cdn1.genspark.ai/user-upload-image/admin/image/seo/og/en.jpg"
 tags: [web, cloud, computer-use, skills]
 ---
 
