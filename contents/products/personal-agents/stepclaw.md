@@ -1,6 +1,7 @@
 ---
 name: StepClaw
 link: https://chat.stepfun.com/openclaw
+image: "https://chat.stepfun.com/img/opengraph-image.png"
 tags: [web, cloud, computer-use]
 ---
 

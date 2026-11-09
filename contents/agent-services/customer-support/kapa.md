@@ -1,6 +1,7 @@
 ---
 name: "Kapa"
 link: "https://www.kapa.ai/"
+image: "https://framerusercontent.com/images/sbzIzK5ApbZdAnqCQsJCijVBT4.png"
 tags: [skill, grok-bot]
 ---
 

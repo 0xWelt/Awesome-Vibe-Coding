@@ -1,6 +1,7 @@
 ---
 name: Grok Bot
 link: https://x.ai/bot
+image: "https://x.ai/images/news/introducing-grok-bot-og-2.png"
 tags: [desktop, mobile, cloud, computer-use, skills, routines, connectors]
 ---
 

@@ -1,6 +1,7 @@
 ---
 name: "Opsera"
 link: "https://www.opsera.io/"
+image: "https://opsera.ai/social/index.png?v=410b1171"
 tags: [mcp, skill, grok-bot]
 ---
 

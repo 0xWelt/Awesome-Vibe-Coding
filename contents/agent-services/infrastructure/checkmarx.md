@@ -1,6 +1,7 @@
 ---
 name: "Checkmarx"
 link: "https://checkmarx.com/"
+image: "https://checkmarx.com/wp-content/uploads/2026/06/Preview-image-CXHomepage.jpg"
 tags: [mcp, grok-bot]
 ---
 

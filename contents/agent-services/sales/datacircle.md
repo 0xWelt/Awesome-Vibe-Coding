@@ -1,6 +1,7 @@
 ---
 name: "Datacircle"
 link: "https://datacircle.dev"
+image: "https://datacircle.dev/og-find-the-best-gtm-apis.jpg"
 tags: [mcp, skill]
 ---
 
