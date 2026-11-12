@@ -1,6 +1,7 @@
 ---
 name: "DeepSeek Super-agent (prototype)"
 link: "https://github.com/deepseek-ai/dsh-superagent-prototype"
+tags: [web]
 ---
 
 Research prototype for reference only, not an official DeepSeek product and not production-ready software. The published code was adapted and is not identical to the internal version or to everything in the article "Exploring Super-agent Design: Towards a More Autonomous Agent System"; some designs in that article are future work and are not implemented here.
